@@ -26,7 +26,7 @@ const Footer = () => {
                 <Phone size={14} /> +381 14 000 000
               </a>
               <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="mailto:alcompany@open.telekom.rs">
-                <Mail size={14} /> info@alcompany.rs
+                <Mail size={14} /> alcompany@open.telekom.rs
               </a>
             </div>
           </div>
