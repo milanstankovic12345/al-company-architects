@@ -22,8 +22,14 @@ const Footer = () => {
               <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA">
                 <MapPin size={14} /> Prva proleterska 60, 14000 Valjevo, Srbija
               </a>
-              <a href="tel:+381000000" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
-                <Phone size={14} /> +381 14 000 000
+              <a href="tel:+38114246079" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+                <Phone size={14} /> +381 14 246 079
+              </a>
+              <a href="tel:+381143100179" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+                <Phone size={14} /> +381 14 31 00 179
+              </a>
+              <a href="tel:+38163369392" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+                <Phone size={14} /> +381 63 369 392
               </a>
               <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="mailto:alcompany@open.telekom.rs">
                 <Mail size={14} /> alcompany@open.telekom.rs
