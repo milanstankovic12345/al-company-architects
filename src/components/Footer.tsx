@@ -20,7 +20,7 @@ const Footer = () => {
             </p>
             <div className="flex flex-col gap-3 text-sm font-body text-primary-foreground/50">
               <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA">
-                <MapPin size={14} /> Valjevo, Srbija
+                <MapPin size={14} /> Prva proleterska 60, 14000 Valjevo, Srbija
               </a>
               <a href="tel:+381000000" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone size={14} /> +381 14 000 000
