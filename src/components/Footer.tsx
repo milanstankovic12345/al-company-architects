@@ -25,7 +25,7 @@ const Footer = () => {
               <a href="tel:+381000000" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone size={14} /> +381 14 000 000
               </a>
-              <a href="mailto:info@alcompany.rs" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
+              <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="mailto:alcompany@open.telekom.rs">
                 <Mail size={14} /> info@alcompany.rs
               </a>
             </div>
@@ -66,8 +66,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
