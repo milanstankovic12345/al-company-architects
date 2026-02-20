@@ -19,7 +19,7 @@ const Footer = () => {
               Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
             </p>
             <div className="flex flex-col gap-3 text-sm font-body text-primary-foreground/50">
-              <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA">
+              <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA" target="_blank" rel="noopener noreferrer">
                 <MapPin size={14} /> Prva proleterska 60, 14000 Valjevo, Srbija
               </a>
               <a href="tel:+38114246079" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
