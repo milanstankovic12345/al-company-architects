@@ -3,7 +3,9 @@ import HeroSection from "@/components/HeroSection";
 import ValuePillars from "@/components/ValuePillars";
 import ProductsPreview from "@/components/ProductsPreview";
 import SubsidyBanner from "@/components/SubsidyBanner";
+import EnergyROICalculator from "@/components/EnergyCalculator/EnergyROICalculator";
 import PartnersSection from "@/components/PartnersSection";
+import StickyQuoteBar from "@/components/StickyQuoteBar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,7 +16,9 @@ const Index = () => {
       <ValuePillars />
       <ProductsPreview />
       <SubsidyBanner />
+      <EnergyROICalculator />
       <PartnersSection />
+      <StickyQuoteBar />
       <Footer />
     </main>
   );
