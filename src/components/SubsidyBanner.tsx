@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BadgePercent } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SubsidyBanner = () => {
   return (
@@ -39,8 +40,10 @@ const SubsidyBanner = () => {
             </div>
 
             <div className="flex flex-col gap-3">
-              <Button variant="hero" size="lg" className="h-14 px-10 text-sm gap-2">
-                Proveri pravo na subvenciju <ArrowRight size={16} />
+              <Button variant="hero" size="lg" className="h-14 px-10 text-sm gap-2" asChild>
+                <Link to="/subvencije">
+                  Proveri pravo na subvenciju <ArrowRight size={16} />
+                </Link>
               </Button>
               <p className="text-xs text-muted-foreground text-center font-body">
                 Besplatna provera u 2 minuta
