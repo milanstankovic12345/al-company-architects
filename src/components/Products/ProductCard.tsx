@@ -24,7 +24,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
       </div>
       <div className="p-6 flex flex-col flex-1">
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-3 flex-wrap">
           <Badge variant="secondary" className="text-xs font-medium">
             {product.category}
           </Badge>
