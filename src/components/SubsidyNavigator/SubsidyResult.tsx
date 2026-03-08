@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Download, ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
 
 interface SubsidyResultProps {
   percentage: number;
@@ -16,16 +17,6 @@ const documents = [
 ];
 
 const SubsidyResult = ({ percentage, maxAmount, isVulnerable }: SubsidyResultProps) => {
-  const handleDownload = () => {
-    const text = `LISTA POTREBNIH DOKUMENATA ZA SUBVENCIJE 2026\n\n${documents.map((d, i) => `${i + 1}. ${d}`).join("\n")}\n\nNapomena: Proverite sa lokalnom samoupravom dodatne zahteve.`;
-    const blob = new Blob([text], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "subvencije-dokumenta-lista.txt";
-    a.click();
-    URL.revokeObjectURL(url);
-  };
 
   return (
     <motion.div

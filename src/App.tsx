@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import SubsidyNavigator from "./pages/SubsidyNavigator";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 

@@ -50,9 +50,11 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="hero" size="lg">
-            Zatražite ponudu
-          </Button>
+          <Link to="/kontakt">
+            <Button variant="hero" size="lg">
+              Zatražite ponudu
+            </Button>
+          </Link>
         </div>
 
         <button

@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProductSpecTable from "./ProductSpecTable";
 import type { Product } from "@/data/products";
-import { CheckCircle, Download } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 interface ProductTabsProps {
   product: Product;
