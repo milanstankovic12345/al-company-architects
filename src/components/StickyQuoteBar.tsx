@@ -11,10 +11,10 @@ const StickyQuoteBar = () => {
         <Phone size={16} /> Pozovite odmah
       </a>
       <Link
-        to="/subvencije"
+        to="/kontakt"
         className="flex-1 flex items-center justify-center gap-2 bg-accent text-accent-foreground py-3 text-sm font-medium"
       >
-        <FileText size={16} /> Predračun
+        <FileText size={16} /> Zatražite ponudu
       </Link>
     </div>
   );

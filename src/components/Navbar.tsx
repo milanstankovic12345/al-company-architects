@@ -8,8 +8,8 @@ const navLinks = [
   { label: "Početna", href: "/" },
   { label: "Proizvodi", href: "/proizvodi" },
   { label: "Subvencije 2026", href: "/subvencije" },
-  { label: "Projekti", href: "#projects" },
-  { label: "O nama", href: "#about" },
+  { label: "Projekti", href: "/proizvodi" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 const Navbar = () => {
@@ -50,9 +50,11 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="hero" size="lg">
-            Zatražite ponudu
-          </Button>
+          <Link to="/kontakt">
+            <Button variant="hero" size="lg">
+              Zatražite ponudu
+            </Button>
+          </Link>
         </div>
 
         <button
@@ -94,9 +96,11 @@ const Navbar = () => {
                   </a>
                 )
               )}
-              <Button variant="hero" size="lg" className="mt-2">
-                Zatražite ponudu
-              </Button>
+              <Link to="/kontakt" onClick={() => setOpen(false)}>
+                <Button variant="hero" size="lg" className="mt-2 w-full">
+                  Zatražite ponudu
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}

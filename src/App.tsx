@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import SubsidyNavigator from "./pages/SubsidyNavigator";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/subvencije" element={<SubsidyNavigator />} />
           <Route path="/proizvodi" element={<Products />} />
           <Route path="/proizvodi/:slug" element={<ProductDetail />} />
+          <Route path="/kontakt" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

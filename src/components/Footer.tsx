@@ -56,10 +56,10 @@ const Footer = () => {
               Informacije
             </h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-              <li><a href="https://www.alcompany.rs/index.php?pid=1" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80 transition-colors">O nama</a></li>
+              <li><Link to="/kontakt" className="hover:text-primary-foreground/80 transition-colors">O nama</Link></li>
               <li><Link to="/subvencije" className="hover:text-primary-foreground/80 transition-colors">Subvencije 2026</Link></li>
-              <li><a href="https://www.alcompany.rs/index.php?pid=8" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80 transition-colors">Projekti</a></li>
-              <li><a href="https://www.alcompany.rs/index.php?pid=13" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80 transition-colors">Kontakt</a></li>
+              <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Projekti</Link></li>
+              <li><Link to="/kontakt" className="hover:text-primary-foreground/80 transition-colors">Kontakt</Link></li>
             </ul>
           </div>
         </div>

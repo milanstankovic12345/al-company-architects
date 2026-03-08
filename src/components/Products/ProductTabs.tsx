@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProductSpecTable from "./ProductSpecTable";
 import type { Product } from "@/data/products";
-import { CheckCircle, Download } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 interface ProductTabsProps {
   product: Product;
@@ -23,12 +23,6 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
         >
           Tehničke Specifikacije
         </TabsTrigger>
-        <TabsTrigger
-          value="preuzimanja"
-          className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:bg-transparent px-6 py-3 font-heading font-semibold text-sm"
-        >
-          Preuzimanja
-        </TabsTrigger>
       </TabsList>
 
       <TabsContent value="opis" className="pt-8">
@@ -47,25 +41,6 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
 
       <TabsContent value="specifikacije" className="pt-8">
         <ProductSpecTable specs={product.specs} />
-      </TabsContent>
-
-      <TabsContent value="preuzimanja" className="pt-8">
-        <div className="space-y-3">
-          {product.pdfLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.url}
-              className="flex items-center gap-3 p-4 border border-border hover:border-accent/40 transition-colors group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download size={18} className="text-accent" />
-              <span className="font-body text-sm text-foreground group-hover:text-accent transition-colors">
-                {link.label}
-              </span>
-            </a>
-          ))}
-        </div>
       </TabsContent>
     </Tabs>
   );
