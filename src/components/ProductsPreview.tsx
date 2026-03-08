@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const products = [
   {
+    slug: "gealan-s9000",
     tag: "PVC SISTEMI",
     name: "GEALAN S-9000",
     description: "Šestokomorni profil sa tri nivoa zaptivanja. Uf=0.72 W/m²K. Maksimalna termička i zvučna izolacija za rezidencijalne projekte.",
@@ -10,6 +12,7 @@ const products = [
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
   },
   {
+    slug: "alumil-supreme-sd77",
     tag: "ALU SISTEMI",
     name: "ALUMIL SUPREME",
     description: "Premium aluminijumski sistem za velike staklene fasade. Tanki profili, maksimalna svetlost, izuzetna energetska efikasnost.",
@@ -71,12 +74,12 @@ const ProductsPreview = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href="#"
+                <Link
+                  to={`/proizvodi/${product.slug}`}
                   className="inline-flex items-center gap-2 text-accent text-sm font-semibold group-hover:gap-3 transition-all"
                 >
                   Saznajte više <ArrowRight size={16} />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}
