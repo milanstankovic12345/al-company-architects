@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-architecture.jpg";
 
@@ -52,12 +53,16 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button variant="hero" size="lg" className="h-14 px-10 text-sm">
-              Zatražite ponudu
-            </Button>
-            <Button variant="hero-outline" size="lg" className="h-14 px-10 text-sm">
-              Vodič za subvencije 2026
-            </Button>
+            <Link to="/subvencije">
+              <Button variant="hero" size="lg" className="h-14 px-10 text-sm">
+                Zatražite ponudu
+              </Button>
+            </Link>
+            <Link to="/subvencije">
+              <Button variant="hero-outline" size="lg" className="h-14 px-10 text-sm">
+                Vodič za subvencije 2026
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>

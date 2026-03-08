@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -42,11 +43,11 @@ const Footer = () => {
               Proizvodi
             </h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">PVC prozori</a></li>
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">PVC vrata</a></li>
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">ALU fasade</a></li>
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">ALU klizni sistemi</a></li>
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">Roletne i komarnici</a></li>
+              <li><Link to="/proizvodi/gealan-s9000" className="hover:text-primary-foreground/80 transition-colors">PVC prozori</Link></li>
+              <li><Link to="/proizvodi/gealan-linear" className="hover:text-primary-foreground/80 transition-colors">PVC vrata</Link></li>
+              <li><Link to="/proizvodi/alumil-supreme-sd77" className="hover:text-primary-foreground/80 transition-colors">ALU fasade</Link></li>
+              <li><Link to="/proizvodi/alumil-smartia-s67" className="hover:text-primary-foreground/80 transition-colors">ALU klizni sistemi</Link></li>
+              <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Roletne i komarnici</Link></li>
             </ul>
           </div>
 
@@ -55,10 +56,10 @@ const Footer = () => {
               Informacije
             </h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">O nama</a></li>
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">Subvencije 2026</a></li>
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">Projekti</a></li>
-              <li><a href="#" className="hover:text-primary-foreground/80 transition-colors">Kontakt</a></li>
+              <li><a href="https://www.alcompany.rs/index.php?pid=1" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80 transition-colors">O nama</a></li>
+              <li><Link to="/subvencije" className="hover:text-primary-foreground/80 transition-colors">Subvencije 2026</Link></li>
+              <li><a href="https://www.alcompany.rs/index.php?pid=8" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80 transition-colors">Projekti</a></li>
+              <li><a href="https://www.alcompany.rs/index.php?pid=13" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground/80 transition-colors">Kontakt</a></li>
             </ul>
           </div>
         </div>
