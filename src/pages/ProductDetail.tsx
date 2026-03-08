@@ -55,10 +55,13 @@ const ProductDetail = () => {
             </div>
 
             <div className="flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4 flex-wrap">
                 <Badge variant="secondary">{product.category}</Badge>
                 <Badge variant="outline" className="border-accent/30 text-accent">
                   {product.tag}
+                </Badge>
+                <Badge variant="outline" className="text-xs text-muted-foreground">
+                  {product.subcategory}
                 </Badge>
               </div>
               <h1 className="text-3xl md:text-4xl font-heading font-black text-foreground mb-4">

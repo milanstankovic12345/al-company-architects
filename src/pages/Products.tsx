@@ -4,7 +4,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/Products/ProductCard";
 import ComparisonWidget from "@/components/Products/ComparisonWidget";
-import { products, type ProductCategory } from "@/data/products";
+import FinishesSection from "@/components/Products/FinishesSection";
+import {
+  products,
+  subcategoryOrder,
+  subcategoryLabels,
+  type ProductCategory,
+  type ProductSubcategory,
+} from "@/data/products";
 
 const filters: { label: string; value: "all" | ProductCategory }[] = [
   { label: "Svi", value: "all" },
@@ -15,6 +22,15 @@ const filters: { label: string; value: "all" | ProductCategory }[] = [
 const Products = () => {
   const [active, setActive] = useState<"all" | ProductCategory>("all");
   const filtered = active === "all" ? products : products.filter((p) => p.category === active);
+
+  // Group by subcategory
+  const groupedBySubcategory = subcategoryOrder
+    .map((sub) => ({
+      subcategory: sub,
+      label: subcategoryLabels[sub],
+      items: filtered.filter((p) => p.subcategory === sub),
+    }))
+    .filter((g) => g.items.length > 0);
 
   return (
     <main>
@@ -30,11 +46,11 @@ const Products = () => {
               Naši proizvodi
             </h1>
             <p className="font-body text-muted-foreground max-w-xl mb-10">
-              Istražite kompletnu ponudu PVC i aluminijumskih sistema — od prozora za pasivne kuće do premium ulaznih vrata.
+              Istražite kompletnu ponudu PVC i aluminijumskih sistema — od prozora za pasivne kuće do premium ulaznih vrata, kliznih sistema i staklenih fasada.
             </p>
           </motion.div>
 
-          <div className="flex gap-2 mb-10">
+          <div className="flex gap-2 mb-12">
             {filters.map((f) => (
               <button
                 key={f.value}
@@ -50,20 +66,42 @@ const Products = () => {
             ))}
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-            {filtered.map((product, i) => (
+          {groupedBySubcategory.map((group, gi) => (
+            <div key={group.subcategory} className={gi > 0 ? "mt-16" : ""}>
               <motion.div
-                key={product.slug}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+                className="mb-6"
               >
-                <ProductCard product={product} />
+                <h2 className="text-2xl font-heading font-bold text-foreground">
+                  {group.label}
+                </h2>
+                <div className="w-12 h-0.5 bg-accent mt-2" />
               </motion.div>
-            ))}
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {group.items.map((product, i) => (
+                  <motion.div
+                    key={product.slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                  >
+                    <ProductCard product={product} />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <div className="mt-16">
+            <ComparisonWidget />
           </div>
 
-          <ComparisonWidget />
+          <FinishesSection />
         </div>
       </section>
       <Footer />
