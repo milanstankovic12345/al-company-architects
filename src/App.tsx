@@ -25,6 +25,7 @@ const App = () => (
           <Route path="/subvencije" element={<SubsidyNavigator />} />
           <Route path="/proizvodi" element={<Products />} />
           <Route path="/proizvodi/:slug" element={<ProductDetail />} />
+          <Route path="/kontakt" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

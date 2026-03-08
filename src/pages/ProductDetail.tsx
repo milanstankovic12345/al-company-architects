@@ -76,9 +76,11 @@ const ProductDetail = () => {
                 ))}
               </div>
 
-              <Button variant="hero" size="lg" className="w-fit gap-2">
-                Zatražite ponudu <ArrowRight size={16} />
-              </Button>
+              <Link to="/kontakt">
+                <Button variant="hero" size="lg" className="w-fit gap-2">
+                  Zatražite ponudu <ArrowRight size={16} />
+                </Button>
+              </Link>
             </div>
           </motion.div>
 

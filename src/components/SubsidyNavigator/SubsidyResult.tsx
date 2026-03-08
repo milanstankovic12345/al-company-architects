@@ -17,7 +17,6 @@ const documents = [
 ];
 
 const SubsidyResult = ({ percentage, maxAmount, isVulnerable }: SubsidyResultProps) => {
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -63,14 +62,11 @@ const SubsidyResult = ({ percentage, maxAmount, isVulnerable }: SubsidyResultPro
         </ul>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-3 justify-center">
+      <div className="flex justify-center">
         <Button variant="hero" size="lg" className="gap-2" asChild>
-          <a href="#contact">
-            Zatražite predračun <ArrowRight size={16} />
-          </a>
-        </Button>
-        <Button variant="outline" size="lg" className="gap-2" onClick={handleDownload}>
-          <Download size={16} /> Preuzmite listu dokumenata
+          <Link to="/kontakt">
+            Zatražite ponudu <ArrowRight size={16} />
+          </Link>
         </Button>
       </div>
     </motion.div>
