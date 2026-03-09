@@ -32,15 +32,18 @@ const ValuePillars = () => {
   return (
     <section className="py-24 md:py-32 bg-background" id="about">
       <div className="container">
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-3xl mb-16">
           <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-4">
             Zašto AL Company
           </p>
-          <h2 className="text-3xl md:text-5xl font-heading font-black text-foreground leading-tight">
+          <h2 className="text-3xl md:text-5xl font-heading font-black text-foreground leading-tight mb-6">
             Generacijska investicija u
             <br />
             komfor i sigurnost
           </h2>
+          <p className="font-body text-muted-foreground leading-relaxed text-base md:text-lg">
+            Preduzeće AL Company je nastalo kao rezultat ulaganja kapitala i znanja tokom dugog niza godina i jedno je od pionira u proizvodnji PVC i ALU stolarije u Srbiji. Nudimo širok asortiman proizvoda od svetski poznatih proizvođača — <strong className="text-foreground">GEALAN</strong> (Nemačka) i <strong className="text-foreground">ALUMIL</strong> (Grčka) — čiji kvalitet stoji na samom vrhu domaće i evropske proizvodnje. Naš tim stručnjaka kontinuirano prati svetske inovacije kako bi svakom klijentu ponudili najbolje rešenje.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-px bg-border">

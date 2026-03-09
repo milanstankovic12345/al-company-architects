@@ -6,7 +6,7 @@ import alCompanyLogo from "@/assets/al-company-logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Početna", href: "/" },
+  { label: "O nama", href: "/#about" },
   { label: "Proizvodi", href: "/proizvodi" },
   { label: "Subvencije 2026", href: "/subvencije" },
   { label: "Projekti", href: "/proizvodi" },
