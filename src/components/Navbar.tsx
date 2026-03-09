@@ -20,12 +20,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-heading font-black text-sm">AL</span>
-          </div>
-          <span className="font-heading font-bold text-lg tracking-tight text-foreground">
-            AL Company
-          </span>
+          <img src={alCompanyLogo} alt="AL Company Valjevo Logo" className="h-10 md:h-14 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
