@@ -27,12 +27,25 @@ const ProductCard = ({ product }: ProductCardProps) => {
       to={`/proizvodi/${product.slug}`}
       className="group border border-border bg-card hover:border-accent/40 transition-all duration-300 flex flex-col"
     >
-      <div className="aspect-[4/3] bg-muted overflow-hidden">
+      <div className="aspect-[4/3] bg-muted overflow-hidden relative">
         <img
           src={product.heroImage}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
+        {hasAssistantData && (
+          <button
+            onClick={handleCompare}
+            className={`absolute top-2 right-2 p-1.5 border transition-all ${
+              selected
+                ? "bg-accent border-accent text-accent-foreground"
+                : "bg-background/80 border-border text-muted-foreground hover:border-accent"
+            }`}
+            title={selected ? "Ukloni iz poređenja" : "Dodaj u poređenje"}
+          >
+            {selected ? <Check size={14} /> : <Plus size={14} />}
+          </button>
+        )}
       </div>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-3 flex-wrap">
