@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import type { Product } from "@/data/products";
 import TechTooltip from "@/components/TechTooltip";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plus, Check } from "lucide-react";
+import { useComparison } from "@/contexts/ComparisonContext";
+import { assistantProducts } from "@/data/assistantProducts";
 
 interface ProductCardProps {
   product: Product;
