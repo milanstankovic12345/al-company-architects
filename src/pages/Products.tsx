@@ -105,6 +105,7 @@ const Products = () => {
           <FinishesSection />
         </div>
       </section>
+      <ComparisonDrawer />
       <Footer />
     </main>
   );
