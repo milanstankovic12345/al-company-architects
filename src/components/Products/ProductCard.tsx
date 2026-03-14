@@ -12,7 +12,16 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const keySpec = product.specs[0];
+  const { addProduct, removeProduct, isSelected } = useComparison();
+  const hasAssistantData = assistantProducts.some((p) => p.slug === product.slug);
+  const selected = isSelected(product.slug);
 
+  const handleCompare = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (selected) removeProduct(product.slug);
+    else addProduct(product.slug);
+  };
   return (
     <Link
       to={`/proizvodi/${product.slug}`}
