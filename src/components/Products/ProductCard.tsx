@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import type { Product } from "@/data/products";
 import TechTooltip from "@/components/TechTooltip";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plus, Check } from "lucide-react";
+import { useComparison } from "@/contexts/ComparisonContext";
+import { assistantProducts } from "@/data/assistantProducts";
 
 interface ProductCardProps {
   product: Product;
@@ -10,18 +12,40 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const keySpec = product.specs[0];
+  const { addProduct, removeProduct, isSelected } = useComparison();
+  const hasAssistantData = assistantProducts.some((p) => p.slug === product.slug);
+  const selected = isSelected(product.slug);
 
+  const handleCompare = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (selected) removeProduct(product.slug);
+    else addProduct(product.slug);
+  };
   return (
     <Link
       to={`/proizvodi/${product.slug}`}
       className="group border border-border bg-card hover:border-accent/40 transition-all duration-300 flex flex-col"
     >
-      <div className="aspect-[4/3] bg-muted overflow-hidden">
+      <div className="aspect-[4/3] bg-muted overflow-hidden relative">
         <img
           src={product.heroImage}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
+        {hasAssistantData && (
+          <button
+            onClick={handleCompare}
+            className={`absolute top-2 right-2 p-1.5 border transition-all ${
+              selected
+                ? "bg-accent border-accent text-accent-foreground"
+                : "bg-background/80 border-border text-muted-foreground hover:border-accent"
+            }`}
+            title={selected ? "Ukloni iz poređenja" : "Dodaj u poređenje"}
+          >
+            {selected ? <Check size={14} /> : <Plus size={14} />}
+          </button>
+        )}
       </div>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-3 flex-wrap">

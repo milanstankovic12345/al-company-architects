@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/Products/ProductCard";
 import ComparisonWidget from "@/components/Products/ComparisonWidget";
+import ComparisonDrawer from "@/components/Assistant/ComparisonDrawer";
 import FinishesSection from "@/components/Products/FinishesSection";
 import {
   products,
@@ -104,6 +105,7 @@ const Products = () => {
           <FinishesSection />
         </div>
       </section>
+      <ComparisonDrawer />
       <Footer />
     </main>
   );
