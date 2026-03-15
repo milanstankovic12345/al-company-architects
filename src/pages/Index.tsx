@@ -7,6 +7,7 @@ import EnergyROICalculator from "@/components/EnergyCalculator/EnergyROICalculat
 import PartnersSection from "@/components/PartnersSection";
 import StickyQuoteBar from "@/components/StickyQuoteBar";
 import Footer from "@/components/Footer";
+import AlChatbot from "@/components/chat/AlChatbot";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <PartnersSection />
       <StickyQuoteBar />
       <Footer />
+      <AlChatbot />
     </main>
   );
 };
