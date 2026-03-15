@@ -1,162 +1,124 @@
 
 
-# Implementation Plan: Subsidy Navigator, ROI Calculator, and Product Pages
+# Plan: AlAdvisor — Floating Conversational Chatbot
 
-This is a large feature set spanning three major modules plus supporting UI elements. The plan creates dedicated pages with routing, reusable components, and all the calculation logic specified.
+## Overview
 
----
+Build a standalone floating chatbot component that replaces the static wizard UX with a conversational interface. It reuses existing scoring logic, product data, and ROI calculations but presents them as an interactive chat with "mini-app" cards inline.
 
-## Architecture Overview
+## Architecture
 
 ```text
-src/
-├── pages/
-│   ├── Index.tsx              (existing - add ROI Calculator section)
-│   ├── SubsidyNavigator.tsx   (new page)
-│   ├── Products.tsx           (new - product listing)
-│   ├── ProductDetail.tsx      (new - tabbed product detail template)
-│   └── NotFound.tsx
-├── components/
-│   ├── SubsidyNavigator/
-│   │   ├── SubsidyWizard.tsx         (multi-step container)
-│   │   ├── StepEligibility.tsx       (step 1)
-│   │   ├── StepCategory.tsx          (step 2)
-│   │   ├── StepMeasures.tsx          (step 3)
-│   │   └── SubsidyResult.tsx         (output with checklist)
-│   ├── EnergyCalculator/
-│   │   ├── EnergyROICalculator.tsx   (main component)
-│   │   ├── SavingsMeter.tsx          (animated bar visualization)
-│   │   └── PaybackTimeline.tsx       (year-by-year chart)
-│   ├── Products/
-│   │   ├── ProductCard.tsx           (listing card)
-│   │   ├── ProductSpecTable.tsx      (filterable spec table)
-│   │   ├── ProductTabs.tsx           (Opis/Specifikacije/Preuzimanja)
-│   │   └── ComparisonWidget.tsx      (PVC vs ALU side-by-side)
-│   ├── StickyQuoteBar.tsx            (mobile bottom bar)
-│   └── TechTooltip.tsx               (reusable tooltip for U-values, dB)
-├── data/
-│   └── products.ts                   (all product specifications as typed data)
+src/components/chat/
+├── AlChatbot.tsx          # Floating bubble + chat window shell
+├── ChatMessage.tsx        # Single message renderer (text, chips, cards)
+├── ChatROICard.tsx        # Inline ROI savings mini-card
+├── ChatComparisonCarousel.tsx  # Horizontal product comparison carousel
+├── ChatSubsidyBadge.tsx   # Green subsidy eligibility badge
+└── chatEngine.ts          # State machine + scoring logic (no UI)
 ```
 
----
+## Component Details
 
-## 1. Subsidy Navigator
+### 1. `AlChatbot.tsx` — Shell
+- Floating action button (bottom-right, `fixed bottom-6 right-6 z-50`). On mobile, position above the existing `StickyQuoteBar` (`bottom-20`).
+- Click expands into a chat window (~400×500px, or full-screen sheet on mobile via `vaul` Drawer).
+- Header: "Al Architectural Advisor" with close button.
+- Body: scrollable message list.
+- Footer: text input + send button. Suggestion chips rendered above input when available.
+- State: `isOpen` toggle, `messages[]` array, `chatState` from engine.
+- Persist `messages` and `chatState` to `localStorage` key `"al-advisor-chat"`.
 
-**Route:** `/subvencije` (linked from SubsidyBanner CTA and navbar)
+### 2. `chatEngine.ts` — State Machine (no AI API)
+A deterministic dialogue engine. No LLM calls — purely rule-based branching.
 
-**Component: `SubsidyWizard.tsx`**
-- Multi-step form using local React state (step 1–3 + result).
-- Progress indicator bar at top showing current step.
-- Animated transitions between steps using `framer-motion`.
+**States:** `greeting → buildingType → goal → noise → floor → subsidy → results → followUp`
 
-**Step 1 — Eligibility (`StepEligibility.tsx`)**
-- Two yes/no radio questions: building ownership and 80+ kWh consumption.
-- If either is "No," display a message explaining ineligibility and stop.
+Each state defines:
+- `botMessage`: text the bot sends
+- `chips`: suggestion buttons (primary interaction mode)
+- `next(userInput)`: transition function returning next state + optional tool response (ROI card, comparison, badge)
 
-**Step 2 — Category (`StepCategory.tsx`)**
-- Two cards: "Redovno domaćinstvo" and "Socijalno ugrožena grupa" with descriptions (pensioner with lowest pension, social help recipient).
+**Key logic reused from `GuidedWizard.tsx`:**
+- Same `WizardState` accumulation (buildingType, goal, noise, floor, subsidy)
+- Same `calculate()` scoring with `assistantProducts` data
+- Floor step skipped when buildingType === "house"
 
-**Step 3 — Measures (`StepMeasures.tsx`)**
-- If "Socially Vulnerable": skip to result (90% fixed).
-- If "Regular": radio selection between "Samo prozori/vrata" (single measure) and package tiers:
-  - Basic (2 measures) = 55%, up to max amount
-  - Standard (+Heat Pump) = 60%
-  - Advanced (+Solar) = 65%
-  - Single measure = 50%, max 180,000 RSD
+**Tool responses triggered at specific points:**
+- After energy goal + noise answer → render `ChatROICard` with savings estimate
+- After results calculated → render `ChatComparisonCarousel` with top 3
+- After subsidy "yes" → render `ChatSubsidyBadge`
+- Fallback: if user types free text not matching any chip, bot responds with "Nisam siguran da razumem. Da li želite da razgovarate sa stručnjakom?" + button to `/kontakt`
 
-**Result (`SubsidyResult.tsx`)**
-- Large percentage display with accent color.
-- Max subsidy amount in RSD.
-- "Download Checklist" button listing required documents (lična karta, dokaz o vlasništvu, račun za struju, profaktura).
-- CTA: "Zatražite predračun" linking to quote form.
+### 3. `ChatMessage.tsx` — Message Renderer
+- Renders bot messages (left-aligned, charcoal bg) and user messages (right-aligned, accent bg)
+- Supports embedded components via a `toolResponse` field on message objects:
+  - `type: "roi"` → renders `ChatROICard`
+  - `type: "comparison"` → renders `ChatComparisonCarousel`
+  - `type: "subsidy"` → renders `ChatSubsidyBadge`
+  - `type: "cta"` → renders final CTA buttons
 
----
+### 4. Mini-App Components
 
-## 2. Energy ROI Calculator
+**`ChatROICard.tsx`**: Compact card showing old Uw → new Uw, annual RSD savings, payback years. Reuses calculation logic from `EnergyROICalculator` (heating costs, improvement ratio). Assumes 80m² default home size, electric heating.
 
-**Placement:** New section on the homepage (between SubsidyBanner and PartnersSection), and also accessible on product detail pages.
+**`ChatComparisonCarousel.tsx`**: Horizontal scroll of 2-3 product cards showing name, category badge, Uw, dB, security class. Uses existing `Carousel` component from shadcn/ui. Each card links to `/proizvodi/:slug`.
 
-**Component: `EnergyROICalculator.tsx`**
+**`ChatSubsidyBadge.tsx`**: Green badge showing "90% Subvencija" or "50% Osnovni paket" based on product Uw threshold.
 
-**Inputs (form):**
-- Home size in m² — number input with slider (30–300 m²)
-- Current heating source — select: Electricity (11 RSD/kWh), Wood (8,000 RSD/m³), Gas (50 RSD/m³), Pellet (32,000 RSD/t)
-- Current window type — select: "Stari jednoslojni drveni" (Uw=3.0), "Dvoslojni drveni" (Uw=2.5)
+### 5. Closing CTA
+Final bot message includes two buttons:
+- "Pošaljite konfiguraciju konsultantu" → navigates to `/kontakt` with query params encoding selections
+- "Ponovo započni" → resets chat state
 
-**Calculation Logic:**
-- Annual heating energy = homeSize × 150 kWh/m²
-- Window heat loss share ≈ 40% of total
-- Old window loss = windowShare × oldUw / totalUw
-- New window loss = same formula with GEALAN Uw (0.9)
-- Energy savings = difference × heating cost per kWh equivalent
-- Convert fuel costs to per-kWh: Wood ~0.4 m³/1000kWh, Gas ~10 m³/1000kWh, Pellet ~0.2t/1000kWh
-- Payback = estimated window cost (homeSize-based) / annual savings
+## Integration
 
-**UI Output:**
-- `SavingsMeter.tsx`: Animated green bar showing annual RSD savings with large number.
-- `PaybackTimeline.tsx`: Simple horizontal timeline (recharts or custom) showing payback period in years with cumulative savings.
-- Tooltip on the Uw value explaining what it means.
+| File | Change |
+|------|--------|
+| `src/pages/Index.tsx` | Add `<AlChatbot />` component |
+| `src/App.tsx` | No change needed (chatbot is overlay, not a route) |
 
----
+The chatbot renders globally from Index but as a fixed-position overlay. It does not interfere with the existing `/asistent` wizard page (which remains available).
 
-## 3. Product Pages
+## Conversation Example
 
-### Data Layer (`src/data/products.ts`)
-Typed product data array containing all 4 products with: slug, name, category (PVC/ALU), tag, heroImage, description, features list, full technical specs object (Uf, depth, chambers, sealing levels, acoustic dB, security class, watertightness, threshold), and downloadable PDF links.
+```
+Bot: "Zdravo! Ja sam vaš Al Architectural Advisor. Da li želite da
+      poboljšate energetsku efikasnost, sigurnost ili dizajn?"
+      [Energija] [Sigurnost] [Dizajn] [Budžet]
 
-### Product Listing Page (`/proizvodi`)
-- Category filter tabs: "Svi" | "PVC Sistemi" | "ALU Sistemi"
-- Grid of `ProductCard` components with image, name, key spec badges, and link to detail.
+User clicks: [Energija]
 
-### Product Detail Page (`/proizvodi/:slug`)
-- Hero banner with product image and key specs overlay.
-- **`ProductTabs.tsx`** with three tabs:
-  - **Opis**: Rich text description, USP bullets, feature icons.
-  - **Tehničke Specifikacije**: `ProductSpecTable` — clean table with rows for each spec. All U-values and dB ratings wrapped in `TechTooltip` (e.g., "Uf 0.92 znači pasivnu kuću – najviši nivo toplote").
-  - **Preuzimanja**: Links to PDF catalogs (placeholder URLs for now).
+Bot: "Kakav je vaš objekat?"
+      [Kuća] [Zgrada – ceo objekat] [Zgrada – jedan stan]
 
-### Comparison Widget (`ComparisonWidget.tsx`)
-- Placed on the Products listing page below the grid.
-- Side-by-side cards: PVC vs ALU.
-- Rows: Thermal insulation, Price, Aesthetics, Large spans, Maintenance.
-- Visual indicators (green check / neutral) for which is better in each category.
+User clicks: [Kuća]
 
----
+Bot: "Da li je buka problem u vašem okruženju?"
+      [Mirno] [Prometna ulica]
 
-## 4. Supporting UI Components
+User clicks: [Prometna ulica]
 
-### `TechTooltip.tsx`
-- Wraps any technical value in a Radix `<Tooltip>` with a dashed underline style.
-- Props: `value` (display text), `explanation` (tooltip content).
-- Predefined explanations map for common values (Uf, Uw, dB, RC classes).
+Bot: "Da li aplicirate za državne subvencije?"
+      [Da] [Ne]
 
-### `StickyQuoteBar.tsx`
-- Fixed bottom bar, visible only on mobile (`md:hidden`).
-- Two buttons: "Pozovite odmah" (tel: link) and "Zatražite predračun za subvencije" (links to quote/subsidy page).
-- Slight shadow and blur backdrop, sits above footer.
+User clicks: [Da]
 
----
+Bot: "Na osnovu vaših odgovora, evo koliko možete uštedeti:"
+     [ROI Card: Uw 3.0 → 0.73, ~85,000 RSD/god]
 
-## 5. Routing Updates (`App.tsx`)
+Bot: "Preporučujem ove sisteme:"
+     [Comparison Carousel: S-9000 (98%), S-7000 IQ (91%), Linear (78%)]
+     [Subsidy Badge: ✓ Ispunjava uslove za subvenciju]
 
-Add routes:
-- `/subvencije` → `SubsidyNavigator`
-- `/proizvodi` → `Products`
-- `/proizvodi/:slug` → `ProductDetail`
+Bot: "Želite li da pošaljete ovu konfiguraciju našem konsultantu?"
+     [Pošaljite konsultantu] [Ponovo započni]
+```
 
-Update `Navbar.tsx` links to point to these routes using `react-router-dom` `Link` components instead of anchor `href`s.
+## Implementation Order
 
-Update `SubsidyBanner.tsx` CTA to link to `/subvencije`.
-
----
-
-## 6. Implementation Order
-
-1. **Product data + TechTooltip** — foundational data and reusable tooltip.
-2. **Product listing and detail pages** — largest visual surface area.
-3. **Comparison Widget** — added to product listing.
-4. **Subsidy Navigator** — full multi-step wizard with calculation logic.
-5. **Energy ROI Calculator** — calculator with visualizations, placed on homepage.
-6. **Sticky Quote Bar** — mobile-only bottom bar added to layout.
-7. **Routing + navigation updates** — wire everything together.
+1. Create `chatEngine.ts` (state machine + scoring)
+2. Create `ChatMessage.tsx`, `ChatROICard.tsx`, `ChatComparisonCarousel.tsx`, `ChatSubsidyBadge.tsx`
+3. Create `AlChatbot.tsx` (shell + localStorage persistence)
+4. Add to `Index.tsx`
 
