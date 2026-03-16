@@ -9,7 +9,6 @@ const navLinks = [
   { label: "O nama", href: "/#about" },
   { label: "Proizvodi", href: "/proizvodi" },
   { label: "Subvencije 2026", href: "/subvencije" },
-  { label: "Asistent", href: "/asistent" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
