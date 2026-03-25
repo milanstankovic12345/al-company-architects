@@ -1,5 +1,6 @@
 export type BuildingType = "house" | "wholeBuilding" | "singleApartment";
 export type AestheticStyle = "modern" | "classic" | "industrial";
+import { products, type ProductCategory } from "@/data/products";
 
 export interface AssistantProduct {
   slug: string;
@@ -19,11 +20,24 @@ export interface AssistantProduct {
   suitableFor: BuildingType[];
 }
 
-export const assistantProducts: AssistantProduct[] = [
+interface AssistantProductMetrics {
+  slug: string;
+  frameDepth: number;
+  uf: number;
+  uw: number;
+  maxGlazing: number;
+  securityClass: string;
+  soundInsulation: number;
+  sealLevels: number;
+  passiveHouse: boolean;
+  aestheticStyle: AestheticStyle;
+  subsidyEligible: boolean;
+  suitableFor: BuildingType[];
+}
+
+const assistantProductMetrics: AssistantProductMetrics[] = [
   {
     slug: "gealan-s9000",
-    name: "GEALAN S-9000",
-    category: "PVC",
     frameDepth: 82.5,
     uf: 0.92,
     uw: 0.73,
@@ -33,14 +47,11 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 3,
     passiveHouse: true,
     aestheticStyle: "classic",
-    image: "/placeholder.svg",
     subsidyEligible: true,
     suitableFor: ["house", "wholeBuilding", "singleApartment"],
   },
   {
     slug: "gealan-s7000-iq",
-    name: "GEALAN S-7000 IQ",
-    category: "PVC",
     frameDepth: 82.5,
     uf: 0.95,
     uw: 0.78,
@@ -50,14 +61,11 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 3,
     passiveHouse: true,
     aestheticStyle: "classic",
-    image: "/placeholder.svg",
     subsidyEligible: true,
     suitableFor: ["house", "wholeBuilding", "singleApartment"],
   },
   {
     slug: "gealan-s8000-iq",
-    name: "GEALAN S-8000 IQ",
-    category: "PVC",
     frameDepth: 74,
     uf: 1.0,
     uw: 0.85,
@@ -67,14 +75,11 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 3,
     passiveHouse: false,
     aestheticStyle: "modern",
-    image: "/placeholder.svg",
     subsidyEligible: true,
     suitableFor: ["house", "wholeBuilding", "singleApartment"],
   },
   {
     slug: "gealan-linear",
-    name: "GEALAN-LINEAR®",
-    category: "PVC",
     frameDepth: 74,
     uf: 1.0,
     uw: 0.85,
@@ -84,14 +89,11 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 3,
     passiveHouse: false,
     aestheticStyle: "modern",
-    image: "/placeholder.svg",
     subsidyEligible: true,
     suitableFor: ["house", "singleApartment"],
   },
   {
     slug: "gealan-s3000",
-    name: "GEALAN S-3000",
-    category: "PVC",
     frameDepth: 58,
     uf: 1.6,
     uw: 1.3,
@@ -101,14 +103,11 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 2,
     passiveHouse: false,
     aestheticStyle: "classic",
-    image: "/placeholder.svg",
     subsidyEligible: true,
     suitableFor: ["house", "wholeBuilding", "singleApartment"],
   },
   {
     slug: "alumil-smartia-s67",
-    name: "ALUMIL SMARTIA S67",
-    category: "ALU",
     frameDepth: 67,
     uf: 1.1,
     uw: 0.95,
@@ -118,14 +117,11 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 2,
     passiveHouse: false,
     aestheticStyle: "modern",
-    image: "/placeholder.svg",
     subsidyEligible: true,
     suitableFor: ["house", "wholeBuilding", "singleApartment"],
   },
   {
     slug: "alumil-supreme-sd77",
-    name: "ALUMIL SUPREME SD77",
-    category: "ALU",
     frameDepth: 77,
     uf: 1.3,
     uw: 0.9,
@@ -135,14 +131,11 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 3,
     passiveHouse: true,
     aestheticStyle: "modern",
-    image: "/placeholder.svg",
     subsidyEligible: true,
     suitableFor: ["house", "wholeBuilding"],
   },
   {
     slug: "alumil-m11000",
-    name: "ALUMIL M 11000",
-    category: "ALU",
     frameDepth: 60,
     uf: 1.8,
     uw: 1.5,
@@ -152,11 +145,23 @@ export const assistantProducts: AssistantProduct[] = [
     sealLevels: 2,
     passiveHouse: false,
     aestheticStyle: "industrial",
-    image: "/placeholder.svg",
     subsidyEligible: false,
     suitableFor: ["house", "wholeBuilding", "singleApartment"],
   },
 ];
+
+const productsBySlug = new Map(products.map((product) => [product.slug, product]));
+
+export const assistantProducts: AssistantProduct[] = assistantProductMetrics.map((item) => {
+  const baseProduct = productsBySlug.get(item.slug);
+
+  return {
+    ...item,
+    name: baseProduct?.name ?? item.slug,
+    category: (baseProduct?.category as ProductCategory | undefined) ?? "PVC",
+    image: baseProduct?.heroImage ?? "/placeholder.svg",
+  };
+});
 
 // Security class to numeric rank for scoring
 export const securityRank: Record<string, number> = {

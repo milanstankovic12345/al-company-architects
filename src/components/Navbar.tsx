@@ -1,19 +1,30 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import alCompanyLogo from "@/assets/al-company-logo.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { scrollToHash } from "@/lib/anchors";
 
 const navLinks = [
   { label: "O nama", href: "/#about" },
   { label: "Proizvodi", href: "/proizvodi" },
   { label: "Subvencije 2026", href: "/subvencije" },
-  { label: "Kontakt", href: "/kontakt" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  const handleHomeAnchorClick = (href: string) => (e: React.MouseEvent) => {
+    const hashIndex = href.indexOf("#");
+    if (hashIndex === -1) return;
+    if (pathname !== "/") return;
+
+    e.preventDefault();
+    scrollToHash(href.slice(hashIndex) as `#${string}`);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -29,6 +40,7 @@ const Navbar = () => {
                 key={link.label}
                 to={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                onClick={handleHomeAnchorClick(link.href)}
               >
                 {link.label}
               </Link>
@@ -76,7 +88,10 @@ const Navbar = () => {
                     key={link.label}
                     to={link.href}
                     className="text-base font-medium text-foreground py-2"
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => {
+                      setOpen(false);
+                      handleHomeAnchorClick(link.href)(e);
+                    }}
                   >
                     {link.label}
                   </Link>

@@ -1,7 +1,19 @@
 import { MapPin, Phone, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { scrollToHash } from "@/lib/anchors";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+
+  const handleHomeAnchorClick = (to: string) => (e: React.MouseEvent) => {
+    const hashIndex = to.indexOf("#");
+    if (hashIndex === -1) return;
+    if (pathname !== "/") return;
+
+    e.preventDefault();
+    scrollToHash(to.slice(hashIndex) as `#${string}`);
+  };
+
   return (
     <footer className="bg-surface-dark py-16 md:py-20">
       <div className="container">
@@ -16,7 +28,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="font-body text-primary-foreground/50 max-w-sm leading-relaxed mb-6">
-              Proizvođač vrhunske PVC i aluminijumske stolarije od 1991. godine.
+              Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. godine.
               Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
             </p>
             <div className="flex flex-col gap-3 text-sm font-body text-primary-foreground/50">
@@ -56,10 +68,10 @@ const Footer = () => {
               Informacije
             </h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-              <li><Link to="/#about" className="hover:text-primary-foreground/80 transition-colors">O nama</Link></li>
+              <li><Link to="/#about" onClick={handleHomeAnchorClick("/#about")} className="hover:text-primary-foreground/80 transition-colors">O nama</Link></li>
               <li><Link to="/subvencije" className="hover:text-primary-foreground/80 transition-colors">Subvencije 2026</Link></li>
               <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Projekti</Link></li>
-              <li><Link to="/kontakt" className="hover:text-primary-foreground/80 transition-colors">Kontakt</Link></li>
+              <li><Link to="/#kontakt" onClick={handleHomeAnchorClick("/#kontakt")} className="hover:text-primary-foreground/80 transition-colors">Kontakt</Link></li>
             </ul>
           </div>
         </div>
@@ -69,7 +81,7 @@ const Footer = () => {
             © 2026 AL Company. Sva prava zadržana.
           </p>
           <p className="text-xs font-body text-primary-foreground/30">
-            Valjevo, Srbija · Od 1991.
+            Valjevo, Srbija · Od 2002.
           </p>
         </div>
       </div>

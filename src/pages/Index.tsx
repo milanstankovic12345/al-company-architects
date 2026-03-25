@@ -20,7 +20,9 @@ const Index = () => {
       <EnergyROICalculator />
       <PartnersSection />
       <StickyQuoteBar />
-      <Footer />
+      <div id="kontakt">
+        <Footer />
+      </div>
       <AlChatbot />
     </main>
   );

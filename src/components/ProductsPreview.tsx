@@ -1,25 +1,21 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { products as allProducts } from "@/data/products";
 
-const products = [
-  {
-    slug: "gealan-s9000",
-    tag: "PVC SISTEMI",
-    name: "GEALAN S-9000",
-    description: "Šestokomorni profil sa tri nivoa zaptivanja. Uf=0.72 W/m²K. Maksimalna termička i zvučna izolacija za rezidencijalne projekte.",
-    specs: ["6 komora", "Uf 0.72", "RC2 klasa", "47dB"],
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-  },
-  {
-    slug: "alumil-supreme-sd77",
-    tag: "ALU SISTEMI",
-    name: "ALUMIL SUPREME",
-    description: "Premium aluminijumski sistem za velike staklene fasade. Tanki profili, maksimalna svetlost, izuzetna energetska efikasnost.",
-    specs: ["Tanki profili", "Uf 1.0", "Fasade", "Klizni sistemi"],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-  },
-];
+const previewProductSlugs = ["gealan-s9000", "alumil-supreme-sd77"] as const;
+
+const previewProducts = previewProductSlugs
+  .map((slug) => allProducts.find((product) => product.slug === slug))
+  .filter((product): product is NonNullable<(typeof allProducts)[number]> => Boolean(product))
+  .map((product) => ({
+    slug: product.slug,
+    tag: `${product.category} SISTEMI`,
+    name: product.name,
+    description: product.description,
+    specs: product.specs.slice(0, 4).map((spec) => spec.value),
+    image: product.heroImage,
+  }));
 
 const ProductsPreview = () => {
   return (
@@ -37,7 +33,7 @@ const ProductsPreview = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6">
-          {products.map((product, i) => (
+          {previewProducts.map((product, i) => (
             <motion.div
               key={product.name}
               initial={{ opacity: 0, y: 30 }}

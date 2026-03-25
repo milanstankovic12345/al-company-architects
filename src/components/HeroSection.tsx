@@ -24,7 +24,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-6">
-              Od 1991. godine
+              Od 2002. godine
             </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-primary-foreground leading-[0.95] mb-6">
               Arhitektonska
@@ -43,7 +43,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="font-body text-lg md:text-xl text-primary-foreground/70 max-w-lg mb-10"
           >
-            Vrhunska PVC i ALU stolarija sa tradicijom od 1991. godine.
+            Vrhunska PVC i ALU stolarija sa tradicijom od 2002. godine.
             Partneri kompanija GEALAN i ALUMIL.
           </motion.p>
 

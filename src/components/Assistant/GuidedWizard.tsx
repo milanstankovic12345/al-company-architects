@@ -97,6 +97,7 @@ const GuidedWizard = ({ onResults }: GuidedWizardProps) => {
   };
 
   const calculate = () => {
+    // Client-side recommendation only; do not use as a security, pricing, or eligibility authority.
     let pool = [...assistantProducts];
 
     // Filter by subsidy eligibility

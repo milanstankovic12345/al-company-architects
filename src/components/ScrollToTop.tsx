@@ -1,11 +1,18 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { scrollToHash } from "@/lib/anchors";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    scrollToHash(hash as `#${string}`);
+  }, [pathname, hash]);
+
   return null;
 };
 
