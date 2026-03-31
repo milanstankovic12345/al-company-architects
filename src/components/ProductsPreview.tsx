@@ -42,7 +42,7 @@ const ProductsPreview = () => {
               transition={{ duration: 0.6, delay: i * 0.15 }}
               className="group relative overflow-hidden bg-primary-foreground/5 border border-primary-foreground/10 hover:border-accent/40 transition-colors"
             >
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="w-[300px] h-[300px] max-w-full mx-auto overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.name}

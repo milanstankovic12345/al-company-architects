@@ -27,7 +27,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       to={`/proizvodi/${product.slug}`}
       className="group border border-border bg-card hover:border-accent/40 transition-all duration-300 flex flex-col"
     >
-      <div className="aspect-[4/3] bg-muted overflow-hidden relative">
+      <div className="w-[300px] h-[300px] max-w-full mx-auto bg-muted overflow-hidden relative">
         <img
           src={product.heroImage}
           alt={product.name}

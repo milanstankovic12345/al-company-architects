@@ -46,7 +46,7 @@ const ProductDetail = () => {
             transition={{ duration: 0.5 }}
             className="grid lg:grid-cols-2 gap-10 mb-12"
           >
-            <div className="aspect-[4/3] bg-muted overflow-hidden border border-border">
+            <div className="w-[300px] h-[300px] max-w-full mx-auto bg-muted overflow-hidden border border-border">
               <img
                 src={product.heroImage}
                 alt={product.name}

@@ -1,3 +1,20 @@
+import alumilM11000Image from "@/assets/products/alumil m 11000.jpg";
+import alumilM11500Image from "@/assets/products/alumil m 11500.jpg";
+import alumilM11600Image from "@/assets/products/alumil m 11600.jpg";
+import alumilM23300Image from "@/assets/products/alumil m 23300.jpg";
+import alumilM300Image from "@/assets/products/alumil m 300.jpg";
+import alumilM5600Image from "@/assets/products/alumil m 5600.jpg";
+import alumilM9050Image from "@/assets/products/alumil m 9050.jpg";
+import alumilM9400Image from "@/assets/products/alumil m 9400.jpg";
+import alumilM9650Image from "@/assets/products/alumil m 9650.jpg";
+import alumilSmartiaS67Image from "@/assets/products/alumil smartia s67.jpg";
+import alumilSupremeSd77Image from "@/assets/products/alumil supreme sd77.jpg";
+import gealanLinearImage from "@/assets/products/gealan-linear.jpg";
+import gealanS3000Image from "@/assets/products/gealan-s3000.jpg";
+import gealanS7000IqImage from "@/assets/products/gealan-s7000 iq.jpg";
+import gealanS8000IqImage from "@/assets/products/gealan-s8000 iq.jpg";
+import gealanS9000Image from "@/assets/products/gealan-s9000.jpg";
+
 export type ProductCategory = "PVC" | "ALU";
 export type ProductSubcategory = "Prozori" | "Vrata" | "Klizni sistemi" | "Fasade" | "Roletne";
 
@@ -41,7 +58,7 @@ export const products: Product[] = [
     category: "PVC",
     subcategory: "Prozori",
     tag: "Ekonomičan izbor",
-    heroImage: "/placeholder.svg",
+    heroImage: gealanS3000Image,
     description:
       "GEALAN S-3000 je četvorokomorni PVC profilni sistem koji nudi odličan odnos cene i kvaliteta. Sa dubinom profila od 58mm, idealan je za standardne projekte gde je potrebna pouzdana toplotna i zvučna izolacija bez visokih troškova. Proverena GEALAN tehnologija garantuje dugotrajnost i jednostavno održavanje.",
     features: [
@@ -70,7 +87,7 @@ export const products: Product[] = [
     category: "PVC",
     subcategory: "Prozori",
     tag: "Pasivna kuća",
-    heroImage: "/placeholder.svg",
+    heroImage: gealanS9000Image,
     description:
       "GEALAN S-9000 je vrhunski PVC profilni sistem dizajniran za pasivne kuće i objekte sa najvišim zahtevima za energetsku efikasnost. Sa šest komora i dubinom od 82.5mm, pruža izuzetnu toplotnu izolaciju koja zadovoljava najstrože standarde. STV® tehnologija omogućava izradu velikih elemenata bez čeličnog ojačanja.",
     features: [
@@ -100,7 +117,7 @@ export const products: Product[] = [
     category: "PVC",
     subcategory: "Prozori",
     tag: "Premium izolacija",
-    heroImage: "/placeholder.svg",
+    heroImage: gealanS7000IqImage,
     description:
       "GEALAN S-7000 IQ je sedmokomorni profilni sistem sa dubinom od 82.5mm koji predstavlja vrhunac PVC tehnologije. Sedam komora obezbeđuje izuzetnu toplotnu izolaciju sa Uf vrednošću od samo 0.95 W/m²K. IQ koncept omogućava montažu bez dodatnog lepljenja zaptivnih guma, što ubrzava proizvodnju i povećava kvalitet.",
     features: [
@@ -129,7 +146,7 @@ export const products: Product[] = [
     category: "PVC",
     subcategory: "Prozori",
     tag: "Pametni profil",
-    heroImage: "/placeholder.svg",
+    heroImage: gealanS8000IqImage,
     description:
       "GEALAN S-8000 IQ je šestokomorni profilni sistem sa dubinom od 74mm koji kombinuje kompaktnost sa visokim performansama. IQ tehnologija omogućava mehaničko pričvršćivanje zaptivnih guma umesto lepljenja, čime se postiže trajnija i pouzdanija veza. Idealan izbor za savremene projekte koji zahtevaju optimalan balans između performansi i estetike.",
     features: [
@@ -158,7 +175,7 @@ export const products: Product[] = [
     category: "PVC",
     subcategory: "Prozori",
     tag: "Moderan dizajn",
-    heroImage: "/placeholder.svg",
+    heroImage: gealanLinearImage,
     description:
       "GEALAN-LINEAR® je profilni sistem sa minimalističkim, ugaonim linijama koji spaja savremenu estetiku sa visokim performansama. Idealan za moderne arhitektonske projekte gde je važan čist i elegantan izgled. Dubina od 74mm i izuzetna zvučna izolacija čine ga odličnim izborom za urbana okruženja.",
     features: [
@@ -189,7 +206,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Prozori",
     tag: "Termički most",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM11000Image,
     description:
       "ALUMIL M 11000 je aluminijumski profilni sistem sa termičkim prekidom namenjen za prozore i balkonska vrata. Pruža odličnu toplotnu izolaciju zahvaljujući polyamide termičkom mostu, uz elegantnu aluminijumsku estetiku. Pogodan za rezidencijalne i komercijalne objekte koji zahtevaju dugotrajnost i minimalno održavanje aluminijuma.",
     features: [
@@ -247,7 +264,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Prozori",
     tag: "Nagib-otklon",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilSmartiaS67Image,
     description:
       "ALUMIL SMARTIA S67 je elegantan aluminijumski sistem za prozore sa nagib-otklon funkcijom. Minimalistički dizajn sa vidljivom visinom aluminijuma od samo 93mm omogućava maksimalan prodor svetlosti. Izuzetna vodonepropusnost klase E1200 garantuje pouzdanost u svim vremenskim uslovima.",
     features: [
@@ -278,7 +295,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Vrata",
     tag: "Ulazna vrata",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilSupremeSd77Image,
     description:
       "ALUMIL SUPREME SD77 je premium aluminijumski sistem za ulazna vrata koji kombinuje izuzetnu sigurnost sa vrhunskom toplotnom izolacijom. Sa RC3 sertifikovanom otpornošću na provalu i Ud vrednošću od 0.7 W/m²K, pruža mir i udobnost. Nizak prag od 22mm omogućava lak pristup.",
     features: [
@@ -307,7 +324,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Vrata",
     tag: "Ulazna vrata",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM11500Image,
     description:
       "ALUMIL M 11500 je aluminijumski sistem za ulazna vrata sa termičkim prekidom. Pruža visok nivo toplotne izolacije i sigurnosti uz moderan dizajn. Pogodan za rezidencijalne i poslovne objekte koji zahtevaju reprezentativan ulaz sa dugotrajnošću aluminijuma.",
     features: [
@@ -336,7 +353,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Vrata",
     tag: "Premium ulaz",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM11600Image,
     description:
       "ALUMIL M 11600 je premium aluminijumski sistem za ulazna vrata sa poboljšanim termičkim performansama. Nudi vrhunsku toplotnu izolaciju, višetačkasto zaključavanje i elegantan dizajn za najzahtevnije projekte. Idealan za luksuzne rezidencijalne objekte.",
     features: [
@@ -367,7 +384,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Klizni sistemi",
     tag: "Klizni sistem",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM9050Image,
     description:
       "ALUMIL M 9050 je aluminijumski klizni sistem dizajniran za velike staklene otvore. Omogućava panoramski pogled i maksimalan prodor prirodne svetlosti. Gladak mehanizam klizanja omogućava lako rukovanje čak i sa velikim staklenim panelima.",
     features: [
@@ -396,7 +413,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Klizni sistemi",
     tag: "Podizno-klizni",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM23300Image,
     description:
       "ALUMIL M 23300 je podizno-klizni (Lift & Slide) sistem koji predstavlja vrhunac aluminijumske tehnologije za velike staklene fasade. Mehanizam podizanja omogućava lako otvaranje panela težine do 400kg. Izuzetna vodonepropusnost i zvučna izolacija za maksimalnu udobnost.",
     features: [
@@ -425,7 +442,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Klizni sistemi",
     tag: "Harmonika vrata",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM300Image,
     description:
       "ALUMIL M 300 je sistem za harmonika (bi-fold) vrata koji omogućava potpuno otvaranje zidnog otvora. Paneli se savijaju jedan na drugi, stvarajući neometan prelaz između unutrašnjeg i spoljašnjeg prostora. Idealan za restorane, kafiće i rezidencijalne terase.",
     features: [
@@ -456,7 +473,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Fasade",
     tag: "Staklena fasada",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM9400Image,
     description:
       "ALUMIL M 9400 je strukturalni sistem za staklene fasade (curtain wall) koji omogućava izradu velikih staklenih površina na poslovnim i komercijalnim objektima. Sistem nudi odličnu toplotnu izolaciju i vodonepropusnost, uz mogućnost integracije različitih tipova stakla.",
     features: [
@@ -485,7 +502,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Fasade",
     tag: "Premium fasada",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM9650Image,
     description:
       "ALUMIL M 9650 je premium strukturalni fasadni sistem sa poboljšanim termičkim performansama. Dizajniran za savremene arhitektonske projekte koji zahtevaju maksimalnu energetsku efikasnost uz impresivne staklene površine. Podržava teška stakla i solarne panele.",
     features: [
@@ -516,7 +533,7 @@ export const products: Product[] = [
     category: "ALU",
     subcategory: "Roletne",
     tag: "Roletne",
-    heroImage: "/placeholder.svg",
+    heroImage: alumilM5600Image,
     description:
       "ALUMIL M 5600 je aluminijumski sistem za spoljašnje roletne koji pruža dodatnu toplotnu izolaciju, zaštitu od sunca i povećanu sigurnost. Ispunjene poliuretanskom penom, lamele obezbeđuju izuzetnu zvučnu i toplotnu izolaciju. Dostupne u ručnoj i motorizovanoj varijanti.",
     features: [
