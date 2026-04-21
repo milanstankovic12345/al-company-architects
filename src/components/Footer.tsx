@@ -70,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
               <li><Link to="/#about" onClick={handleHomeAnchorClick("/#about")} className="hover:text-primary-foreground/80 transition-colors">O nama</Link></li>
               <li><Link to="/subvencije" className="hover:text-primary-foreground/80 transition-colors">Subvencije 2026</Link></li>
-              <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Projekti</Link></li>
+              <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Proizvodi</Link></li>
               <li><Link to="/#kontakt" onClick={handleHomeAnchorClick("/#kontakt")} className="hover:text-primary-foreground/80 transition-colors">Kontakt</Link></li>
             </ul>
           </div>
