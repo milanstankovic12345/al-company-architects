@@ -3,12 +3,42 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "redirects": [
-    { "source": "/index.php?pid=2",  "destination": "/proizvodi",              "permanent": true },
-    { "source": "/index.php?pid=10", "destination": "/proizvodi/drvodekor",    "permanent": true },
-    { "source": "/index.php?pid=11", "destination": "/proizvodi/acrylcolor",   "permanent": true },
-    { "source": "/index.php?pid=12", "destination": "/proizvodi/aluminijum",   "permanent": true },
-    { "source": "/index.php?pid=13", "destination": "/kontakt",                "permanent": true },
-    { "source": "/index.php?pid=14", "destination": "/proizvodi/ulazna-vrata", "permanent": true }
+    {
+      "source": "/index.php",
+      "has": [{ "type": "query", "key": "pid", "value": "2" }],
+      "destination": "/proizvodi",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "has": [{ "type": "query", "key": "pid", "value": "10" }],
+      "destination": "/proizvodi/drvodekor",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "has": [{ "type": "query", "key": "pid", "value": "11" }],
+      "destination": "/proizvodi/acrylcolor",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "has": [{ "type": "query", "key": "pid", "value": "12" }],
+      "destination": "/proizvodi/aluminijum",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "has": [{ "type": "query", "key": "pid", "value": "13" }],
+      "destination": "/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/index.php",
+      "has": [{ "type": "query", "key": "pid", "value": "14" }],
+      "destination": "/proizvodi/ulazna-vrata",
+      "permanent": true
+    }
   ],
   "rewrites": [
     { "source": "/((?!assets|favicon|placeholder|robots|sitemap).*)", "destination": "/index.html" }
