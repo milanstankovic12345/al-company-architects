@@ -1,4 +1,7 @@
 {
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "redirects": [
     { "source": "/index.php?pid=2",  "destination": "/proizvodi",              "permanent": true },
     { "source": "/index.php?pid=10", "destination": "/proizvodi/drvodekor",    "permanent": true },
