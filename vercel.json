@@ -1,0 +1,13 @@
+{
+  "redirects": [
+    { "source": "/index.php?pid=2",  "destination": "/proizvodi",              "permanent": true },
+    { "source": "/index.php?pid=10", "destination": "/proizvodi/drvodekor",    "permanent": true },
+    { "source": "/index.php?pid=11", "destination": "/proizvodi/acrylcolor",   "permanent": true },
+    { "source": "/index.php?pid=12", "destination": "/proizvodi/aluminijum",   "permanent": true },
+    { "source": "/index.php?pid=13", "destination": "/kontakt",                "permanent": true },
+    { "source": "/index.php?pid=14", "destination": "/proizvodi/ulazna-vrata", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/((?!assets|favicon|placeholder|robots|sitemap).*)", "destination": "/index.html" }
+  ]
+}

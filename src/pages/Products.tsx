@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -35,6 +36,10 @@ const Products = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>Proizvodi | AL Company – PVC i aluminijumska stolarija Valjevo</title>
+        <meta name="description" content="Kompletan asortiman PVC i aluminijumskih prozora, vrata, kliznih sistema i fasada. GEALAN i ALUMIL profili." />
+      </Helmet>
       <Navbar />
       <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-background">
         <div className="container">

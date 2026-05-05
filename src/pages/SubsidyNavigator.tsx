@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,6 +8,10 @@ import { BadgePercent } from "lucide-react";
 const SubsidyNavigator = () => {
   return (
     <main>
+      <Helmet>
+        <title>Subvencije 2026 | AL Company – PVC i aluminijumska stolarija Valjevo</title>
+        <meta name="description" content="Proverite pravo na državne subvencije za zamenu stolarije 2026. Vodič za građane. AL Company Valjevo." />
+      </Helmet>
       <Navbar />
       <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-background">
         <div className="container">

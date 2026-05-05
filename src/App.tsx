@@ -11,6 +11,13 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Contact from "./pages/Contact";
 import Assistant from "./pages/Assistant";
+import PvcProducts from "./pages/PvcProducts";
+import AluProducts from "./pages/AluProducts";
+import EntranceDoors from "./pages/EntranceDoors";
+import AboutUs from "./pages/AboutUs";
+import Drvodekor from "./pages/Drvodekor";
+import Acrylcolor from "./pages/Acrylcolor";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { ComparisonProvider } from "./contexts/ComparisonContext";
 
 const queryClient = new QueryClient();
@@ -25,11 +32,18 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/o-nama" element={<AboutUs />} />
             <Route path="/subvencije" element={<SubsidyNavigator />} />
             <Route path="/proizvodi" element={<Products />} />
+            <Route path="/proizvodi/pvc" element={<PvcProducts />} />
+            <Route path="/proizvodi/aluminijum" element={<AluProducts />} />
+            <Route path="/proizvodi/ulazna-vrata" element={<EntranceDoors />} />
+            <Route path="/proizvodi/drvodekor" element={<Drvodekor />} />
+            <Route path="/proizvodi/acrylcolor" element={<Acrylcolor />} />
             <Route path="/proizvodi/:slug" element={<ProductDetail />} />
-            <Route path="/asistent" element={<Assistant />} />
             <Route path="/kontakt" element={<Contact />} />
+            <Route path="/asistent" element={<Assistant />} />
+            <Route path="/politika-privatnosti" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
@@ -39,3 +53,4 @@ const App = () => (
 );
 
 export default App;
+

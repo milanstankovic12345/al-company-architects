@@ -1,30 +1,22 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import alCompanyLogo from "@/assets/al-company-logo.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { scrollToHash } from "@/lib/anchors";
 
-const navLinks = [
-  { label: "O nama", href: "/#about" },
-  { label: "Proizvodi", href: "/proizvodi" },
-  { label: "Subvencije 2026", href: "/subvencije" },
-  { label: "Kontakt", href: "/#kontakt" },
+const productLinks = [
+  { label: "PVC stolarija", href: "/proizvodi/pvc" },
+  { label: "Aluminijumska stolarija", href: "/proizvodi/aluminijum" },
+  { label: "Ulazna vrata", href: "/proizvodi/ulazna-vrata" },
+  { label: "Drvodekor", href: "/proizvodi/drvodekor" },
+  { label: "Acrylcolor", href: "/proizvodi/acrylcolor" },
+  { label: "Svi proizvodi", href: "/proizvodi" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
-
-  const handleHomeAnchorClick = (href: string) => (e: React.MouseEvent) => {
-    const hashIndex = href.indexOf("#");
-    if (hashIndex === -1) return;
-    if (pathname !== "/") return;
-
-    e.preventDefault();
-    scrollToHash(href.slice(hashIndex) as `#${string}`);
-  };
+  const [productsOpen, setProductsOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -34,26 +26,48 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) =>
-            link.href.startsWith("/") ? (
-              <Link
-                key={link.label}
-                to={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                onClick={handleHomeAnchorClick(link.href)}
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            )
-          )}
+          <Link to="/o-nama" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            O nama
+          </Link>
+
+          {/* Products dropdown */}
+          <div className="relative" onMouseEnter={() => setProductsOpen(true)} onMouseLeave={() => setProductsOpen(false)}>
+            <Link
+              to="/proizvodi"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+            >
+              Proizvodi <ChevronDown size={14} className={`transition-transform ${productsOpen ? "rotate-180" : ""}`} />
+            </Link>
+            <AnimatePresence>
+              {productsOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute top-full left-0 mt-2 w-56 bg-background border border-border shadow-lg py-2"
+                >
+                  {productLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+                      onClick={() => setProductsOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <Link to="/subvencije" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            Subvencije 2026
+          </Link>
+          <Link to="/kontakt" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            Kontakt
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
@@ -73,6 +87,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -82,30 +97,25 @@ const Navbar = () => {
             className="md:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="container py-6 flex flex-col gap-4">
-              {navLinks.map((link) =>
-                link.href.startsWith("/") ? (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    className="text-base font-medium text-foreground py-2"
-                    onClick={(e) => {
-                      setOpen(false);
-                      handleHomeAnchorClick(link.href)(e);
-                    }}
-                  >
+              <Link to="/o-nama" className="text-base font-medium text-foreground py-2" onClick={() => setOpen(false)}>
+                O nama
+              </Link>
+              <Link to="/proizvodi" className="text-base font-medium text-foreground py-2" onClick={() => setOpen(false)}>
+                Proizvodi
+              </Link>
+              <div className="pl-4 flex flex-col gap-2 border-l-2 border-accent/30">
+                {productLinks.filter((l) => l.href !== "/proizvodi").map((link) => (
+                  <Link key={link.href} to={link.href} className="text-sm text-muted-foreground py-1.5" onClick={() => setOpen(false)}>
                     {link.label}
                   </Link>
-                ) : (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-base font-medium text-foreground py-2"
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                )
-              )}
+                ))}
+              </div>
+              <Link to="/subvencije" className="text-base font-medium text-foreground py-2" onClick={() => setOpen(false)}>
+                Subvencije 2026
+              </Link>
+              <Link to="/kontakt" className="text-base font-medium text-foreground py-2" onClick={() => setOpen(false)}>
+                Kontakt
+              </Link>
               <Link to="/kontakt" onClick={() => setOpen(false)}>
                 <Button variant="hero" size="lg" className="mt-2 w-full">
                   Zatražite ponudu

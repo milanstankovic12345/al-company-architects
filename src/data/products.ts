@@ -16,7 +16,7 @@ import gealanS8000IqImage from "@/assets/products/gealan-s8000 iq.jpg";
 import gealanS9000Image from "@/assets/products/gealan-s9000.jpg";
 
 export type ProductCategory = "PVC" | "ALU";
-export type ProductSubcategory = "Prozori" | "Vrata" | "Klizni sistemi" | "Fasade" | "Roletne";
+export type ProductSubcategory = "Prozori" | "Vrata" | "Klizni sistemi" | "Fasade" | "Roletne" | "Ulazna vrata katalog";
 
 export interface ProductSpec {
   label: string;
@@ -556,6 +556,89 @@ export const products: Product[] = [
       { label: "M 5600 Katalog", url: "#" },
     ],
   },
+
+  // ============ ULAZNA VRATA KATALOG ============
+  {
+    slug: "ulazna-vrata-klasicna",
+    name: "Ulazna vrata – Klasični modeli",
+    category: "ALU",
+    subcategory: "Ulazna vrata katalog",
+    tag: "Klasičan dizajn",
+    heroImage: "/placeholder.svg",
+    description:
+      "Klasični modeli ulaznih vrata (M 1–M 46) sa tradicionalnim dizajnom koji se uklapa u svaki stil kuće. Dostupni u raznim bojama i završnim obradama, sa kvalitetnom termoizolacijom i višetačkastim zaključavanjem.",
+    features: [
+      "Tradicionalni dizajn sa panelnim ispunama",
+      "Ud vrednost od 1.0 W/m²K",
+      "Višetačkasto zaključavanje",
+      "Dostupni u RAL paleti boja",
+      "Modeli M 1 do M 46",
+      "Opcija dekorativnog stakla",
+    ],
+    specs: [
+      { label: "Ud vrednost", value: "1.0 W/m²K", tooltipKey: "ud" },
+      { label: "Klasa sigurnosti", value: "RC2", tooltipKey: "rc" },
+      { label: "Debljina vrata", value: "68 mm" },
+      { label: "Zaključavanje", value: "Višetačkasto" },
+      { label: "Boje", value: "RAL paleta" },
+      { label: "Modeli", value: "M 1 – M 46" },
+    ],
+    pdfLinks: [{ label: "Katalog klasičnih modela", url: "#" }],
+  },
+  {
+    slug: "ulazna-vrata-moderna",
+    name: "Ulazna vrata – Moderni modeli",
+    category: "ALU",
+    subcategory: "Ulazna vrata katalog",
+    tag: "Moderan dizajn",
+    heroImage: "/placeholder.svg",
+    description:
+      "Moderni modeli ulaznih vrata (M 47–M 92) sa čistim linijama, minimalistčkim dizajnom i velikim staklenim površinama. Idealni za savremenu arhitekturu.",
+    features: [
+      "Minimalistički dizajn sa čistim linijama",
+      "Ud vrednost od 0.9 W/m²K",
+      "Velike staklene površine",
+      "RC2 sertifikovana sigurnost",
+      "Modeli M 47 do M 92",
+      "Skrivene šarke (opciono)",
+    ],
+    specs: [
+      { label: "Ud vrednost", value: "0.9 W/m²K", tooltipKey: "ud" },
+      { label: "Klasa sigurnosti", value: "RC2", tooltipKey: "rc" },
+      { label: "Debljina vrata", value: "73 mm" },
+      { label: "Zaključavanje", value: "Višetačkasto + električno" },
+      { label: "Boje", value: "RAL + specijalne" },
+      { label: "Modeli", value: "M 47 – M 92" },
+    ],
+    pdfLinks: [{ label: "Katalog modernih modela", url: "#" }],
+  },
+  {
+    slug: "ulazna-vrata-premium",
+    name: "Ulazna vrata – Premium modeli",
+    category: "ALU",
+    subcategory: "Ulazna vrata katalog",
+    tag: "Premium izvedba",
+    heroImage: "/placeholder.svg",
+    description:
+      "Premium modeli ulaznih vrata (M 93–M 138) sa najvišim nivoom sigurnosti, izolacije i estetike. Luksuzni materijali, fingerprint pristup i pametne brave.",
+    features: [
+      "Premium materijali i završna obrada",
+      "Ud vrednost od 0.7 W/m²K",
+      "RC3 klasa sigurnosti",
+      "Fingerprint / pametna brava opcija",
+      "Modeli M 93 do M 138",
+      "Skrivene šarke i nizak prag",
+    ],
+    specs: [
+      { label: "Ud vrednost", value: "0.7 W/m²K", tooltipKey: "ud" },
+      { label: "Klasa sigurnosti", value: "RC3", tooltipKey: "rc" },
+      { label: "Debljina vrata", value: "82 mm" },
+      { label: "Zaključavanje", value: "Višetačkasto + pametna brava" },
+      { label: "Boje", value: "RAL + specijalne + drvo obloge" },
+      { label: "Modeli", value: "M 93 – M 138" },
+    ],
+    pdfLinks: [{ label: "Katalog premium modela", url: "#" }],
+  },
 ];
 
 // Helper to get unique subcategories in display order
@@ -565,6 +648,7 @@ export const subcategoryOrder: ProductSubcategory[] = [
   "Klizni sistemi",
   "Fasade",
   "Roletne",
+  "Ulazna vrata katalog",
 ];
 
 export const subcategoryLabels: Record<ProductSubcategory, string> = {
@@ -573,4 +657,5 @@ export const subcategoryLabels: Record<ProductSubcategory, string> = {
   "Klizni sistemi": "Klizni sistemi",
   Fasade: "Staklene fasade",
   Roletne: "Roletne i zaštita od sunca",
+  "Ulazna vrata katalog": "Ulazna vrata – Katalog modela",
 };

@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -30,6 +31,10 @@ const ProductDetail = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>{product.name} | AL Company – PVC i aluminijumska stolarija Valjevo</title>
+        <meta name="description" content={`${product.name} – ${product.description.slice(0, 150)}...`} />
+      </Helmet>
       <Navbar />
       <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-background">
         <div className="container">

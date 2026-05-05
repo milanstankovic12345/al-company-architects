@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ValuePillars from "@/components/ValuePillars";
@@ -12,6 +13,10 @@ import AlChatbot from "@/components/chat/AlChatbot";
 const Index = () => {
   return (
     <main>
+      <Helmet>
+        <title>AL Company – PVC i aluminijumska stolarija Valjevo</title>
+        <meta name="description" content="AL Company d.o.o. – Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. GEALAN i ALUMIL profili. Valjevo, Srbija." />
+      </Helmet>
       <Navbar />
       <HeroSection />
       <ValuePillars />
