@@ -16,9 +16,9 @@ const SubsidyBanner = () => {
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
-          <div className="relative grid md:grid-cols-[1fr,auto] gap-8 items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
+          <div className="relative grid md:grid-cols-[1fr,auto] gap-8 items-center justify-items-center md:justify-items-start">
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
                 <div className="w-10 h-10 bg-accent/20 flex items-center justify-center">
                   <BadgePercent className="text-accent" size={20} />
                 </div>
@@ -33,13 +33,13 @@ const SubsidyBanner = () => {
                 kroz državne subvencije
               </h2>
 
-              <p className="font-body text-muted-foreground max-w-lg leading-relaxed">
+              <p className="font-body text-muted-foreground max-w-lg mx-auto md:mx-0 leading-relaxed">
                 Nacionalni program za energetsku rehabilitaciju stambenih zgrada za 2026. godinu.
                 Proverite da li vaša opština ispunjava uslove i uštedite na zameni stolarije.
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col items-center md:items-start gap-3">
               <Button variant="hero" size="lg" className="h-14 px-10 text-sm gap-2" asChild>
                 <Link to="/subvencije">
                   Proveri pravo na subvenciju <ArrowRight size={16} />

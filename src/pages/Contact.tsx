@@ -155,7 +155,6 @@ const Contact = () => {
                     <Phone size={16} className="text-accent mt-0.5 shrink-0" />
                     <div>
                       <a href="tel:+38114246079" className="hover:text-foreground transition-colors block">+381 14 246 079</a>
-                      <a href="tel:+381143100179" className="hover:text-foreground transition-colors block">+381 14 31 00 179</a>
                       <a href="tel:+38163369392" className="hover:text-foreground transition-colors block">+381 63 369 392 (mobilni)</a>
                     </div>
                   </div>

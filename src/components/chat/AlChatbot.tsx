@@ -26,7 +26,7 @@ const AlChatbot = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
-              className="fixed bottom-6 right-6 z-50 md:bottom-6 bottom-20 rounded-full shadow-lg"
+              className="fixed right-4 z-40 bottom-[5.5rem] md:bottom-6 rounded-full shadow-lg"
               aria-label="Otvori AI Assistant"
             >
               <span className="flex items-center gap-2 rounded-full border border-border bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
