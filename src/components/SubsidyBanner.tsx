@@ -16,10 +16,10 @@ const SubsidyBanner = () => {
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
-          <div className="relative grid md:grid-cols-[1fr,auto] gap-8 items-center justify-items-center md:justify-items-start">
-            <div className="text-center md:text-left">
+          <div className="relative flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-8 md:gap-12 w-full">
+            <div className="flex flex-col items-center md:items-start w-full md:flex-1">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
-                <div className="w-10 h-10 bg-accent/20 flex items-center justify-center">
+                <div className="w-10 h-10 bg-accent/20 flex items-center justify-center shrink-0">
                   <BadgePercent className="text-accent" size={20} />
                 </div>
                 <p className="text-accent font-semibold text-sm tracking-[0.15em] uppercase">
@@ -39,13 +39,13 @@ const SubsidyBanner = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-center md:items-start gap-3">
-              <Button variant="hero" size="lg" className="h-14 px-10 text-sm gap-2" asChild>
-                <Link to="/subvencije">
+            <div className="flex flex-col items-center md:items-start gap-3 w-full sm:w-auto shrink-0">
+              <Button variant="hero" size="lg" className="h-14 px-6 sm:px-10 text-sm gap-2 w-full sm:w-auto" asChild>
+                <Link to="/subvencije" className="w-full justify-center">
                   Proveri pravo na subvenciju <ArrowRight size={16} />
                 </Link>
               </Button>
-              <p className="text-xs text-muted-foreground text-center font-body">
+              <p className="text-xs text-muted-foreground text-center font-body w-full">
                 Besplatna provera u 2 minuta
               </p>
             </div>
