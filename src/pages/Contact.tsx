@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Send, Phone, Mail, MapPin, Printer } from "lucide-react";
+import { Send, Phone, Mail, MapPin, Printer, Instagram } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Unesite ime i prezime").max(100),
@@ -169,6 +169,10 @@ const Contact = () => {
                   <a href="https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-foreground transition-colors">
                     <MapPin size={16} className="text-accent mt-0.5 shrink-0" />
                     Prva proleterska 60, 14000 Valjevo, Srbija
+                  </a>
+                  <a href="https://www.instagram.com/alcompany2002/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-foreground transition-colors">
+                    <Instagram size={16} className="text-accent shrink-0" />
+                    @alcompany2002
                   </a>
                 </div>
               </div>

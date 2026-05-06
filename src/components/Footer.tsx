@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -34,6 +34,9 @@ const Footer = () => {
               </a>
               <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="mailto:alcompany@open.telekom.rs">
                 <Mail size={14} /> alcompany@open.telekom.rs
+              </a>
+              <a href="https://www.instagram.com/alcompany2002/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors mt-1">
+                <Instagram size={14} /> @alcompany2002
               </a>
             </div>
           </div>

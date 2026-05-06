@@ -55,6 +55,10 @@ const AboutUs = () => {
                 energetske efikasnosti, zvučne izolacije i bezbednosti, kako bismo našim klijentima
                 uvek ponudili najsavremenija rešenja.
               </p>
+              <p>
+                Kao kompanija koja drži do tradicije, takođe pratimo i moderne trendove poslovanja.
+                Prisutni smo na društvenim mrežama, poput <a href="https://www.instagram.com/alcompany2002/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-accent font-medium underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors">Instagrama</a>, gde sa klijentima delimo naše najnovije projekte i inovacije u realnom vremenu.
+              </p>
             </div>
           </motion.div>
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Instagram } from "lucide-react";
 import alCompanyLogo from "@/assets/al-company-logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -70,7 +70,16 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href="https://www.instagram.com/alcompany2002/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram size={20} />
+          </a>
           <Link to="/kontakt">
             <Button variant="hero" size="lg">
               Zatražite ponudu
@@ -121,6 +130,16 @@ const Navbar = () => {
                   Zatražite ponudu
                 </Button>
               </Link>
+              <div className="flex items-center gap-2 mt-2 pt-4 border-t border-border">
+                <a
+                  href="https://www.instagram.com/alcompany2002/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+                >
+                  <Instagram size={20} /> Pratite nas na Instagramu
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
