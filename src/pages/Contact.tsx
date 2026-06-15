@@ -162,7 +162,7 @@ const Contact = () => {
                     <Printer size={16} className="text-accent shrink-0" />
                     <span>Faks: +381 14 246 079</span>
                   </div>
-                  <a href="mailto:alcompany@open.telekom.rs" className="flex items-center gap-3 hover:text-foreground transition-colors">
+                  <a href="mailto:milanaiagency@gmail.com" className="flex items-center gap-3 hover:text-foreground transition-colors">
                     <Mail size={16} className="text-accent shrink-0" />
                     alcompany@open.telekom.rs
                   </a>

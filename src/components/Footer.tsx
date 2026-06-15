@@ -32,7 +32,7 @@ const Footer = () => {
               <a href="tel:+38163369392" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors">
                 <Phone size={14} /> +381 63 369 392
               </a>
-              <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="mailto:alcompany@open.telekom.rs">
+              <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="mailto:milanaiagency@gmail.com">
                 <Mail size={14} /> alcompany@open.telekom.rs
               </a>
               <a href="https://www.instagram.com/alcompany2002/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors mt-1">
