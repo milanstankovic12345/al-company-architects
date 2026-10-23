@@ -1,6 +1,8 @@
 # AL Company Architects
 
-Frontend web app for AL Company Architects.
+Frontend web site for AL Company Valjevo. 
+
+https://alcompany.vercel.app/
 
 ## Local development
 
