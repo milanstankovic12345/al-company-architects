@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-architecture.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-hero flex items-start overflow-hidden">
+    <section className="relative min-h-hero flex flex-col overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -16,7 +16,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
       </div>
 
-      <div className="relative container pt-28 pb-56 md:pt-36 md:pb-32">
+      <div className="relative container flex-1 pt-28 pb-12 md:pt-36 md:pb-16">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -67,8 +67,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom stats bar */}
-      <div className="absolute bottom-0 left-0 right-0 bg-primary/60 backdrop-blur-md border-t border-primary-foreground/10">
+      {/* Stats bar (in document flow, after the CTAs) */}
+      <div className="relative bg-primary/60 backdrop-blur-md border-t border-primary-foreground/10">
         <div className="container grid grid-cols-2 md:grid-cols-4 divide-x divide-primary-foreground/10">
           {[
             { value: "30+", label: "Godina iskustva" },
