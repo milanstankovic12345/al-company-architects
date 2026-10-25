@@ -25,8 +25,8 @@ const Navbar = () => {
           <img src={alCompanyLogo} alt="AL Company Valjevo Logo" className="h-10 md:h-14 w-auto" />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <Link to="/o-nama" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-8">
+          <Link to="/o-nama" className="whitespace-nowrap text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             O nama
           </Link>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="relative" onMouseEnter={() => setProductsOpen(true)} onMouseLeave={() => setProductsOpen(false)}>
             <Link
               to="/proizvodi"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+              className="whitespace-nowrap text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
             >
               Proizvodi <ChevronDown size={14} className={`transition-transform ${productsOpen ? "rotate-180" : ""}`} />
             </Link>
@@ -62,15 +62,15 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <Link to="/subvencije" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/subvencije" className="whitespace-nowrap text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             Subvencije 2026
           </Link>
-          <Link to="/kontakt" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/kontakt" className="whitespace-nowrap text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             Kontakt
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3 lg:gap-4">
           <a
             href="https://www.instagram.com/alcompany2002/"
             target="_blank"
