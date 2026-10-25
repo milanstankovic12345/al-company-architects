@@ -69,14 +69,21 @@ const HeroSection = () => {
 
       {/* Stats bar (in document flow, after the CTAs) */}
       <div className="relative bg-primary/60 backdrop-blur-md border-t border-primary-foreground/10">
-        <div className="container grid grid-cols-2 md:grid-cols-4 divide-x divide-primary-foreground/10">
+        <div className="container grid grid-cols-2 md:grid-cols-4">
           {[
             { value: "30+", label: "Godina iskustva" },
             { value: "15,000+", label: "Realizovanih projekata" },
             { value: "0.72", label: "Uf vrednost (W/m²K)" },
             { value: "47dB", label: "Zvučna izolacija" },
-          ].map((stat) => (
-            <div key={stat.label} className="py-5 px-4 text-center">
+          ].map((stat, i) => (
+            <div
+              key={stat.label}
+              className={`py-5 px-4 text-center border-primary-foreground/10 ${
+                i % 2 === 1 ? "border-l" : ""
+              } ${i >= 2 ? "border-t" : ""} md:border-t-0 ${
+                i > 0 ? "md:border-l" : ""
+              }`}
+            >
               <p className="text-2xl md:text-3xl font-heading font-black text-primary-foreground">
                 {stat.value}
               </p>
