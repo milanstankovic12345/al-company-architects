@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Ruler } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CountUp from "@/components/motion/CountUp";
 import { getExperienceYears } from "@/lib/experience";
@@ -66,6 +67,20 @@ const HeroSection = () => {
               <Button variant="hero-outline" size="lg" className="h-14 px-10 text-sm">
                 Vodič za subvencije 2026
               </Button>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6"
+          >
+            <Link
+              to="/merenje"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary-foreground underline underline-offset-4 decoration-primary-foreground/40 hover:decoration-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"
+            >
+              <Ruler size={16} aria-hidden="true" /> Zakažite besplatno merenje
             </Link>
           </motion.div>
         </div>

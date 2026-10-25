@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import ValuePillars from "@/components/ValuePillars";
 import ProductsPreview from "@/components/ProductsPreview";
 import SubsidyBanner from "@/components/SubsidyBanner";
+import MeasurementBanner from "@/components/MeasurementBanner";
 import EnergyROICalculator from "@/components/EnergyCalculator/EnergyROICalculator";
 import PartnersSection from "@/components/PartnersSection";
 import StickyQuoteBar from "@/components/StickyQuoteBar";
@@ -21,6 +22,7 @@ const Index = () => {
       <ValuePillars />
       <ProductsPreview />
       <SubsidyBanner />
+      <MeasurementBanner />
       <EnergyROICalculator />
       <PartnersSection />
       <StickyQuoteBar />

@@ -19,7 +19,7 @@ const Quote = () => (
         <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-4">Ponuda</p>
         <h1 className="text-3xl md:text-5xl font-heading font-black text-foreground mb-4">Zatražite ponudu</h1>
         <p className="font-body text-muted-foreground max-w-xl mb-10">
-          Odgovorite na nekoliko pitanja i javićemo vam se sa ponudom. Za opšta pitanja koristite{" "}
+          Odgovorite na nekoliko pitanja i javićemo vam se sa ponudom. Želite da dođemo i izmerimo? <Link to="/merenje" className="text-accent hover:underline">Zakažite besplatno merenje</Link>. Za opšta pitanja koristite{" "}
           <Link to="/kontakt" className="text-accent hover:underline">
             kontakt formular
           </Link>

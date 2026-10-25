@@ -136,11 +136,18 @@ const AluProducts = () => {
                   Kontaktirajte nas za besplatnu ponudu prilagođenu vašem projektu.
                 </p>
               </div>
-              <Link to="/ponuda">
-                <Button variant="hero" size="lg" className="gap-2 whitespace-nowrap">
-                  Zatražite ponudu <ArrowRight size={16} />
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link to="/ponuda">
+                  <Button variant="hero" size="lg" className="gap-2 whitespace-nowrap">
+                    Zatražite ponudu <ArrowRight size={16} />
+                  </Button>
+                </Link>
+                <Link to="/merenje">
+                  <Button variant="outline" size="lg" className="whitespace-nowrap">
+                    Zakažite besplatno merenje
+                  </Button>
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>

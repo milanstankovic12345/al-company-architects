@@ -16,14 +16,14 @@ interface StepProps {
   set: <K extends keyof QuoteData>(key: K, value: QuoteData[K]) => void;
 }
 
-const FieldError = ({ id, message }: { id: string; message?: string }) =>
+export const FieldError =({ id, message }: { id: string; message?: string }) =>
   message ? (
     <p id={`${id}-error`} role="alert" className="text-xs text-destructive">
       {message}
     </p>
   ) : null;
 
-const TextField = ({
+export const TextField = ({
   id,
   label,
   value,

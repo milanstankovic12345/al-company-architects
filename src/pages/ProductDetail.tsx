@@ -87,11 +87,18 @@ const ProductDetail = () => {
                 ))}
               </div>
 
-              <Link to="/ponuda">
-                <Button variant="hero" size="lg" className="w-fit gap-2">
-                  Zatražite ponudu <ArrowRight size={16} />
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link to="/ponuda">
+                  <Button variant="hero" size="lg" className="w-fit gap-2">
+                    Zatražite ponudu <ArrowRight size={16} />
+                  </Button>
+                </Link>
+                <Link to="/merenje">
+                  <Button variant="outline" size="lg" className="w-fit">
+                    Zakažite besplatno merenje
+                  </Button>
+                </Link>
+              </div>
             </div>
           </motion.div>
 

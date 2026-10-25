@@ -35,23 +35,28 @@ export const finishSchema = z.object({
   finishNote: z.string().trim().max(200, "Napomena može imati najviše 200 karaktera").optional().or(z.literal("")),
 });
 
+export const nameField = z.string().trim().min(2, "Unesite ime i prezime (najmanje 2 karaktera)").max(100, "Ime može imati najviše 100 karaktera");
+export const emailField = z
+  .string()
+  .trim()
+  .min(1, "Unesite e-mail adresu")
+  .email("Unesite ispravnu e-mail adresu")
+  .max(255, "E-mail adresa može imati najviše 255 karaktera");
+export const phoneField = z
+  .string()
+  .trim()
+  .min(1, "Unesite broj telefona")
+  .regex(/^\+?[0-9][0-9\s\-()/]{5,19}$/, "Unesite ispravan broj telefona, npr. +381 63 123 4567");
+export const consentField = z.literal(true, { errorMap: () => ({ message: "Potrebna je saglasnost sa politikom privatnosti" }) });
+
 export const contactSchema = z.object({
-  name: z.string().trim().min(2, "Unesite ime i prezime (najmanje 2 karaktera)").max(100, "Ime može imati najviše 100 karaktera"),
-  email: z
-    .string()
-    .trim()
-    .min(1, "Unesite e-mail adresu")
-    .email("Unesite ispravnu e-mail adresu")
-    .max(255, "E-mail adresa može imati najviše 255 karaktera"),
-  phone: z
-    .string()
-    .trim()
-    .min(1, "Unesite broj telefona")
-    .regex(/^\+?[0-9][0-9\s\-()/]{5,19}$/, "Unesite ispravan broj telefona, npr. +381 63 123 4567"),
+  name: nameField,
+  email: emailField,
+  phone: phoneField,
   city: z.string().trim().max(100, "Mesto može imati najviše 100 karaktera").optional().or(z.literal("")),
   contactMethod: oneOf(contactMethods, "Izaberite željeni način kontakta"),
   note: z.string().trim().max(1000, "Napomena može imati najviše 1000 karaktera").optional().or(z.literal("")),
-  consent: z.literal(true, { errorMap: () => ({ message: "Potrebna je saglasnost sa politikom privatnosti" }) }),
+  consent: consentField,
 });
 
 export type QuoteData = {
