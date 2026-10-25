@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/Products/ProductCard";
 import ComparisonDrawer from "@/components/Assistant/ComparisonDrawer";
 import { products, type ProductSubcategory } from "@/data/products";
@@ -74,6 +75,9 @@ const AluProducts = () => {
               i minimalno održavanje.
             </p>
           </motion.div>
+
+          {/* TEMPORARY stock photo (Pexels licence): Max Vakhtbovych, https://www.pexels.com/photo/a-cozy-living-room-with-a-pool-view-8134753/ */}
+          <PageBanner name="stock-alu-lift-slide" alt="Velika klizna aluminijumska vrata sa crnim profilima koja se otvaraju ka bazenu" />
 
           {aluSections.map((section, si) => {
             const sectionProducts = aluProducts.filter((p) =>

@@ -1,10 +1,11 @@
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductTabs from "@/components/Products/ProductTabs";
-import { products } from "@/data/products";
+import { products, getProductImageAlt } from "@/data/products";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -52,9 +53,11 @@ const ProductDetail = () => {
             className="grid lg:grid-cols-2 gap-10 mb-12"
           >
             <div className="w-[300px] h-[300px] max-w-full mx-auto bg-muted overflow-hidden border border-border">
-              <img
-                src={product.heroImage}
-                alt={product.name}
+              <ResponsiveImage
+                name={product.heroImage}
+                alt={getProductImageAlt(product)}
+                sizes="300px"
+                priority
                 className="w-full h-full object-cover"
               />
             </div>

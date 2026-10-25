@@ -29,3 +29,14 @@ Percentages (50/55/60/65%, 90% for socijalno ugrožene, cap 180.000 RSD, rule "p
 | ⚠️ Contact | all places now use milanaiagency@gmail.com (TEMPORARY test address, replace with the real one); fax = same as phone (+381 14 246 079) | `Footer`, `Contact`, `index.html`, `PrivacyPolicy` |
 | ❌ Warranty | no warranty statement anywhere | — |
 | ⚠️ Calculator inputs | 150 kWh/m², 40% window loss, windows = 15% of floor area, 230 €/m², 117 RSD/€, fuel prices | `calculatorConfig.ts` |
+
+## Fotografije koje treba zatražiti od klijenta (P5)
+Trenutno su na sajtu **privremene stock fotografije** (Pexels licenca, označene komentarom `TEMPORARY stock photo` u kodu) i proizvođačke slike profila. Zameniti pravim:
+- Realizovani projekti (kuće, stanovi, poslovni objekti), po mogućstvu pre/posle ugradnje
+- Proizvodni pogon / radionica (rad na mašinama, sečenje i zavarivanje profila)
+- Showroom / prodajni salon (spolja i iznutra)
+- Tim (portreti i grupna fotografija montera/prodaje)
+- Ugradnja na terenu (montaža, zaptivanje, završni radovi)
+- Ulazna vrata iz sopstvenih realizacija (klasična, moderna, premium) – trenutno stock
+- Primeri Acrylcolor završne obrade (RAL uzorci na stvarnim profilima) – za sada nema fotografije
+- Aluminijumski klizni / podizno-klizni sistemi ugrađeni kod klijenata

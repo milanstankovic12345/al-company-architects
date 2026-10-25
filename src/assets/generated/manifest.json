@@ -1,0 +1,210 @@
+{
+  "hero-architecture": {
+    "width": 1920,
+    "height": 1088,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  },
+  "alumil-m-11000": {
+    "width": 699,
+    "height": 464,
+    "widths": [
+      400,
+      699
+    ]
+  },
+  "alumil-m-11500": {
+    "width": 1121,
+    "height": 639,
+    "widths": [
+      400,
+      800,
+      1121
+    ]
+  },
+  "alumil-m-11600": {
+    "width": 509,
+    "height": 248,
+    "widths": [
+      400,
+      509
+    ]
+  },
+  "alumil-m-23300": {
+    "width": 643,
+    "height": 455,
+    "widths": [
+      400,
+      643
+    ]
+  },
+  "alumil-m-300": {
+    "width": 795,
+    "height": 360,
+    "widths": [
+      400,
+      795
+    ]
+  },
+  "alumil-m-5600": {
+    "width": 780,
+    "height": 470,
+    "widths": [
+      400,
+      780
+    ]
+  },
+  "alumil-m-9050": {
+    "width": 499,
+    "height": 444,
+    "widths": [
+      400,
+      499
+    ]
+  },
+  "alumil-m-9400": {
+    "width": 880,
+    "height": 492,
+    "widths": [
+      400,
+      800,
+      880
+    ]
+  },
+  "alumil-m-9650": {
+    "width": 985,
+    "height": 592,
+    "widths": [
+      400,
+      800,
+      985
+    ]
+  },
+  "alumil-smartia-s67": {
+    "width": 1263,
+    "height": 505,
+    "widths": [
+      400,
+      800,
+      1263
+    ]
+  },
+  "alumil-supreme-sd77": {
+    "width": 1265,
+    "height": 901,
+    "widths": [
+      400,
+      800,
+      1265
+    ]
+  },
+  "gealan-linear": {
+    "width": 1043,
+    "height": 916,
+    "widths": [
+      400,
+      800,
+      1043
+    ]
+  },
+  "gealan-s3000": {
+    "width": 589,
+    "height": 591,
+    "widths": [
+      400,
+      589
+    ]
+  },
+  "gealan-s7000-iq": {
+    "width": 586,
+    "height": 591,
+    "widths": [
+      400,
+      586
+    ]
+  },
+  "gealan-s8000-iq": {
+    "width": 917,
+    "height": 912,
+    "widths": [
+      400,
+      800,
+      917
+    ]
+  },
+  "gealan-s9000": {
+    "width": 900,
+    "height": 908,
+    "widths": [
+      400,
+      800,
+      900
+    ]
+  },
+  "stock-alu-lift-slide": {
+    "width": 1600,
+    "height": 1068,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  },
+  "stock-alu-sliding-terrace": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  },
+  "stock-door-classic": {
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  },
+  "stock-door-modern": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  },
+  "stock-door-premium": {
+    "width": 1600,
+    "height": 2039,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  },
+  "stock-pvc-window": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  },
+  "stock-wood-grain": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      400,
+      800,
+      1280
+    ]
+  }
+}

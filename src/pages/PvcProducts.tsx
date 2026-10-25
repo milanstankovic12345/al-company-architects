@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/Products/ProductCard";
 import ComparisonDrawer from "@/components/Assistant/ComparisonDrawer";
 import { products } from "@/data/products";
@@ -45,6 +46,9 @@ const PvcProducts = () => {
               raznovrsnim dekorima i bojama.
             </p>
           </motion.div>
+
+          {/* TEMPORARY stock photo (Pexels licence): Jan van der Wolf, https://www.pexels.com/photo/minimalist-window-on-concrete-wall-in-sunlight-30583624/ */}
+          <PageBanner name="stock-pvc-window" alt="Bela PVC prozor sa dva krila na zidu kuće u sunčanom svetlu" />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {pvcProducts.map((product, i) => (

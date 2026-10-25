@@ -1,3 +1,4 @@
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import GuidedWizard, { type WizardResult } from "@/components/Assistant/GuidedWizard";
@@ -58,7 +59,7 @@ const AssistantContent = ({ embedded = false }: AssistantContentProps) => {
                 className="flex items-center gap-4 p-5 border border-border bg-card hover:border-accent/40 transition-all"
               >
                 <div className="w-16 h-16 bg-muted overflow-hidden shrink-0">
-                  <img src={r.image} alt={r.name} className="w-full h-full object-cover" />
+                  <ResponsiveImage name={r.image} alt={`${r.name} – preporučeni ${r.category} sistem`} sizes="64px" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">

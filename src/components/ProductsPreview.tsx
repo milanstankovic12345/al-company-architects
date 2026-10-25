@@ -1,7 +1,8 @@
 import { Reveal, RevealItem, RevealStagger } from "@/components/motion/Reveal";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { products as allProducts } from "@/data/products";
+import ResponsiveImage from "@/components/ResponsiveImage";
+import { products as allProducts, getProductImageAlt } from "@/data/products";
 
 const previewProductSlugs = ["gealan-s9000", "alumil-supreme-sd77"] as const;
 
@@ -15,6 +16,7 @@ const previewProducts = previewProductSlugs
     description: product.description,
     specs: product.specs.slice(0, 4).map((spec) => spec.value),
     image: product.heroImage,
+    imageAlt: getProductImageAlt(product),
   }));
 
 const ProductsPreview = () => {
@@ -39,11 +41,11 @@ const ProductsPreview = () => {
               className="group relative overflow-hidden bg-primary-foreground/5 border border-primary-foreground/10 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 transition-[border-color,box-shadow] duration-300"
             >
               <div className="w-[300px] h-[300px] max-w-full mx-auto overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
+                <ResponsiveImage
+                  name={product.image}
+                  alt={product.imageAlt}
+                  sizes="300px"
                   className="w-full h-full object-cover group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform duration-700"
-                  loading="lazy"
                 />
               </div>
               <div className="p-8">

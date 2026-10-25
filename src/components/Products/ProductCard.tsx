@@ -1,6 +1,7 @@
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import type { Product } from "@/data/products";
+import { getProductImageAlt, type Product } from "@/data/products";
 import TechTooltip from "@/components/TechTooltip";
 import { ArrowRight, Plus, Check } from "lucide-react";
 import { useComparison } from "@/contexts/ComparisonContext";
@@ -28,11 +29,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
       className="group border border-border bg-card hover:border-accent/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/10 motion-reduce:hover:translate-y-0 transition-all duration-300 flex flex-col"
     >
       <div className="w-[300px] h-[300px] max-w-full mx-auto bg-muted overflow-hidden relative">
-        <img
-          src={product.heroImage}
-          alt={product.name}
-          loading="lazy"
-          decoding="async"
+        <ResponsiveImage
+          name={product.heroImage}
+          alt={getProductImageAlt(product)}
+          sizes="300px"
           className="w-full h-full object-cover group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform duration-500"
         />
         {hasAssistantData && (

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageBanner from "@/components/PageBanner";
 import ProductCard from "@/components/Products/ProductCard";
 import ComparisonDrawer from "@/components/Assistant/ComparisonDrawer";
 import { products } from "@/data/products";
@@ -56,6 +57,9 @@ const EntranceDoors = () => {
               Kliknite na ✚ ikonu da dodate model u poređenje (do 3 proizvoda).
             </p>
           </motion.div>
+
+          {/* TEMPORARY stock photo (Pexels licence): Curtis Adams, https://www.pexels.com/photo/exterior-and-the-entrance-of-a-modern-house-19227220/ */}
+          <PageBanner name="stock-door-modern" alt="Drvena dvokrilna ulazna vrata sa staklom na kamenoj fasadi kuće" />
 
           {/* Compare-enabled product cards for door groups */}
           <motion.div

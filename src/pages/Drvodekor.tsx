@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageBanner from "@/components/PageBanner";
 import { CheckCircle, Palette } from "lucide-react";
 import { drvodekorColors, finishCategories } from "@/data/finishes";
 
@@ -31,6 +32,9 @@ const Drvodekor = () => {
               <p className="font-body text-lg text-foreground leading-relaxed">{drvodekor.description}</p>
             </div>
           </motion.div>
+
+          {/* TEMPORARY stock photo (Pexels licence): Natalia Sevruk, https://www.pexels.com/photo/close-up-of-wooden-texture-with-detailed-grain-patterns-36081877/ */}
+          <PageBanner name="stock-wood-grain" alt="Krupni plan drveta sa izraženim godovima i čvorom" />
 
           {/* Color swatch grid */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">

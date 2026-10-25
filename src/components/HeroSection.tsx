@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CountUp from "@/components/motion/CountUp";
 import { getExperienceYears } from "@/lib/experience";
-import heroImage from "@/assets/hero-architecture.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-hero flex flex-col overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Moderna arhitektura sa aluminium prozorima"
+        <ResponsiveImage
+          name="hero-architecture"
+          alt="Moderna betonska kuća sa velikim aluminijumskim staklenim površinama u sumrak"
+          sizes="100vw"
+          priority
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/90 via-neutral-900/70 to-neutral-900/30" />
