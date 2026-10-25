@@ -26,7 +26,7 @@ const HeroSection = () => {
             <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-6">
               Od 2002. godine
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-primary-foreground leading-[0.95] mb-6">
+            <h1 className="text-[clamp(2.25rem,1.2rem+4.5vw,4.5rem)] font-heading font-black text-primary-foreground leading-[0.95] mb-6">
               Arhitektonska
               <br />
               Preciznost.
