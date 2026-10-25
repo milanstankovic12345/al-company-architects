@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Reveal, RevealItem, RevealStagger } from "@/components/motion/Reveal";
 import { Shield, Thermometer, Volume2, Award } from "lucide-react";
 
 const pillars = [
@@ -32,7 +32,7 @@ const ValuePillars = () => {
   return (
     <section className="py-24 md:py-32 bg-background" id="about">
       <div className="container">
-        <div className="max-w-3xl mb-16">
+        <Reveal className="max-w-3xl mb-16">
           <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-4">
             Zašto AL Company
           </p>
@@ -44,16 +44,12 @@ const ValuePillars = () => {
           <p className="font-body text-muted-foreground leading-relaxed text-base md:text-lg">
             Preduzeće AL Company je nastalo kao rezultat ulaganja kapitala i znanja tokom dugog niza godina i jedno je od pionira u proizvodnji PVC i ALU stolarije u Srbiji. Nudimo širok asortiman proizvoda od svetski poznatih proizvođača — <strong className="text-foreground">GEALAN</strong> (Nemačka) i <strong className="text-foreground">ALUMIL</strong> (Grčka) — čiji kvalitet stoji na samom vrhu domaće i evropske proizvodnje. Naš tim stručnjaka kontinuirano prati svetske inovacije kako bi svakom klijentu ponudili najbolje rešenje.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 gap-px bg-border">
-          {pillars.map((pillar, i) => (
-            <motion.div
+        <RevealStagger className="grid md:grid-cols-2 gap-px bg-border" stagger={0.1}>
+          {pillars.map((pillar) => (
+            <RevealItem
               key={pillar.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
               className="bg-background p-8 md:p-12 group hover:bg-secondary/50 transition-colors"
             >
               <div
@@ -69,9 +65,9 @@ const ValuePillars = () => {
               <p className="font-body text-muted-foreground leading-relaxed">
                 {pillar.description}
               </p>
-            </motion.div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealStagger>
       </div>
     </section>
   );

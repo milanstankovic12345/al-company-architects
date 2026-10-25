@@ -25,13 +25,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Link
       to={`/proizvodi/${product.slug}`}
-      className="group border border-border bg-card hover:border-accent/40 transition-all duration-300 flex flex-col"
+      className="group border border-border bg-card hover:border-accent/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/10 motion-reduce:hover:translate-y-0 transition-all duration-300 flex flex-col"
     >
       <div className="w-[300px] h-[300px] max-w-full mx-auto bg-muted overflow-hidden relative">
         <img
           src={product.heroImage}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform duration-500"
         />
         {hasAssistantData && (
           <button

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BadgePercent } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -7,13 +7,7 @@ const SubsidyBanner = () => {
   return (
     <section className="py-24 md:py-32 bg-background" id="subsidies">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="relative overflow-hidden border border-accent/20 bg-accent/5 p-8 md:p-16"
-        >
+        <Reveal className="relative overflow-hidden border border-accent/20 bg-accent/5 p-8 md:p-16">
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
           <div className="relative flex flex-col md:flex-row md:justify-between items-center text-center md:text-left gap-8 md:gap-12 w-full">
@@ -50,7 +44,7 @@ const SubsidyBanner = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

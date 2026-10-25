@@ -1,3 +1,4 @@
+import { MotionConfig } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -23,6 +24,7 @@ import { ComparisonProvider } from "./contexts/ComparisonContext";
 const queryClient = new QueryClient();
 
 const App = () => (
+  <MotionConfig reducedMotion="user">
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <ComparisonProvider>
@@ -50,6 +52,7 @@ const App = () => (
       </ComparisonProvider>
     </TooltipProvider>
   </QueryClientProvider>
+  </MotionConfig>
 );
 
 export default App;
