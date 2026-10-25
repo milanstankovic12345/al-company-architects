@@ -33,7 +33,7 @@ const Footer = () => {
                 <Phone size={14} /> +381 63 369 392
               </a>
               <a className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors" href="mailto:milanaiagency@gmail.com">
-                <Mail size={14} /> alcompany@open.telekom.rs
+                <Mail size={14} /> milanaiagency@gmail.com
               </a>
               <a href="https://www.instagram.com/alcompany2002/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground/80 transition-colors mt-1">
                 <Instagram size={14} /> @alcompany2002

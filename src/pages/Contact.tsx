@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { z } from "zod";
@@ -11,13 +11,35 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Send, Phone, Mail, MapPin, Printer, Instagram } from "lucide-react";
+import { Send, Phone, Mail, MapPin, Printer, Instagram, Loader2 } from "lucide-react";
+
+const FORM_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string | undefined;
+const COOLDOWN_MS = 60_000;
+const COOLDOWN_KEY = "al-contact-last-sent";
 
 const contactSchema = z.object({
-  name: z.string().trim().min(2, "Unesite ime i prezime").max(100),
-  email: z.string().trim().email("Unesite validnu email adresu").max(255),
-  phone: z.string().trim().max(20).optional().or(z.literal("")),
-  message: z.string().trim().min(10, "Poruka mora imati najmanje 10 karaktera").max(1000),
+  name: z
+    .string()
+    .trim()
+    .min(2, "Unesite ime i prezime (najmanje 2 karaktera)")
+    .max(100, "Ime može imati najviše 100 karaktera"),
+  email: z
+    .string()
+    .trim()
+    .min(1, "Unesite e-mail adresu")
+    .email("Unesite ispravnu e-mail adresu")
+    .max(255, "E-mail adresa može imati najviše 255 karaktera"),
+  phone: z
+    .string()
+    .trim()
+    .regex(/^(\+?[0-9][0-9\s\-()/]{5,19})?$/, "Unesite ispravan broj telefona, npr. +381 63 123 4567")
+    .optional()
+    .or(z.literal("")),
+  message: z
+    .string()
+    .trim()
+    .min(10, "Poruka mora imati najmanje 10 karaktera")
+    .max(1000, "Poruka može imati najviše 1000 karaktera"),
 });
 
 type ContactForm = z.infer<typeof contactSchema>;
@@ -32,29 +54,57 @@ const Contact = () => {
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (field: keyof ContactForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitError("");
+
+    // Honeypot: bots fill the hidden field, humans never see it
+    if (honeypotRef.current?.value) {
+      setSubmitted(true);
+      return;
+    }
+
     const result = contactSchema.safeParse(form);
     if (!result.success) {
       const fieldErrors: Partial<Record<keyof ContactForm, string>> = {};
       result.error.errors.forEach((err) => {
         const field = err.path[0] as keyof ContactForm;
-        fieldErrors[field] = err.message;
+        if (!fieldErrors[field]) fieldErrors[field] = err.message;
       });
       setErrors(fieldErrors);
+      const firstInvalid = (["name", "email", "phone", "message"] as const).find((f) => fieldErrors[f]);
+      if (firstInvalid) e.currentTarget.querySelector<HTMLElement>(`#${firstInvalid}`)?.focus();
+      return;
+    }
+
+    // Client-side throttle (there is no server route to rate limit on)
+    try {
+      const last = Number(sessionStorage.getItem(COOLDOWN_KEY) || 0);
+      if (Date.now() - last < COOLDOWN_MS) {
+        setSubmitError("Poruka je upravo poslata. Sačekajte minut pre slanja nove poruke.");
+        return;
+      }
+    } catch {
+      // sessionStorage unavailable — skip throttle
+    }
+
+    if (!FORM_ENDPOINT) {
+      console.error("VITE_FORMSPREE_ENDPOINT is not set");
+      setSubmitError("Slanje trenutno nije dostupno. Pozovite nas na +381 14 246 079.");
       return;
     }
 
     setSubmitting(true);
     try {
-      // TODO: Replace YOUR_FORMSPREE_ID with actual Formspree form ID
-      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+      const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -66,13 +116,18 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        try {
+          sessionStorage.setItem(COOLDOWN_KEY, String(Date.now()));
+        } catch {
+          // ignore
+        }
         setSubmitted(true);
         toast.success("Vaša poruka je uspešno poslata!");
       } else {
-        toast.error("Došlo je do greške. Pokušajte ponovo ili nas pozovite telefonom.");
+        setSubmitError("Došlo je do greške pri slanju. Pokušajte ponovo ili nas pozovite na +381 14 246 079.");
       }
     } catch {
-      toast.error("Greška u slanju. Proverite internet vezu i pokušajte ponovo.");
+      setSubmitError("Greška u slanju. Proverite internet vezu i pokušajte ponovo.");
     } finally {
       setSubmitting(false);
     }
@@ -98,7 +153,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="lg:col-span-2">
               {submitted ? (
-                <div className="text-center py-16 border border-border bg-muted/30 p-8">
+                <div role="status" aria-live="polite" className="text-center py-16 border border-border bg-muted/30 p-8">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Send className="text-accent" size={28} />
                   </div>
@@ -108,29 +163,35 @@ const Contact = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} noValidate className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div className="space-y-2">
                       <Label htmlFor="name">Ime i prezime *</Label>
-                      <Input id="name" value={form.name} onChange={(e) => handleChange("name", e.target.value)} placeholder="Vaše ime i prezime" />
-                      {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
+                      <Input id="name" aria-invalid={!!errors.name} aria-describedby={errors.name ? "name-error" : undefined} value={form.name} onChange={(e) => handleChange("name", e.target.value)} placeholder="Vaše ime i prezime" />
+                      {errors.name && <p id="name-error" role="alert" className="text-xs text-destructive">{errors.name}</p>}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">E-mail adresa *</Label>
-                      <Input id="email" type="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="vas@email.com" />
-                      {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
+                      <Input id="email" type="email" aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} value={form.email} onChange={(e) => handleChange("email", e.target.value)} placeholder="vas@email.com" />
+                      {errors.email && <p id="email-error" role="alert" className="text-xs text-destructive">{errors.email}</p>}
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="phone">Telefon</Label>
-                    <Input id="phone" type="tel" value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} placeholder="+381 6X XXX XXXX" />
+                    <Input id="phone" type="tel" aria-invalid={!!errors.phone} aria-describedby={errors.phone ? "phone-error" : undefined} value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} placeholder="+381 6X XXX XXXX" />
+                    {errors.phone && <p id="phone-error" role="alert" className="text-xs text-destructive">{errors.phone}</p>}
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Poruka *</Label>
-                    <Textarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} placeholder="Opišite šta vam je potrebno — tip prozora, boja, posebni zahtevi..." rows={5} />
-                    {errors.message && <p className="text-xs text-destructive">{errors.message}</p>}
+                    <Textarea id="message" aria-invalid={!!errors.message} aria-describedby={errors.message ? "message-error" : undefined} value={form.message} onChange={(e) => handleChange("message", e.target.value)} placeholder="Opišite šta vam je potrebno — tip prozora, boja, posebni zahtevi..." rows={5} />
+                    {errors.message && <p id="message-error" role="alert" className="text-xs text-destructive">{errors.message}</p>}
+                  </div>
+
+                  <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+                    <label htmlFor="website">Ne popunjavajte ovo polje</label>
+                    <input ref={honeypotRef} id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
                   </div>
 
                   <p className="text-xs text-muted-foreground">
@@ -140,8 +201,17 @@ const Contact = () => {
                     </Link>.
                   </p>
 
+                  <div aria-live="assertive">
+                    {submitError && (
+                      <p role="alert" className="text-sm text-destructive border border-destructive/30 bg-destructive/5 p-3">
+                        {submitError}
+                      </p>
+                    )}
+                  </div>
+
                   <Button type="submit" variant="hero" size="lg" className="gap-2" disabled={submitting}>
-                    <Send size={16} /> {submitting ? "Slanje..." : "Pošaljite poruku"}
+                    {submitting ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
+                    {submitting ? "Slanje..." : "Pošaljite poruku"}
                   </Button>
                 </form>
               )}
@@ -164,7 +234,7 @@ const Contact = () => {
                   </div>
                   <a href="mailto:milanaiagency@gmail.com" className="flex items-center gap-3 hover:text-foreground transition-colors">
                     <Mail size={16} className="text-accent shrink-0" />
-                    alcompany@open.telekom.rs
+                    milanaiagency@gmail.com
                   </a>
                   <a href="https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-foreground transition-colors">
                     <MapPin size={16} className="text-accent mt-0.5 shrink-0" />
@@ -207,4 +277,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

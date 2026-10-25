@@ -9,6 +9,14 @@ npm install
 npm run dev
 ```
 
+## Environment variables
+
+Copy `.env.example` to `.env.local` for local development. The same variables must be set in Vercel (Project Settings > Environment Variables).
+
+| Variable | Purpose |
+| --- | --- |
+| `VITE_FORMSPREE_ENDPOINT` | Formspree endpoint (`https://formspree.io/f/<id>`) that receives `/kontakt` form submissions. Without it the form shows an error and does not send. |
+
 ## Scripts
 
 ```bash
