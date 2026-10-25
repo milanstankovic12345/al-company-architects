@@ -70,7 +70,7 @@ const ComparisonGrid = ({ slugs }: ComparisonGridProps) => {
                     const val = p[row.key];
                     const numVal = Number(val) || 0;
                     const isBest = products.length > 1 && numVal === best && typeof val === "number";
-                    const display = typeof val === "number" ? `${val}${row.unit || ""}` : String(val);
+                    const display = typeof val === "number" ? `${val.toLocaleString("sr-Latn-RS")}${row.unit || ""}` : String(val);
 
                     return (
                       <td key={p.slug} className="p-3 text-center text-sm">

@@ -43,7 +43,7 @@ const assistantProductMetrics: AssistantProductMetrics[] = [
     uw: 0.73,
     maxGlazing: 58,
     securityClass: "RC2",
-    soundInsulation: 47,
+    soundInsulation: 45,
     sealLevels: 3,
     passiveHouse: true,
     aestheticStyle: "classic",

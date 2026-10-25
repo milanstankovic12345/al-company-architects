@@ -5,13 +5,13 @@ const pillars = [
   {
     icon: Thermometer,
     title: "Termička superiornost",
-    description: "GEALAN S-9000 sistem sa tri nivoa zaptivanja i Uf vrednošću do 0.89 W/m²K. Ušteda energije do 40%.",
+    description: "GEALAN S-9000 sistem sa tri nivoa zaptivanja i Uf vrednošću do 0,89 W/m²K. Ušteda energije do 40%.",
     accent: "accent",
   },
   {
     icon: Volume2,
     title: "Utočište tišine",
-    description: "Redukcija buke do 47dB. Vaš dom postaje oaza mira, čak i u najbuknijim gradskim sredinama.",
+    description: "Redukcija buke do 45 dB. Vaš dom postaje oaza mira, čak i u najbuknijim gradskim sredinama.",
     accent: "tech-blue",
   },
   {

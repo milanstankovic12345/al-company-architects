@@ -19,13 +19,13 @@ Percentages (50/55/60/65%, 90% for socijalno ugrožene, cap 180.000 RSD, rule "p
 |---|---|---|
 | ⚠️ 15.000+ projects | "Realizovanih projekata" | `HeroSection.tsx:76` (AboutUs says only "hiljade") |
 | ⚠️ Exclusive partner | "Ekskluzivni partner GEALAN i ALUMIL (za Srbiju)" | `index.html`, `Footer.tsx`, `PartnersSection.tsx` |
-| ⚠️ Sound 47 dB | "47dB Zvučna izolacija", "Redukcija buke do 47dB" | `HeroSection`, `ValuePillars`, `products.ts` |
-| ⚠️ Uw 0.73 for S-9000 | `uw: 0.73`; calculator assumes new Uw 0.9 | `assistantProducts.ts`, `calculatorConfig.ts` |
+| ⚠️ Sound | S-9000 corrected to 45 dB (GEALAN states 34–45 dB); S-7000 IQ and others still say "Do 47 dB" — unverified | `products.ts`, `assistantProducts.ts` |
+| ⚠️ S-9000 Uw 0,73 (reseller figure, depends on glazing; GEALAN publishes no Uw) and RC2 (GEALAN publishes no RC class) | `uw: 0.73`; calculator assumes new Uw 0.9 | `assistantProducts.ts`, `calculatorConfig.ts` |
 | ⚠️ RC2 / RC3 | "RC2 klasa otpornosti"; SD77 "RC3"; SD77 listed as window (Uf 1.3) and entrance system | `ValuePillars`, `products.ts`, `assistantProducts.ts` |
 | ⚠️ Energy saving | "Ušteda energije do 40%" | `ValuePillars.tsx:8` |
 | ⚠️ Product specs | S-3000 1.6, S-7000 IQ 0.95, S-8000 1.0, Alumil M11000 1.8–3.5, Smartia 1.1–2.6; 82.5 mm, 6 chambers, 3 seals | `products.ts` |
 | ⚠️ "130+ modela", "M 47 – M 92", "do 400 kg" | | `EntranceDoors.tsx`, `products.ts` |
 | ⚠️ About timeline | "2010–2020 hiljade projekata" | `AboutUs.tsx:12` |
-| ⚠️ Contact | public pages use milanaiagency@gmail.com; JSON-LD and privacy policy use alcompany@open.telekom.rs; fax = same as phone (+381 14 246 079) | `Footer`, `Contact`, `index.html`, `PrivacyPolicy` |
+| ⚠️ Contact | all places now use milanaiagency@gmail.com (TEMPORARY test address, replace with the real one); fax = same as phone (+381 14 246 079) | `Footer`, `Contact`, `index.html`, `PrivacyPolicy` |
 | ❌ Warranty | no warranty statement anywhere | — |
 | ⚠️ Calculator inputs | 150 kWh/m², 40% window loss, windows = 15% of floor area, 230 €/m², 117 RSD/€, fuel prices | `calculatorConfig.ts` |

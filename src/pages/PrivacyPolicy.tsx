@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
               </ul>
               <p className="mt-3">
                 Za sve zahteve u vezi sa vašim ličnim podacima, kontaktirajte nas na:{" "}
-                <a href="mailto:alcompany@open.telekom.rs" className="text-accent hover:underline">alcompany@open.telekom.rs</a>
+                <a href="mailto:milanaiagency@gmail.com" className="text-accent hover:underline">milanaiagency@gmail.com</a>
               </p>
             </div>
 

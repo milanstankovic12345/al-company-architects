@@ -55,7 +55,7 @@ const EnergyROICalculator = () => {
           </h2>
           <p className="font-body text-muted-foreground max-w-lg mb-10">
             Izračunajte godišnju uštedu na grejanju zamenom starih prozora sa{" "}
-            <TechTooltip value="GEALAN sistemom (Uw 0.9)" tooltipKey="uw" />.
+            <TechTooltip value="GEALAN sistemom (Uw 0,9)" tooltipKey="uw" />.
           </p>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -104,7 +104,7 @@ const EnergyROICalculator = () => {
                   <SelectContent>
                     {windowTypes.map((w) => (
                       <SelectItem key={w.value} value={w.value}>
-                        {w.label} (Uw = {w.uw})
+                        {w.label} (Uw = {w.uw.toLocaleString("sr-Latn-RS", { minimumFractionDigits: 1 })})
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -129,7 +129,7 @@ const EnergyROICalculator = () => {
                 <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
                   <li>Godišnja potreba za grejanjem: {calculatorConfig.consumptionKwhPerM2} kWh/m², od čega {calculatorConfig.windowHeatLossShare * 100}% odlazi kroz prozore.</li>
                   <li>Površina prozora: {calculatorConfig.windowAreaShare * 100}% površine stana/kuće.</li>
-                  <li>Nova stolarija: Uw {newUw.toString().replace(".", ",")} W/m²K; cena {calculatorConfig.windowPriceEurPerM2} €/m² sa ugradnjom (kurs {calculatorConfig.eurToRsd} RSD/€).</li>
+                  <li>Nova stolarija: Uw {newUw.toLocaleString("sr-Latn-RS", { minimumFractionDigits: 1 })} W/m²K; cena {calculatorConfig.windowPriceEurPerM2} €/m² sa ugradnjom (kurs {calculatorConfig.eurToRsd} RSD/€).</li>
                   <li>Ušteda = gubici kroz prozore × (stari Uw − novi Uw) / stari Uw × cena energije.</li>
                   <li>Rezultat je okvirna procena; stvarna ušteda zavisi od objekta, navika i cena. Tačnu ponudu dobijate nakon merenja.</li>
                 </ul>

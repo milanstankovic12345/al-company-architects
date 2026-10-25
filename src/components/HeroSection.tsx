@@ -76,7 +76,7 @@ const HeroSection = () => {
             { value: getExperienceYears(), suffix: "+", label: "Godina iskustva" },
             { value: 15000, suffix: "+", label: "Realizovanih projekata" },
             { value: 0.89, decimals: 2, label: "Uf vrednost (W/m²K)" },
-            { value: 47, suffix: "dB", label: "Zvučna izolacija" },
+            { value: 45, suffix: " dB", label: "Zvučna izolacija" },
           ].map((stat, i) => (
             <div
               key={stat.label}
