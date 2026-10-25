@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CountUp from "@/components/motion/CountUp";
+import { getExperienceYears } from "@/lib/experience";
 import heroImage from "@/assets/hero-architecture.jpg";
 
 const HeroSection = () => {
@@ -72,9 +73,9 @@ const HeroSection = () => {
       <div className="relative bg-neutral-900/60 backdrop-blur-md border-t border-primary-foreground/10">
         <div className="container grid grid-cols-2 md:grid-cols-4">
           {[
-            { value: 30, suffix: "+", label: "Godina iskustva" },
+            { value: getExperienceYears(), suffix: "+", label: "Godina iskustva" },
             { value: 15000, suffix: "+", label: "Realizovanih projekata" },
-            { value: 0.72, decimals: 2, label: "Uf vrednost (W/m²K)" },
+            { value: 0.89, decimals: 2, label: "Uf vrednost (W/m²K)" },
             { value: 47, suffix: "dB", label: "Zvučna izolacija" },
           ].map((stat, i) => (
             <div

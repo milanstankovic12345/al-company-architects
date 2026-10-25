@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, FileText } from "lucide-react";
+import { SUBSIDY_SOURCE_URL } from "@/data/subsidy";
 
 interface SubsidyResultProps {
   percentage: number;
@@ -25,7 +26,7 @@ const SubsidyResult = ({ percentage, maxAmount, isVulnerable }: SubsidyResultPro
       className="space-y-8 text-center"
     >
       <div>
-        <p className="text-sm font-body text-muted-foreground mb-2">Vaša procenjena subvencija</p>
+        <p className="text-sm font-body text-muted-foreground mb-2">Vaša okvirna subvencija (do)</p>
         <motion.p
           initial={{ scale: 0.5 }}
           animate={{ scale: 1 }}
@@ -61,6 +62,11 @@ const SubsidyResult = ({ percentage, maxAmount, isVulnerable }: SubsidyResultPro
           ))}
         </ul>
       </div>
+
+      <p className="text-xs font-body text-muted-foreground max-w-md mx-auto">
+        Procenat zavisi od opštine i javnog poziva. Konačan iznos utvrđuje nadležna institucija.{" "}
+        <a href={SUBSIDY_SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline">Zvanični izvor</a>
+      </p>
 
       <div className="flex justify-center">
         <Button variant="hero" size="lg" className="gap-2" asChild>

@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { calculatorConfig } from "@/data/calculatorConfig";
+
+const MAX_YEARS = calculatorConfig.maxPaybackYears;
 
 interface PaybackTimelineProps {
   paybackYears: number;
@@ -6,7 +9,7 @@ interface PaybackTimelineProps {
 }
 
 const PaybackTimeline = ({ paybackYears, annualSavings }: PaybackTimelineProps) => {
-  const years = Array.from({ length: Math.min(Math.ceil(paybackYears) + 2, 15) }, (_, i) => i + 1);
+  const years = Array.from({ length: Math.min(Math.ceil(Math.min(paybackYears, 13)) + 2, 15) }, (_, i) => i + 1);
   const maxCumulative = years[years.length - 1] * annualSavings;
 
   return (
@@ -33,7 +36,7 @@ const PaybackTimeline = ({ paybackYears, annualSavings }: PaybackTimelineProps) 
       </div>
       <p className="text-lg font-heading font-bold text-foreground">
         Otplata za{" "}
-        <span className="text-accent">{paybackYears.toFixed(1)} godina</span>
+        <span className="text-accent">{paybackYears > MAX_YEARS ? `više od ${MAX_YEARS} godina` : `${paybackYears.toFixed(1).replace(".", ",")} godina`}</span>
       </p>
     </div>
   );

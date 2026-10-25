@@ -91,7 +91,7 @@ export const products: Product[] = [
     description:
       "GEALAN S-9000 je vrhunski PVC profilni sistem dizajniran za pasivne kuće i objekte sa najvišim zahtevima za energetsku efikasnost. Sa šest komora i dubinom od 82.5mm, pruža izuzetnu toplotnu izolaciju koja zadovoljava najstrože standarde. STV® tehnologija omogućava izradu velikih elemenata bez čeličnog ojačanja.",
     features: [
-      "Standard pasivne kuće – Uf od 0.92 W/m²K",
+      "Standard pasivne kuće – Uf do 0.89 W/m²K",
       "STV® tehnologija za velike elemente bez čelika",
       "6-komorna konstrukcija za maksimalnu izolaciju",
       "3 nivoa zaptivanja protiv vode, vazduha i buke",
@@ -99,7 +99,7 @@ export const products: Product[] = [
       "Širok izbor dekora i boja",
     ],
     specs: [
-      { label: "Uf vrednost", value: "0.92 W/m²K", tooltipKey: "uf" },
+      { label: "Uf vrednost", value: "do 0.89 W/m²K", tooltipKey: "uf" },
       { label: "Dubina profila", value: "82.5 mm" },
       { label: "Broj komora", value: "6", tooltipKey: "chambers" },
       { label: "Nivoi zaptivanja", value: "3", tooltipKey: "sealing" },

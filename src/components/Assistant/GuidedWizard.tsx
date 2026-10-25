@@ -245,7 +245,7 @@ const GuidedWizard = ({ onResults }: GuidedWizardProps) => {
             <div className="space-y-3">
               <h2 className="text-xl font-heading font-bold text-foreground mb-1">Da li aplicirate za državne subvencije?</h2>
               <p className="text-sm text-muted-foreground mb-6">
-                Subvencije za energetsku efikasnost 2025/2026.
+                Subvencije za energetsku efikasnost (iznos zavisi od javnog poziva).
               </p>
               <div className="grid gap-3">
                 <RadioCard selected={state.subsidy === "yes"} onClick={() => setState({ ...state, subsidy: "yes" })} label="Da" desc="Prikaži samo sisteme koji ispunjavaju uslove" />

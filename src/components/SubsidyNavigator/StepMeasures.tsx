@@ -8,10 +8,10 @@ interface StepMeasuresProps {
 }
 
 const measures = [
-  { value: "single", label: "Samo prozori/vrata", desc: "50% subvencije, maks. 180.000 RSD" },
-  { value: "basic", label: "Osnovni paket (2 mere)", desc: "55% subvencije" },
-  { value: "standard", label: "Standardni paket (+ toplotna pumpa)", desc: "60% subvencije" },
-  { value: "advanced", label: "Napredni paket (+ solarni paneli)", desc: "65% subvencije" },
+  { value: "single", label: "Samo prozori/vrata", desc: "Do 50% subvencije, maks. 180.000 RSD" },
+  { value: "basic", label: "Osnovni paket (2 mere)", desc: "Do 55% subvencije" },
+  { value: "standard", label: "Standardni paket (+ toplotna pumpa)", desc: "Do 60% subvencije" },
+  { value: "advanced", label: "Napredni paket (+ solarni paneli)", desc: "Do 65% subvencije" },
 ];
 
 const StepMeasures = ({ measure, setMeasure }: StepMeasuresProps) => {

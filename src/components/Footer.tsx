@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs font-body text-primary-foreground/30">
-            © 2002–2026 AL Company d.o.o. Sva prava zadržana.
+            © 2002–{new Date().getFullYear()} AL Company d.o.o. Sva prava zadržana.
           </p>
           <p className="text-xs font-body text-primary-foreground/30">
             Valjevo, Srbija · Od 2002.

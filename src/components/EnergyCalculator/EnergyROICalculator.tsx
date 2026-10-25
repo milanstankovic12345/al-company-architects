@@ -12,59 +12,25 @@ import SavingsMeter from "./SavingsMeter";
 import PaybackTimeline from "./PaybackTimeline";
 import TechTooltip from "@/components/TechTooltip";
 import { Calculator } from "lucide-react";
-
-const heatingSources = [
-  { value: "electric", label: "Struja", costPerKwh: 11 },
-  { value: "wood", label: "Drva", costPerKwh: 8000 / (1000 / 0.4) }, // ~3.2 RSD/kWh
-  { value: "gas", label: "Gas", costPerKwh: 50 / (1000 / 10) }, // ~0.5 → adjusted: 50*10/1000=0.5 nope, let me recalc
-  { value: "pellet", label: "Pelet", costPerKwh: 32000 / (1000 / 0.2) }, // ~6.4 RSD/kWh
-];
-
-// Recalculate properly:
-// Wood: 0.4 m³ per 1000kWh → 0.4*8000/1000 = 3.2 RSD/kWh
-// Gas: 10 m³ per 1000kWh → 10*50/1000 = 0.5 RSD/kWh (seems low, use 5 RSD/kWh for natural gas)
-// Pellet: 0.2t per 1000kWh → 0.2*32000/1000 = 6.4 RSD/kWh
-const heatingCosts: Record<string, number> = {
-  electric: 11,
-  wood: 3.2,
-  gas: 5,
-  pellet: 6.4,
-};
-
-const windowTypes = [
-  { value: "single", label: "Stari jednoslojni drveni", uw: 3.0 },
-  { value: "double", label: "Dvoslojni drveni", uw: 2.5 },
-];
-
-const NEW_UW = 0.9;
-const CONSUMPTION_PER_M2 = 150; // kWh/m²/year
-const WINDOW_HEAT_LOSS_SHARE = 0.4;
-const COST_PER_M2_WINDOW = 350; // EUR equivalent in RSD (~41,000 RSD/m², simplified)
+import { calculatorConfig } from "@/data/calculatorConfig";
+import { calculateSavings } from "@/lib/energyCalc";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const EnergyROICalculator = () => {
   const [homeSize, setHomeSize] = useState(80);
   const [heating, setHeating] = useState("electric");
   const [windowType, setWindowType] = useState("single");
 
-  const result = useMemo(() => {
-    const oldUw = windowTypes.find((w) => w.value === windowType)?.uw ?? 3.0;
-    const costPerKwh = heatingCosts[heating] ?? 11;
-
-    const annualEnergy = homeSize * CONSUMPTION_PER_M2;
-    const windowLoss = annualEnergy * WINDOW_HEAT_LOSS_SHARE;
-
-    // U-value improvement ratio
-    const improvement = (oldUw - NEW_UW) / oldUw;
-    const energySaved = windowLoss * improvement; // kWh saved
-    const annualSavings = Math.round(energySaved * costPerKwh);
-
-    // Estimate window cost: ~15% of home area is windows, ~350 EUR/m² window
-    const windowArea = homeSize * 0.15;
-    const windowCost = windowArea * COST_PER_M2_WINDOW * 117; // rough EUR to RSD
-    const paybackYears = annualSavings > 0 ? windowCost / annualSavings : 99;
-
-    return { annualSavings, paybackYears: Math.min(paybackYears, 20) };
-  }, [homeSize, heating, windowType]);
+  const result = useMemo(
+    () => calculateSavings({ homeSize, heating, windowType }),
+    [homeSize, heating, windowType],
+  );
+  const { heatingSources, windowTypes, newUw } = calculatorConfig;
 
   return (
     <section className="py-24 md:py-32 bg-background" id="calculator">
@@ -120,11 +86,9 @@ const EnergyROICalculator = () => {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {Object.entries(heatingCosts).map(([key]) => (
-                      <SelectItem key={key} value={key}>
-                        {key === "electric" ? "Struja (11 RSD/kWh)" : 
-                         key === "wood" ? "Drva (8.000 RSD/m³)" :
-                         key === "gas" ? "Gas (50 RSD/m³)" : "Pelet (32.000 RSD/t)"}
+                    {heatingSources.map((h) => (
+                      <SelectItem key={h.value} value={h.value}>
+                        {h.label} ({h.unit})
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -157,6 +121,21 @@ const EnergyROICalculator = () => {
               />
             </div>
           </div>
+
+          <Accordion type="single" collapsible className="mt-10 max-w-3xl">
+            <AccordionItem value="how">
+              <AccordionTrigger>Kako računamo?</AccordionTrigger>
+              <AccordionContent>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                  <li>Godišnja potreba za grejanjem: {calculatorConfig.consumptionKwhPerM2} kWh/m², od čega {calculatorConfig.windowHeatLossShare * 100}% odlazi kroz prozore.</li>
+                  <li>Površina prozora: {calculatorConfig.windowAreaShare * 100}% površine stana/kuće.</li>
+                  <li>Nova stolarija: Uw {newUw.toString().replace(".", ",")} W/m²K; cena {calculatorConfig.windowPriceEurPerM2} €/m² sa ugradnjom (kurs {calculatorConfig.eurToRsd} RSD/€).</li>
+                  <li>Ušteda = gubici kroz prozore × (stari Uw − novi Uw) / stari Uw × cena energije.</li>
+                  <li>Rezultat je okvirna procena; stvarna ušteda zavisi od objekta, navika i cena. Tačnu ponudu dobijate nakon merenja.</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </motion.div>
       </div>
     </section>

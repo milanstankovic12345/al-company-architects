@@ -39,7 +39,7 @@ const assistantProductMetrics: AssistantProductMetrics[] = [
   {
     slug: "gealan-s9000",
     frameDepth: 82.5,
-    uf: 0.92,
+    uf: 0.89,
     uw: 0.73,
     maxGlazing: 58,
     securityClass: "RC2",

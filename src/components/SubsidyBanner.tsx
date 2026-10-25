@@ -1,3 +1,4 @@
+import { SUBSIDY_SOURCE_URL } from "@/data/subsidy";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BadgePercent } from "lucide-react";
@@ -22,9 +23,9 @@ const SubsidyBanner = () => {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-heading font-black text-foreground leading-tight mb-4">
-                Ostvarite do 90% povraćaja
+                Subvencije do 90% vrednosti
                 <br />
-                kroz državne subvencije
+                u zavisnosti od opštine i javnog poziva
               </h2>
 
               <p className="font-body text-muted-foreground max-w-lg mx-auto md:mx-0 leading-relaxed">
@@ -40,7 +41,10 @@ const SubsidyBanner = () => {
                 </Link>
               </Button>
               <p className="text-xs text-muted-foreground text-center font-body w-full">
-                Besplatna provera u 2 minuta
+                Besplatna provera u 2 minuta ·{" "}
+                <a href={SUBSIDY_SOURCE_URL} target="_blank" rel="noopener noreferrer" className="underline">
+                  Zvanični izvor
+                </a>
               </p>
             </div>
           </div>
