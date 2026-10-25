@@ -27,3 +27,7 @@ npm test
 - Tailwind CSS
 - shadcn/ui
 
+
+## Disabled features
+
+The floating AI Assistant widget is disabled and kept in `_disabled/ai-assistant/` (excluded from build, tsconfig and ESLint). See the README in that folder for restore steps.
