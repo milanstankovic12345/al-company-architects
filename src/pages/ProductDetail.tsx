@@ -87,7 +87,7 @@ const ProductDetail = () => {
                 ))}
               </div>
 
-              <Link to="/kontakt">
+              <Link to="/ponuda">
                 <Button variant="hero" size="lg" className="w-fit gap-2">
                   Zatražite ponudu <ArrowRight size={16} />
                 </Button>

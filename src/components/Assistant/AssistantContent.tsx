@@ -89,7 +89,7 @@ const AssistantContent = ({ embedded = false }: AssistantContentProps) => {
               <Button variant="outline" onClick={() => setResults(null)}>
                 <RotateCcw size={14} /> Ponovi
               </Button>
-              <Link to="/kontakt">
+              <Link to="/ponuda">
                 <Button>Zatražite ponudu</Button>
               </Link>
             </div>

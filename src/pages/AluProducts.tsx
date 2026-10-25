@@ -136,7 +136,7 @@ const AluProducts = () => {
                   Kontaktirajte nas za besplatnu ponudu prilagođenu vašem projektu.
                 </p>
               </div>
-              <Link to="/kontakt">
+              <Link to="/ponuda">
                 <Button variant="hero" size="lg" className="gap-2 whitespace-nowrap">
                   Zatražite ponudu <ArrowRight size={16} />
                 </Button>

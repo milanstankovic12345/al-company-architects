@@ -80,7 +80,7 @@ const Navbar = () => {
           >
             <Instagram size={20} />
           </a>
-          <Link to="/kontakt">
+          <Link to="/ponuda">
             <Button variant="hero" size="lg">
               Zatražite ponudu
             </Button>
@@ -125,7 +125,7 @@ const Navbar = () => {
               <Link to="/kontakt" className="text-base font-medium text-foreground py-2" onClick={() => setOpen(false)}>
                 Kontakt
               </Link>
-              <Link to="/kontakt" onClick={() => setOpen(false)}>
+              <Link to="/ponuda" onClick={() => setOpen(false)}>
                 <Button variant="hero" size="lg" className="mt-2 w-full">
                   Zatražite ponudu
                 </Button>

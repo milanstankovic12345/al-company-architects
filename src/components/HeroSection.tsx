@@ -57,7 +57,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Link to="/kontakt">
+            <Link to="/ponuda">
               <Button variant="hero" size="lg" className="h-14 px-10 text-sm">
                 Zatražite ponudu
               </Button>

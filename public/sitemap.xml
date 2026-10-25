@@ -41,6 +41,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://al-company.vercel.app/ponuda</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://al-company.vercel.app/kontakt</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>

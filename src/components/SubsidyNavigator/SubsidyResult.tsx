@@ -70,7 +70,7 @@ const SubsidyResult = ({ percentage, maxAmount, isVulnerable }: SubsidyResultPro
 
       <div className="flex justify-center">
         <Button variant="hero" size="lg" className="gap-2" asChild>
-          <Link to="/kontakt">
+          <Link to="/ponuda">
             Zatražite ponudu <ArrowRight size={16} />
           </Link>
         </Button>
