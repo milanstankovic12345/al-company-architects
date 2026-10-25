@@ -119,4 +119,11 @@
   .border-subtle {
     border-color: hsl(var(--border));
   }
+
+  /* Full-viewport minimum height; later declarations override earlier ones where supported */
+  .min-h-hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+  }
 }
