@@ -13,7 +13,7 @@ const HeroSection = () => {
           alt="Moderna arhitektura sa aluminium prozorima"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/90 via-neutral-900/70 to-neutral-900/30" />
       </div>
 
       <div className="relative container flex-1 pt-28 pb-12 md:pt-36 md:pb-16">
@@ -68,7 +68,7 @@ const HeroSection = () => {
       </div>
 
       {/* Stats bar (in document flow, after the CTAs) */}
-      <div className="relative bg-primary/60 backdrop-blur-md border-t border-primary-foreground/10">
+      <div className="relative bg-neutral-900/60 backdrop-blur-md border-t border-primary-foreground/10">
         <div className="container grid grid-cols-2 md:grid-cols-4">
           {[
             { value: "30+", label: "Godina iskustva" },

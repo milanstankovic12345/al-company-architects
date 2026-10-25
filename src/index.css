@@ -15,8 +15,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 97%;
+    --primary: 358 83% 29%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 358 80% 40%;
+    --primary-dark: 358 85% 20%;
+    --primary-light: 358 80% 60%;
+    --primary-gradient: linear-gradient(135deg, hsl(358 85% 20%) 0%, hsl(358 83% 29%) 45%, hsl(358 78% 56%) 100%);
 
     --secondary: 240 5% 96%;
     --secondary-foreground: 0 0% 10%;
@@ -24,7 +28,7 @@
     --muted: 240 5% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 145 63% 49%;
+    --accent: 358 78% 52%;
     --accent-foreground: 0 0% 100%;
 
     --tech-blue: 204 70% 53%;
@@ -35,7 +39,7 @@
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 0% 10%;
+    --ring: 358 83% 29%;
 
     --radius: 0.25rem;
 
@@ -60,13 +64,17 @@
     --card-foreground: 0 0% 97%;
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 97%;
-    --primary: 0 0% 97%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 358 83% 29%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 358 80% 40%;
+    --primary-dark: 358 85% 20%;
+    --primary-light: 358 80% 60%;
+    --primary-gradient: linear-gradient(135deg, hsl(358 85% 20%) 0%, hsl(358 83% 29%) 45%, hsl(358 78% 56%) 100%);
     --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 97%;
     --muted: 0 0% 14%;
     --muted-foreground: 0 0% 55%;
-    --accent: 145 63% 49%;
+    --accent: 358 78% 56%;
     --accent-foreground: 0 0% 100%;
     --tech-blue: 204 70% 53%;
     --tech-blue-foreground: 0 0% 100%;
@@ -74,7 +82,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 0 0% 90%;
+    --ring: 358 78% 56%;
     --surface-elevated: 0 0% 12%;
     --surface-dark: 0 0% 6%;
     --surface-dark-foreground: 0 0% 97%;
@@ -104,7 +112,7 @@
 @layer utilities {
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--tech-blue)));
+    background-image: linear-gradient(135deg, hsl(358 80% 42%) 0%, hsl(var(--primary-light)) 100%);
   }
 
   .bg-surface-dark {
