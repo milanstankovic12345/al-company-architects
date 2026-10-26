@@ -3,19 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CheckCircle, Palette } from "lucide-react";
-import { finishCategories } from "@/data/finishes";
-
-/** Common RAL colors for window profiles */
-const ralSwatches = [
-  { name: "Bela (RAL 9016)", hex: "#F7F7F2" },
-  { name: "Antracit siva (RAL 7016)", hex: "#383E42" },
-  { name: "Braon (RAL 8014)", hex: "#4A3526" },
-  { name: "Bež (RAL 1015)", hex: "#E6D2B5" },
-  { name: "Tamno zelena (RAL 6009)", hex: "#27352A" },
-  { name: "Srebrno siva (RAL 9006)", hex: "#A5A5A5" },
-  { name: "Crna (RAL 9005)", hex: "#0E0E10" },
-  { name: "Krem bela (RAL 9001)", hex: "#F2EAD7" },
-];
+import { finishCategories, ralSwatches } from "@/data/finishes";
 
 /** Acrylcolor dedicated page — /proizvodi/acrylcolor */
 const Acrylcolor = () => {
@@ -53,7 +41,7 @@ const Acrylcolor = () => {
             <div className="grid grid-cols-4 sm:grid-cols-8 gap-4">
               {ralSwatches.map((swatch) => (
                 <div key={swatch.name} className="group">
-                  <div className="aspect-square rounded-sm border border-border hover:scale-110 transition-transform cursor-pointer shadow-sm" style={{ backgroundColor: swatch.hex }} title={swatch.name} />
+                  <div className="aspect-square rounded-sm border border-border hover:scale-110 transition-transform cursor-pointer shadow-sm" style={{ backgroundColor: swatch.colorHex }} title={swatch.name} />
                   <p className="text-[10px] text-muted-foreground text-center mt-1.5 leading-tight font-body">{swatch.name}</p>
                 </div>
               ))}

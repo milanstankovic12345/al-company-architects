@@ -33,6 +33,67 @@ export const drvodekorColors: WoodDecor[] = [
   { name: "Golden Oak", colorHex: "#DAA520" },
 ];
 
+/** Common RAL colors for window profiles (Acrylcolor) */
+export const ralSwatches: WoodDecor[] = [
+  { name: "Bela (RAL 9016)", colorHex: "#F7F7F2" },
+  { name: "Antracit siva (RAL 7016)", colorHex: "#383E42" },
+  { name: "Braon (RAL 8014)", colorHex: "#4A3526" },
+  { name: "Bež (RAL 1015)", colorHex: "#E6D2B5" },
+  { name: "Tamno zelena (RAL 6009)", colorHex: "#27352A" },
+  { name: "Srebrno siva (RAL 9006)", colorHex: "#A5A5A5" },
+  { name: "Crna (RAL 9005)", colorHex: "#0E0E10" },
+  { name: "Krem bela (RAL 9001)", colorHex: "#F2EAD7" },
+];
+
+export type FinishGroup = "standard" | "drvodekor" | "acrylcolor";
+
+export interface VisualizerFinish {
+  id: string;
+  name: string;
+  colorHex: string;
+  group: FinishGroup;
+  /** wood decors get a grain overlay in the preview */
+  wood: boolean;
+}
+
+const slug = (s: string) =>
+  s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+const standardNames = ["Bela (RAL 9016)", "Antracit siva (RAL 7016)"];
+
+export const visualizerFinishes: VisualizerFinish[] = [
+  ...ralSwatches
+    .filter((s) => standardNames.includes(s.name))
+    .map((s) => ({
+      id: s.name.startsWith("Bela") ? "bela" : "antracit",
+      name: s.name.startsWith("Bela") ? "Bela" : "Antracit",
+      colorHex: s.colorHex,
+      group: "standard" as const,
+      wood: false,
+    })),
+  ...drvodekorColors.map((d) => ({
+    id: `dekor-${slug(d.name)}`,
+    name: d.name,
+    colorHex: d.colorHex,
+    group: "drvodekor" as const,
+    wood: true,
+  })),
+  ...ralSwatches
+    .filter((s) => !standardNames.includes(s.name))
+    .map((s) => ({
+      id: `ral-${slug(s.name)}`,
+      name: s.name,
+      colorHex: s.colorHex,
+      group: "acrylcolor" as const,
+      wood: false,
+    })),
+];
+
 export const finishCategories: FinishCategory[] = [
   {
     id: "drvodekor",

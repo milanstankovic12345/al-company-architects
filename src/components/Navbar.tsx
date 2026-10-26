@@ -11,6 +11,7 @@ const productLinks = [
   { label: "Ulazna vrata", href: "/proizvodi/ulazna-vrata" },
   { label: "Drvodekor", href: "/proizvodi/drvodekor" },
   { label: "Acrylcolor", href: "/proizvodi/acrylcolor" },
+  { label: "Boje i dekori", href: "/boje" },
   { label: "Svi proizvodi", href: "/proizvodi" },
 ];
 
