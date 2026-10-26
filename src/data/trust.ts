@@ -3,37 +3,42 @@ import { Award, BadgeCheck, Factory, ShieldCheck, type LucideIcon } from "lucide
 export interface Testimonial {
   id: string;
   name: string;
-  town: string;
   text: string;
-  rating: 1 | 2 | 3 | 4 | 5;
+  /** Per-review stars were not visible in the public Maps view; omit rather than guess. */
+  rating?: 1 | 2 | 3 | 4 | 5;
   source: "Google" | "Direktno";
+  when: string;
 }
 
-// TODO: real data from client (replace with actual Google reviews / customer quotes)
+export const googleSummary = {
+  rating: "4,9",
+  count: 16,
+  url: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x4759ed14d24baac3:0xef671b98ed4ddb0d",
+};
+
+// Real Google reviews (read 2026-10-26). Text is Google's Serbian translation of the originals
+// (bs/hr/en), converted to Latin script. TODO: replace with original wording from the owner.
 export const testimonials: Testimonial[] = [
   {
-    id: "t1",
-    name: "Ime Prezime",
-    town: "Valjevo",
-    text: "Primer recenzije: stolarija je ugrađena u dogovorenom roku, a montaža je bila uredna i profesionalna.",
-    rating: 5,
+    id: "g1",
+    name: "Ilija B.",
+    text: "Profesionalci, kvalitet, samo dođite i uverite se sami na licu mesta. Garancija 10 godina.",
     source: "Google",
+    when: "pre godinu dana",
   },
   {
-    id: "t2",
-    name: "Ime Prezime",
-    town: "Beograd",
-    text: "Primer recenzije: merenje na licu mesta i jasna ponuda bez iznenađenja. Razlika u toplini se oseti već prve zime.",
-    rating: 5,
+    id: "g2",
+    name: "Mico P.",
+    text: "Vrhunska stolarija po razumnim cenama. Ljudi su pravi majstori svog zanata. Preciznost u proizvodnji i ugradnji do najsitnijih detalja. Njihov rad možete prepoznati na mnogim mestima u Valjevu.",
     source: "Google",
+    when: "pre 4 godine",
   },
   {
-    id: "t3",
-    name: "Ime Prezime",
-    town: "Šabac",
-    text: "Primer recenzije: ljubazno osoblje i brza reakcija kada je trebalo podesiti okove nakon montaže.",
-    rating: 5,
-    source: "Direktno",
+    id: "g3",
+    name: "Ravi Prakash Architects",
+    text: "Gaga ima sve što vam može zatrebati za prozore i vrata…",
+    source: "Google",
+    when: "pre 4 godine",
   },
 ];
 
