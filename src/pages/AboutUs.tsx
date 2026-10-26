@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProjectsTeaser from "@/components/Projects/ProjectsTeaser";
 import { Building2, Award, Users, Wrench, Calendar } from "lucide-react";
 
 /** About Us page — /o-nama */
@@ -78,6 +79,13 @@ const AboutUs = () => {
                 </motion.div>
               ))}
             </div>
+          </motion.div>
+
+          {/* Projects */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-12">
+            <h2 className="text-2xl font-heading font-bold text-foreground mb-3">Realizovani projekti</h2>
+            <p className="font-body text-muted-foreground mb-8">Izdvojeni radovi na kućama, stanovima i poslovnim objektima.</p>
+            <ProjectsTeaser />
           </motion.div>
 
           {/* Key facts */}
