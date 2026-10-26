@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Check, Minus } from "lucide-react";
 
 const rows = [
@@ -58,6 +59,11 @@ const ComparisonWidget = () => {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="p-6 md:p-8 border-t border-border">
+        <Link to="/uporedi" className="font-body text-sm font-semibold text-accent hover:underline">
+          Detaljno poređenje sistema →
+        </Link>
       </div>
     </div>
   );

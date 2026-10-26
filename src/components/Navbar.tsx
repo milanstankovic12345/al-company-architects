@@ -12,6 +12,7 @@ const productLinks = [
   { label: "Drvodekor", href: "/proizvodi/drvodekor" },
   { label: "Acrylcolor", href: "/proizvodi/acrylcolor" },
   { label: "Boje i dekori", href: "/boje" },
+  { label: "Poređenje sistema", href: "/uporedi" },
   { label: "Svi proizvodi", href: "/proizvodi" },
 ];
 

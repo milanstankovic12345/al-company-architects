@@ -62,6 +62,7 @@ const Footer = () => {
               <li><Link to="/o-nama" className="hover:text-primary-foreground/80 transition-colors">O nama</Link></li>
               <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Proizvodi</Link></li>
               <li><Link to="/boje" className="hover:text-primary-foreground/80 transition-colors">Boje i dekori</Link></li>
+              <li><Link to="/uporedi" className="hover:text-primary-foreground/80 transition-colors">Poređenje sistema</Link></li>
               <li><Link to="/projekti" className="hover:text-primary-foreground/80 transition-colors">Realizovani projekti</Link></li>
               <li><Link to="/subvencije" className="hover:text-primary-foreground/80 transition-colors">Subvencije 2026</Link></li>
               <li><Link to="/kontakt" className="hover:text-primary-foreground/80 transition-colors">Kontakt</Link></li>
