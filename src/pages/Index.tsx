@@ -7,7 +7,6 @@ import SubsidyBanner from "@/components/SubsidyBanner";
 import MeasurementBanner from "@/components/MeasurementBanner";
 import EnergyROICalculator from "@/components/EnergyCalculator/EnergyROICalculator";
 import PartnersSection from "@/components/PartnersSection";
-import StickyQuoteBar from "@/components/StickyQuoteBar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -25,7 +24,6 @@ const Index = () => {
       <MeasurementBanner />
       <EnergyROICalculator />
       <PartnersSection />
-      <StickyQuoteBar />
       <div id="kontakt">
         <Footer />
       </div>

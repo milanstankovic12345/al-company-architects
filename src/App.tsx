@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import StickyQuoteBar from "./components/StickyQuoteBar";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SubsidyNavigator from "./pages/SubsidyNavigator";
@@ -37,6 +38,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <StickyQuoteBar />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/o-nama" element={<AboutUs />} />

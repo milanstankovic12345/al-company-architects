@@ -20,7 +20,7 @@ const ComparisonDrawer = () => {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 80, opacity: 0 }}
-        className="fixed bottom-0 left-0 right-0 z-40 bg-card border-t border-border shadow-lg backdrop-blur-md"
+        className="fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] md:bottom-0 left-0 right-0 z-40 bg-card border-t border-border shadow-lg backdrop-blur-md"
       >
         <div className="container py-3 flex items-center gap-4">
           <span className="text-sm font-medium text-muted-foreground hidden sm:inline">Uporedi:</span>
