@@ -13,6 +13,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import Measurement from "./pages/Measurement";
+import Projects from "./pages/Projects";
 import Assistant from "./pages/Assistant";
 import PvcProducts from "./pages/PvcProducts";
 import AluProducts from "./pages/AluProducts";
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/kontakt" element={<Contact />} />
             <Route path="/ponuda" element={<Quote />} />
             <Route path="/merenje" element={<Measurement />} />
+            <Route path="/projekti" element={<Projects />} />
             <Route path="/asistent" element={<Assistant />} />
             <Route path="/politika-privatnosti" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />

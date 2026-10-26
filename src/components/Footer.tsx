@@ -61,6 +61,7 @@ const Footer = () => {
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
               <li><Link to="/o-nama" className="hover:text-primary-foreground/80 transition-colors">O nama</Link></li>
               <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Proizvodi</Link></li>
+              <li><Link to="/projekti" className="hover:text-primary-foreground/80 transition-colors">Realizovani projekti</Link></li>
               <li><Link to="/subvencije" className="hover:text-primary-foreground/80 transition-colors">Subvencije 2026</Link></li>
               <li><Link to="/kontakt" className="hover:text-primary-foreground/80 transition-colors">Kontakt</Link></li>
               <li><Link to="/politika-privatnosti" className="hover:text-primary-foreground/80 transition-colors">Politika privatnosti</Link></li>
