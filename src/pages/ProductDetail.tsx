@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import TechTooltip from "@/components/TechTooltip";
 import { Skeleton } from "@/components/ui/skeleton";
+import { hasProfileSection } from "@/data/profileSections";
 
 const ProfileCrossSection = lazy(() => import("@/components/ProfileSection/ProfileCrossSection"));
 
@@ -108,9 +109,9 @@ const ProductDetail = () => {
 
           <ProductTabs product={product} />
 
-          {product.slug === "gealan-s9000" && (
+          {hasProfileSection(product.slug) && (
             <Suspense fallback={<Skeleton className="h-80 w-full mt-12" />}>
-              <ProfileCrossSection />
+              <ProfileCrossSection slug={product.slug} />
             </Suspense>
           )}
         </div>

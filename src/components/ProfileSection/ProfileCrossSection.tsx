@@ -1,14 +1,133 @@
 import { useState } from "react";
-import { s9000Hotspots, type ProfileHotspot } from "@/data/profileSections";
+import { profileSections, type HotspotId } from "@/data/profileSections";
 import { cn } from "@/lib/utils";
 
-type HotspotId = ProfileHotspot["id"];
+const GAP = 4;
+const TOP = 38;
+const HEIGHT = 184;
 
-const ProfileCrossSection = () => {
-  const [activeId, setActiveId] = useState<HotspotId>("chambers");
-  const active = s9000Hotspots.find((h) => h.id === activeId) ?? s9000Hotspots[0];
-  const stroke = (id: HotspotId) => (activeId === id ? "stroke-accent" : "stroke-foreground/60");
-  const dim = (id: HotspotId) => cn("transition-opacity", activeId === id ? "opacity-100" : "opacity-70");
+// n equal cells stacked in the 184-unit frame height
+const stack = (n: number) => {
+  const h = (HEIGHT - GAP * (n - 1)) / n;
+  return Array.from({ length: n }, (_, i) => ({ y: TOP + i * (h + GAP), h }));
+};
+
+interface DrawingProps {
+  activeId: HotspotId;
+  chambers: number;
+  seals: number;
+  depth?: string;
+}
+
+const useStyles = (activeId: HotspotId) => ({
+  stroke: (id: HotspotId) => (activeId === id ? "stroke-accent" : "stroke-foreground/60"),
+  dim: (id: HotspotId) => cn("transition-opacity", activeId === id ? "opacity-100" : "opacity-70"),
+});
+
+const Glass = ({ activeId }: { activeId: HotspotId }) => {
+  const { stroke, dim } = useStyles(activeId);
+  return (
+    <g className={dim("glass")}>
+      {[215, 235, 255].map((x) => (
+        <rect key={x} x={x} y="56" width="8" height="148" strokeWidth="2" className={cn("fill-primary/15", stroke("glass"))} />
+      ))}
+      <rect x="215" y="52" width="48" height="4" className="fill-foreground/60" />
+      <rect x="215" y="204" width="48" height="4" className="fill-foreground/60" />
+    </g>
+  );
+};
+
+const Labels = ({ depth }: { depth?: string }) => (
+  <>
+    <text x="30" y="250" className="fill-muted-foreground" fontSize="10">
+      ← unutra
+    </text>
+    {depth && (
+      <text x="115" y="250" textAnchor="middle" className="fill-muted-foreground" fontSize="10">
+        {depth}
+      </text>
+    )}
+    <text x="263" y="250" textAnchor="end" className="fill-muted-foreground" fontSize="10">
+      spolja →
+    </text>
+  </>
+);
+
+const PvcDrawing = ({ activeId, chambers, seals, depth }: DrawingProps) => {
+  const { stroke, dim } = useStyles(activeId);
+  const others = Math.max(chambers - 1, 0); // one tall chamber holds the steel
+  const left = stack(Math.floor(others / 2));
+  const right = stack(Math.ceil(others / 2));
+  const cell = (x: number, w: number, c: { y: number; h: number }, key: string) => (
+    <rect key={key} x={x} y={c.y} width={w} height={c.h} className={cn("fill-muted", stroke("chambers"))} />
+  );
+  const rings = [
+    seals >= 3 && { x: 24, y: 130, kind: "rect" as const },
+    { x: 207, y: 44, kind: "circle" as const },
+    { x: 207, y: 216, kind: "circle" as const },
+  ].filter(Boolean) as { x: number; y: number; kind: "rect" | "circle" }[];
+
+  return (
+    <>
+      <rect x="30" y="30" width="170" height="200" className="fill-background stroke-foreground" strokeWidth="2" />
+      <g className={dim("chambers")} strokeWidth="1.5">
+        {left.map((c, i) => cell(38, 40, c, `l${i}`))}
+        <rect x="84" y="38" width="52" height="184" className={cn("fill-muted", stroke("chambers"))} />
+        {right.map((c, i) => cell(142, 50, c, `r${i}`))}
+      </g>
+      <g className={dim("steel")}>
+        <rect x="94" y="60" width="32" height="140" strokeWidth="2" className={cn("fill-foreground/30", stroke("steel"))} />
+      </g>
+      <g className={dim("seals")}>
+        {rings.map((r) =>
+          r.kind === "rect" ? (
+            <g key="gasket">
+              <rect x="18" y="116" width="12" height="28" rx="4" className="fill-foreground" />
+              {activeId === "seals" && (
+                <rect x="16" y="114" width="16" height="32" rx="5" className="fill-none stroke-accent" strokeWidth="2" />
+              )}
+            </g>
+          ) : (
+            <g key={r.y}>
+              <circle cx={r.x} cy={r.y} r="6" className="fill-foreground" />
+              {activeId === "seals" && <circle cx={r.x} cy={r.y} r="9" className="fill-none stroke-accent" strokeWidth="2" />}
+            </g>
+          ),
+        )}
+      </g>
+      <Glass activeId={activeId} />
+      <Labels depth={depth} />
+    </>
+  );
+};
+
+const AluDrawing = ({ activeId }: DrawingProps) => {
+  const { stroke, dim } = useStyles(activeId);
+  return (
+    <>
+      <g className={dim("shells")}>
+        <rect x="30" y="30" width="80" height="200" strokeWidth="2" className={cn("fill-muted", stroke("shells"))} />
+        <rect x="42" y="42" width="56" height="176" className="fill-background stroke-foreground/40" strokeWidth="1" />
+        <rect x="120" y="30" width="80" height="200" strokeWidth="2" className={cn("fill-muted", stroke("shells"))} />
+        <rect x="132" y="42" width="56" height="176" className="fill-background stroke-foreground/40" strokeWidth="1" />
+      </g>
+      <g className={dim("thermalbreak")}>
+        <rect x="106" y="50" width="18" height="36" strokeWidth="2" className={cn("fill-accent/40", stroke("thermalbreak"))} />
+        <rect x="106" y="174" width="18" height="36" strokeWidth="2" className={cn("fill-accent/40", stroke("thermalbreak"))} />
+      </g>
+      <Glass activeId={activeId} />
+      <Labels />
+    </>
+  );
+};
+
+const ProfileCrossSection = ({ slug }: { slug: string }) => {
+  const section = profileSections[slug];
+  const [activeId, setActiveId] = useState<HotspotId | null>(null);
+  if (!section) return null;
+
+  const active = section.hotspots.find((h) => h.id === activeId) ?? section.hotspots[0];
+  const Drawing = section.kind === "pvc" ? PvcDrawing : AluDrawing;
 
   return (
     <section aria-labelledby="profile-section-title" className="mt-12">
@@ -16,7 +135,7 @@ const ProfileCrossSection = () => {
         Presek profila
       </h2>
       <p className="font-body text-muted-foreground max-w-xl mb-6">
-        Izaberite tačku na preseku da vidite šta u profilu štiti vaš dom.
+        Izaberite tačku na preseku da vidite šta u profilu {section.name} štiti vaš dom.
       </p>
 
       <div className="grid md:grid-cols-2 gap-6 items-start">
@@ -27,60 +146,19 @@ const ProfileCrossSection = () => {
             role="img"
             aria-labelledby="profile-svg-title profile-svg-desc"
           >
-            <title id="profile-svg-title">Šematski presek GEALAN S-9000 profila</title>
+            <title id="profile-svg-title">Šematski presek profila {section.name}</title>
             <desc id="profile-svg-desc">
-              Okvir sa šest komora, čeličnim ojačanjem u glavnoj komori, zaptivkama i staklenim paketom sa desne strane.
+              {section.hotspots.map((h) => h.label).join(", ")}. Izaberite tačku za objašnjenje.
             </desc>
-            <rect x="30" y="30" width="170" height="200" className="fill-background stroke-foreground" strokeWidth="2" />
-
-            <g className={dim("chambers")} strokeWidth="1.5">
-              <rect x="38" y="38" width="40" height="90" className={cn("fill-muted", stroke("chambers"))} />
-              <rect x="38" y="132" width="40" height="90" className={cn("fill-muted", stroke("chambers"))} />
-              <rect x="84" y="38" width="52" height="184" className={cn("fill-muted", stroke("chambers"))} />
-              <rect x="142" y="38" width="50" height="62" className={cn("fill-muted", stroke("chambers"))} />
-              <rect x="142" y="104" width="50" height="60" className={cn("fill-muted", stroke("chambers"))} />
-              <rect x="142" y="168" width="50" height="54" className={cn("fill-muted", stroke("chambers"))} />
-            </g>
-
-            <g className={dim("steel")}>
-              <rect x="94" y="60" width="32" height="140" strokeWidth="2" className={cn("fill-foreground/30", stroke("steel"))} />
-            </g>
-
-            <g className={dim("seals")}>
-              <rect x="18" y="116" width="12" height="28" rx="4" className="fill-foreground" />
-              <circle cx="207" cy="44" r="6" className="fill-foreground" />
-              <circle cx="207" cy="216" r="6" className="fill-foreground" />
-              {activeId === "seals" && (
-                <g className="fill-none stroke-accent" strokeWidth="2">
-                  <rect x="16" y="114" width="16" height="32" rx="5" />
-                  <circle cx="207" cy="44" r="9" />
-                  <circle cx="207" cy="216" r="9" />
-                </g>
-              )}
-            </g>
-
-            <g className={dim("glass")}>
-              {[215, 235, 255].map((x) => (
-                <rect key={x} x={x} y="56" width="8" height="148" strokeWidth="2" className={cn("fill-primary/15", stroke("glass"))} />
-              ))}
-              <rect x="215" y="52" width="48" height="4" className="fill-foreground/60" />
-              <rect x="215" y="204" width="48" height="4" className="fill-foreground/60" />
-            </g>
-
-            <text x="30" y="250" className="fill-muted-foreground" fontSize="10">
-              ← unutra
-            </text>
-            <text x="263" y="250" textAnchor="end" className="fill-muted-foreground" fontSize="10">
-              spolja →
-            </text>
+            <Drawing activeId={active.id} chambers={section.chambers} seals={section.seals} depth={section.depth} />
           </svg>
 
-          {s9000Hotspots.map((h) => (
+          {section.hotspots.map((h) => (
             <button
               key={h.id}
               type="button"
               aria-label={h.label}
-              aria-pressed={activeId === h.id}
+              aria-pressed={active.id === h.id}
               aria-describedby="profile-hotspot-panel"
               onMouseEnter={() => setActiveId(h.id)}
               onFocus={() => setActiveId(h.id)}
@@ -91,7 +169,7 @@ const ProfileCrossSection = () => {
               <span
                 className={cn(
                   "block w-4 h-4 rounded-full border-2 border-background bg-accent shadow transition-transform",
-                  activeId === h.id ? "scale-125 motion-safe:animate-pulse" : "group-hover:scale-110",
+                  active.id === h.id ? "scale-125 motion-safe:animate-pulse" : "group-hover:scale-110",
                 )}
               />
             </button>
