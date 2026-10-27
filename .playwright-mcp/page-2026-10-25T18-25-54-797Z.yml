@@ -1,0 +1,650 @@
+- generic [ref=f2e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - main [ref=f2e3]:
+    - generic [ref=f2e5]:
+      - link [ref=f2e6] [cursor=pointer]:
+        - /url: /
+        - img "AL Company Valjevo Logo" [ref=f2e7]
+      - navigation [ref=f2e8]:
+        - link "O nama" [ref=f2e9] [cursor=pointer]:
+          - /url: /o-nama
+        - link "Proizvodi" [ref=f2e11] [cursor=pointer]:
+          - /url: /proizvodi
+        - link "Subvencije 2026" [ref=f2e14] [cursor=pointer]:
+          - /url: /subvencije
+        - link "Kontakt" [ref=f2e15] [cursor=pointer]:
+          - /url: /kontakt
+      - generic [ref=f2e16]:
+        - link "Instagram" [ref=f2e17] [cursor=pointer]:
+          - /url: https://www.instagram.com/alcompany2002/
+        - link [ref=f2e21] [cursor=pointer]:
+          - /url: /kontakt
+          - button "Zatražite ponudu" [ref=f2e22]
+    - generic [ref=f2e24]:
+      - generic [ref=f2e25]:
+        - paragraph [ref=f2e26]: Katalog
+        - heading "Ulazna vrata" [level=1] [ref=f2e27]
+        - paragraph [ref=f2e28]: Preko 130 modela ulaznih vrata u našoj ponudi — od klasičnih do savremenih dizajna. Izaberite kategoriju i uporedite karakteristike.
+        - paragraph [ref=f2e29]: Kliknite na ✚ ikonu da dodate model u poređenje (do 3 proizvoda).
+      - img "Drvena dvokrilna ulazna vrata sa staklom na kamenoj fasadi kuće" [ref=f2e32]
+      - heading "Kategorije ulaznih vrata" [level=2] [ref=f2e34]
+      - generic [ref=f2e36]:
+        - 'link "Ulazna vrata – Klasični modeli – primer ulaznih vrata ALU Klasičan dizajn Ulazna vrata – Klasični modeli Ud vrednost: 1,0 W/m²K Detaljnije" [ref=f2e38] [cursor=pointer]':
+          - /url: /proizvodi/ulazna-vrata-klasicna
+          - generic [ref=f2e39]:
+            - img "Ulazna vrata – Klasični modeli – primer ulaznih vrata" [ref=f2e41]
+            - button "Dodaj u poređenje" [ref=f2e42]
+          - generic [ref=f2e44]:
+            - generic [ref=f2e45]:
+              - generic [ref=f2e46]: ALU
+              - generic [ref=f2e47]: Klasičan dizajn
+            - heading "Ulazna vrata – Klasični modeli" [level=3] [ref=f2e48]
+            - paragraph [ref=f2e49]: "Ud vrednost: 1,0 W/m²K"
+            - generic [ref=f2e50]: Detaljnije
+        - 'link "Ulazna vrata – Moderni modeli – primer ulaznih vrata ALU Moderan dizajn Ulazna vrata – Moderni modeli Ud vrednost: 0,9 W/m²K Detaljnije" [ref=f2e54] [cursor=pointer]':
+          - /url: /proizvodi/ulazna-vrata-moderna
+          - generic [ref=f2e55]:
+            - img "Ulazna vrata – Moderni modeli – primer ulaznih vrata" [ref=f2e57]
+            - button "Dodaj u poređenje" [ref=f2e58]
+          - generic [ref=f2e60]:
+            - generic [ref=f2e61]:
+              - generic [ref=f2e62]: ALU
+              - generic [ref=f2e63]: Moderan dizajn
+            - heading "Ulazna vrata – Moderni modeli" [level=3] [ref=f2e64]
+            - paragraph [ref=f2e65]: "Ud vrednost: 0,9 W/m²K"
+            - generic [ref=f2e66]: Detaljnije
+        - 'link "Ulazna vrata – Premium modeli – primer ulaznih vrata ALU Premium izvedba Ulazna vrata – Premium modeli Ud vrednost: 0,7 W/m²K Detaljnije" [ref=f2e70] [cursor=pointer]':
+          - /url: /proizvodi/ulazna-vrata-premium
+          - generic [ref=f2e71]:
+            - img "Ulazna vrata – Premium modeli – primer ulaznih vrata" [ref=f2e73]
+            - button "Dodaj u poređenje" [ref=f2e74]
+          - generic [ref=f2e76]:
+            - generic [ref=f2e77]:
+              - generic [ref=f2e78]: ALU
+              - generic [ref=f2e79]: Premium izvedba
+            - heading "Ulazna vrata – Premium modeli" [level=3] [ref=f2e80]
+            - paragraph [ref=f2e81]: "Ud vrednost: 0,7 W/m²K"
+            - generic [ref=f2e82]: Detaljnije
+      - generic [ref=f2e85]:
+        - heading "Svi modeli (M 1 – M 138)" [level=2] [ref=f2e86]
+        - paragraph [ref=f2e87]: Slike modela se dodaju. Kontaktirajte nas za katalog sa fotografijama.
+      - generic [ref=f2e89]:
+        - generic [ref=f2e90]:
+          - heading "M 1–M 4" [level=3] [ref=f2e91]
+          - generic [ref=f2e92]:
+            - button [ref=f2e93] [cursor=pointer]:
+              - paragraph [ref=f2e102]: M 1
+              - paragraph [ref=f2e103]: Slika uskoro
+            - button [ref=f2e104] [cursor=pointer]:
+              - paragraph [ref=f2e113]: M 2
+              - paragraph [ref=f2e114]: Slika uskoro
+            - button [ref=f2e115] [cursor=pointer]:
+              - paragraph [ref=f2e124]: M 3
+              - paragraph [ref=f2e125]: Slika uskoro
+            - button [ref=f2e126] [cursor=pointer]:
+              - paragraph [ref=f2e135]: M 4
+              - paragraph [ref=f2e136]: Slika uskoro
+        - generic [ref=f2e137]:
+          - heading "M 5–M 8" [level=3] [ref=f2e138]
+          - generic [ref=f2e139]:
+            - button [ref=f2e140] [cursor=pointer]:
+              - paragraph [ref=f2e149]: M 5
+              - paragraph [ref=f2e150]: Slika uskoro
+            - button [ref=f2e151] [cursor=pointer]:
+              - paragraph [ref=f2e160]: M 6
+              - paragraph [ref=f2e161]: Slika uskoro
+            - button [ref=f2e162] [cursor=pointer]:
+              - paragraph [ref=f2e171]: M 7
+              - paragraph [ref=f2e172]: Slika uskoro
+            - button [ref=f2e173] [cursor=pointer]:
+              - paragraph [ref=f2e182]: M 8
+              - paragraph [ref=f2e183]: Slika uskoro
+        - generic [ref=f2e184]:
+          - heading "M 9–M 12" [level=3] [ref=f2e185]
+          - generic [ref=f2e186]:
+            - button [ref=f2e187] [cursor=pointer]:
+              - paragraph [ref=f2e196]: M 9
+              - paragraph [ref=f2e197]: Slika uskoro
+            - button [ref=f2e198] [cursor=pointer]:
+              - paragraph [ref=f2e207]: M 10
+              - paragraph [ref=f2e208]: Slika uskoro
+            - button [ref=f2e209] [cursor=pointer]:
+              - paragraph [ref=f2e218]: M 11
+              - paragraph [ref=f2e219]: Slika uskoro
+            - button [ref=f2e220] [cursor=pointer]:
+              - paragraph [ref=f2e229]: M 12
+              - paragraph [ref=f2e230]: Slika uskoro
+        - generic [ref=f2e231]:
+          - heading "M 13–M 16" [level=3] [ref=f2e232]
+          - generic [ref=f2e233]:
+            - button [ref=f2e234] [cursor=pointer]:
+              - paragraph [ref=f2e243]: M 13
+              - paragraph [ref=f2e244]: Slika uskoro
+            - button [ref=f2e245] [cursor=pointer]:
+              - paragraph [ref=f2e254]: M 14
+              - paragraph [ref=f2e255]: Slika uskoro
+            - button [ref=f2e256] [cursor=pointer]:
+              - paragraph [ref=f2e265]: M 15
+              - paragraph [ref=f2e266]: Slika uskoro
+            - button [ref=f2e267] [cursor=pointer]:
+              - paragraph [ref=f2e276]: M 16
+              - paragraph [ref=f2e277]: Slika uskoro
+        - generic [ref=f2e278]:
+          - heading "M 17–M 20" [level=3] [ref=f2e279]
+          - generic [ref=f2e280]:
+            - button [ref=f2e281] [cursor=pointer]:
+              - paragraph [ref=f2e290]: M 17
+              - paragraph [ref=f2e291]: Slika uskoro
+            - button [ref=f2e292] [cursor=pointer]:
+              - paragraph [ref=f2e301]: M 18
+              - paragraph [ref=f2e302]: Slika uskoro
+            - button [ref=f2e303] [cursor=pointer]:
+              - paragraph [ref=f2e312]: M 19
+              - paragraph [ref=f2e313]: Slika uskoro
+            - button [ref=f2e314] [cursor=pointer]:
+              - paragraph [ref=f2e323]: M 20
+              - paragraph [ref=f2e324]: Slika uskoro
+        - generic [ref=f2e325]:
+          - heading "M 21–M 24" [level=3] [ref=f2e326]
+          - generic [ref=f2e327]:
+            - button [ref=f2e328] [cursor=pointer]:
+              - paragraph [ref=f2e337]: M 21
+              - paragraph [ref=f2e338]: Slika uskoro
+            - button [ref=f2e339] [cursor=pointer]:
+              - paragraph [ref=f2e348]: M 22
+              - paragraph [ref=f2e349]: Slika uskoro
+            - button [ref=f2e350] [cursor=pointer]:
+              - paragraph [ref=f2e359]: M 23
+              - paragraph [ref=f2e360]: Slika uskoro
+            - button [ref=f2e361] [cursor=pointer]:
+              - paragraph [ref=f2e370]: M 24
+              - paragraph [ref=f2e371]: Slika uskoro
+        - generic [ref=f2e372]:
+          - heading "M 25–M 28" [level=3] [ref=f2e373]
+          - generic [ref=f2e374]:
+            - button [ref=f2e375] [cursor=pointer]:
+              - paragraph [ref=f2e384]: M 25
+              - paragraph [ref=f2e385]: Slika uskoro
+            - button [ref=f2e386] [cursor=pointer]:
+              - paragraph [ref=f2e395]: M 26
+              - paragraph [ref=f2e396]: Slika uskoro
+            - button [ref=f2e397] [cursor=pointer]:
+              - paragraph [ref=f2e406]: M 27
+              - paragraph [ref=f2e407]: Slika uskoro
+            - button [ref=f2e408] [cursor=pointer]:
+              - paragraph [ref=f2e417]: M 28
+              - paragraph [ref=f2e418]: Slika uskoro
+        - generic [ref=f2e419]:
+          - heading "M 29–M 32" [level=3] [ref=f2e420]
+          - generic [ref=f2e421]:
+            - button [ref=f2e422] [cursor=pointer]:
+              - paragraph [ref=f2e431]: M 29
+              - paragraph [ref=f2e432]: Slika uskoro
+            - button [ref=f2e433] [cursor=pointer]:
+              - paragraph [ref=f2e442]: M 30
+              - paragraph [ref=f2e443]: Slika uskoro
+            - button [ref=f2e444] [cursor=pointer]:
+              - paragraph [ref=f2e453]: M 31
+              - paragraph [ref=f2e454]: Slika uskoro
+            - button [ref=f2e455] [cursor=pointer]:
+              - paragraph [ref=f2e464]: M 32
+              - paragraph [ref=f2e465]: Slika uskoro
+        - generic [ref=f2e466]:
+          - heading "M 33–M 36" [level=3] [ref=f2e467]
+          - generic [ref=f2e468]:
+            - button [ref=f2e469] [cursor=pointer]:
+              - paragraph [ref=f2e478]: M 33
+              - paragraph [ref=f2e479]: Slika uskoro
+            - button [ref=f2e480] [cursor=pointer]:
+              - paragraph [ref=f2e489]: M 34
+              - paragraph [ref=f2e490]: Slika uskoro
+            - button [ref=f2e491] [cursor=pointer]:
+              - paragraph [ref=f2e500]: M 35
+              - paragraph [ref=f2e501]: Slika uskoro
+            - button [ref=f2e502] [cursor=pointer]:
+              - paragraph [ref=f2e511]: M 36
+              - paragraph [ref=f2e512]: Slika uskoro
+        - generic [ref=f2e513]:
+          - heading "M 37–M 40" [level=3] [ref=f2e514]
+          - generic [ref=f2e515]:
+            - button [ref=f2e516] [cursor=pointer]:
+              - paragraph [ref=f2e525]: M 37
+              - paragraph [ref=f2e526]: Slika uskoro
+            - button [ref=f2e527] [cursor=pointer]:
+              - paragraph [ref=f2e536]: M 38
+              - paragraph [ref=f2e537]: Slika uskoro
+            - button [ref=f2e538] [cursor=pointer]:
+              - paragraph [ref=f2e547]: M 39
+              - paragraph [ref=f2e548]: Slika uskoro
+            - button [ref=f2e549] [cursor=pointer]:
+              - paragraph [ref=f2e558]: M 40
+              - paragraph [ref=f2e559]: Slika uskoro
+        - generic [ref=f2e560]:
+          - heading "M 41–M 44" [level=3] [ref=f2e561]
+          - generic [ref=f2e562]:
+            - button [ref=f2e563] [cursor=pointer]:
+              - paragraph [ref=f2e572]: M 41
+              - paragraph [ref=f2e573]: Slika uskoro
+            - button [ref=f2e574] [cursor=pointer]:
+              - paragraph [ref=f2e583]: M 42
+              - paragraph [ref=f2e584]: Slika uskoro
+            - button [ref=f2e585] [cursor=pointer]:
+              - paragraph [ref=f2e594]: M 43
+              - paragraph [ref=f2e595]: Slika uskoro
+            - button [ref=f2e596] [cursor=pointer]:
+              - paragraph [ref=f2e605]: M 44
+              - paragraph [ref=f2e606]: Slika uskoro
+        - generic [ref=f2e607]:
+          - heading "M 45–M 48" [level=3] [ref=f2e608]
+          - generic [ref=f2e609]:
+            - button [ref=f2e610] [cursor=pointer]:
+              - paragraph [ref=f2e619]: M 45
+              - paragraph [ref=f2e620]: Slika uskoro
+            - button [ref=f2e621] [cursor=pointer]:
+              - paragraph [ref=f2e630]: M 46
+              - paragraph [ref=f2e631]: Slika uskoro
+            - button [ref=f2e632] [cursor=pointer]:
+              - paragraph [ref=f2e641]: M 47
+              - paragraph [ref=f2e642]: Slika uskoro
+            - button [ref=f2e643] [cursor=pointer]:
+              - paragraph [ref=f2e652]: M 48
+              - paragraph [ref=f2e653]: Slika uskoro
+        - generic [ref=f2e654]:
+          - heading "M 49–M 52" [level=3] [ref=f2e655]
+          - generic [ref=f2e656]:
+            - button [ref=f2e657] [cursor=pointer]:
+              - paragraph [ref=f2e666]: M 49
+              - paragraph [ref=f2e667]: Slika uskoro
+            - button [ref=f2e668] [cursor=pointer]:
+              - paragraph [ref=f2e677]: M 50
+              - paragraph [ref=f2e678]: Slika uskoro
+            - button [ref=f2e679] [cursor=pointer]:
+              - paragraph [ref=f2e688]: M 51
+              - paragraph [ref=f2e689]: Slika uskoro
+            - button [ref=f2e690] [cursor=pointer]:
+              - paragraph [ref=f2e699]: M 52
+              - paragraph [ref=f2e700]: Slika uskoro
+        - generic [ref=f2e701]:
+          - heading "M 53–M 56" [level=3] [ref=f2e702]
+          - generic [ref=f2e703]:
+            - button [ref=f2e704] [cursor=pointer]:
+              - paragraph [ref=f2e713]: M 53
+              - paragraph [ref=f2e714]: Slika uskoro
+            - button [ref=f2e715] [cursor=pointer]:
+              - paragraph [ref=f2e724]: M 54
+              - paragraph [ref=f2e725]: Slika uskoro
+            - button [ref=f2e726] [cursor=pointer]:
+              - paragraph [ref=f2e735]: M 55
+              - paragraph [ref=f2e736]: Slika uskoro
+            - button [ref=f2e737] [cursor=pointer]:
+              - paragraph [ref=f2e746]: M 56
+              - paragraph [ref=f2e747]: Slika uskoro
+        - generic [ref=f2e748]:
+          - heading "M 57–M 60" [level=3] [ref=f2e749]
+          - generic [ref=f2e750]:
+            - button [ref=f2e751] [cursor=pointer]:
+              - paragraph [ref=f2e760]: M 57
+              - paragraph [ref=f2e761]: Slika uskoro
+            - button [ref=f2e762] [cursor=pointer]:
+              - paragraph [ref=f2e771]: M 58
+              - paragraph [ref=f2e772]: Slika uskoro
+            - button [ref=f2e773] [cursor=pointer]:
+              - paragraph [ref=f2e782]: M 59
+              - paragraph [ref=f2e783]: Slika uskoro
+            - button [ref=f2e784] [cursor=pointer]:
+              - paragraph [ref=f2e793]: M 60
+              - paragraph [ref=f2e794]: Slika uskoro
+        - generic [ref=f2e795]:
+          - heading "M 61–M 64" [level=3] [ref=f2e796]
+          - generic [ref=f2e797]:
+            - button [ref=f2e798] [cursor=pointer]:
+              - paragraph [ref=f2e807]: M 61
+              - paragraph [ref=f2e808]: Slika uskoro
+            - button [ref=f2e809] [cursor=pointer]:
+              - paragraph [ref=f2e818]: M 62
+              - paragraph [ref=f2e819]: Slika uskoro
+            - button [ref=f2e820] [cursor=pointer]:
+              - paragraph [ref=f2e829]: M 63
+              - paragraph [ref=f2e830]: Slika uskoro
+            - button [ref=f2e831] [cursor=pointer]:
+              - paragraph [ref=f2e840]: M 64
+              - paragraph [ref=f2e841]: Slika uskoro
+        - generic [ref=f2e842]:
+          - heading "M 65–M 68" [level=3] [ref=f2e843]
+          - generic [ref=f2e844]:
+            - button [ref=f2e845] [cursor=pointer]:
+              - paragraph [ref=f2e854]: M 65
+              - paragraph [ref=f2e855]: Slika uskoro
+            - button [ref=f2e856] [cursor=pointer]:
+              - paragraph [ref=f2e865]: M 66
+              - paragraph [ref=f2e866]: Slika uskoro
+            - button [ref=f2e867] [cursor=pointer]:
+              - paragraph [ref=f2e876]: M 67
+              - paragraph [ref=f2e877]: Slika uskoro
+            - button [ref=f2e878] [cursor=pointer]:
+              - paragraph [ref=f2e887]: M 68
+              - paragraph [ref=f2e888]: Slika uskoro
+        - generic [ref=f2e889]:
+          - heading "M 69–M 72" [level=3] [ref=f2e890]
+          - generic [ref=f2e891]:
+            - button [ref=f2e892] [cursor=pointer]:
+              - paragraph [ref=f2e901]: M 69
+              - paragraph [ref=f2e902]: Slika uskoro
+            - button [ref=f2e903] [cursor=pointer]:
+              - paragraph [ref=f2e912]: M 70
+              - paragraph [ref=f2e913]: Slika uskoro
+            - button [ref=f2e914] [cursor=pointer]:
+              - paragraph [ref=f2e923]: M 71
+              - paragraph [ref=f2e924]: Slika uskoro
+            - button [ref=f2e925] [cursor=pointer]:
+              - paragraph [ref=f2e934]: M 72
+              - paragraph [ref=f2e935]: Slika uskoro
+        - generic [ref=f2e936]:
+          - heading "M 73–M 76" [level=3] [ref=f2e937]
+          - generic [ref=f2e938]:
+            - button [ref=f2e939] [cursor=pointer]:
+              - paragraph [ref=f2e948]: M 73
+              - paragraph [ref=f2e949]: Slika uskoro
+            - button [ref=f2e950] [cursor=pointer]:
+              - paragraph [ref=f2e959]: M 74
+              - paragraph [ref=f2e960]: Slika uskoro
+            - button [ref=f2e961] [cursor=pointer]:
+              - paragraph [ref=f2e970]: M 75
+              - paragraph [ref=f2e971]: Slika uskoro
+            - button [ref=f2e972] [cursor=pointer]:
+              - paragraph [ref=f2e981]: M 76
+              - paragraph [ref=f2e982]: Slika uskoro
+        - generic [ref=f2e983]:
+          - heading "M 77–M 80" [level=3] [ref=f2e984]
+          - generic [ref=f2e985]:
+            - button [ref=f2e986] [cursor=pointer]:
+              - paragraph [ref=f2e995]: M 77
+              - paragraph [ref=f2e996]: Slika uskoro
+            - button [ref=f2e997] [cursor=pointer]:
+              - paragraph [ref=f2e1006]: M 78
+              - paragraph [ref=f2e1007]: Slika uskoro
+            - button [ref=f2e1008] [cursor=pointer]:
+              - paragraph [ref=f2e1017]: M 79
+              - paragraph [ref=f2e1018]: Slika uskoro
+            - button [ref=f2e1019] [cursor=pointer]:
+              - paragraph [ref=f2e1028]: M 80
+              - paragraph [ref=f2e1029]: Slika uskoro
+        - generic [ref=f2e1030]:
+          - heading "M 81–M 84" [level=3] [ref=f2e1031]
+          - generic [ref=f2e1032]:
+            - button [ref=f2e1033] [cursor=pointer]:
+              - paragraph [ref=f2e1042]: M 81
+              - paragraph [ref=f2e1043]: Slika uskoro
+            - button [ref=f2e1044] [cursor=pointer]:
+              - paragraph [ref=f2e1053]: M 82
+              - paragraph [ref=f2e1054]: Slika uskoro
+            - button [ref=f2e1055] [cursor=pointer]:
+              - paragraph [ref=f2e1064]: M 83
+              - paragraph [ref=f2e1065]: Slika uskoro
+            - button [ref=f2e1066] [cursor=pointer]:
+              - paragraph [ref=f2e1075]: M 84
+              - paragraph [ref=f2e1076]: Slika uskoro
+        - generic [ref=f2e1077]:
+          - heading "M 85–M 88" [level=3] [ref=f2e1078]
+          - generic [ref=f2e1079]:
+            - button [ref=f2e1080] [cursor=pointer]:
+              - paragraph [ref=f2e1089]: M 85
+              - paragraph [ref=f2e1090]: Slika uskoro
+            - button [ref=f2e1091] [cursor=pointer]:
+              - paragraph [ref=f2e1100]: M 86
+              - paragraph [ref=f2e1101]: Slika uskoro
+            - button [ref=f2e1102] [cursor=pointer]:
+              - paragraph [ref=f2e1111]: M 87
+              - paragraph [ref=f2e1112]: Slika uskoro
+            - button [ref=f2e1113] [cursor=pointer]:
+              - paragraph [ref=f2e1122]: M 88
+              - paragraph [ref=f2e1123]: Slika uskoro
+        - generic [ref=f2e1124]:
+          - heading "M 89–M 92" [level=3] [ref=f2e1125]
+          - generic [ref=f2e1126]:
+            - button [ref=f2e1127] [cursor=pointer]:
+              - paragraph [ref=f2e1136]: M 89
+              - paragraph [ref=f2e1137]: Slika uskoro
+            - button [ref=f2e1138] [cursor=pointer]:
+              - paragraph [ref=f2e1147]: M 90
+              - paragraph [ref=f2e1148]: Slika uskoro
+            - button [ref=f2e1149] [cursor=pointer]:
+              - paragraph [ref=f2e1158]: M 91
+              - paragraph [ref=f2e1159]: Slika uskoro
+            - button [ref=f2e1160] [cursor=pointer]:
+              - paragraph [ref=f2e1169]: M 92
+              - paragraph [ref=f2e1170]: Slika uskoro
+        - generic [ref=f2e1171]:
+          - heading "M 93–M 96" [level=3] [ref=f2e1172]
+          - generic [ref=f2e1173]:
+            - button [ref=f2e1174] [cursor=pointer]:
+              - paragraph [ref=f2e1183]: M 93
+              - paragraph [ref=f2e1184]: Slika uskoro
+            - button [ref=f2e1185] [cursor=pointer]:
+              - paragraph [ref=f2e1194]: M 94
+              - paragraph [ref=f2e1195]: Slika uskoro
+            - button [ref=f2e1196] [cursor=pointer]:
+              - paragraph [ref=f2e1205]: M 95
+              - paragraph [ref=f2e1206]: Slika uskoro
+            - button [ref=f2e1207] [cursor=pointer]:
+              - paragraph [ref=f2e1216]: M 96
+              - paragraph [ref=f2e1217]: Slika uskoro
+        - generic [ref=f2e1218]:
+          - heading "M 97–M 100" [level=3] [ref=f2e1219]
+          - generic [ref=f2e1220]:
+            - button [ref=f2e1221] [cursor=pointer]:
+              - paragraph [ref=f2e1230]: M 97
+              - paragraph [ref=f2e1231]: Slika uskoro
+            - button [ref=f2e1232] [cursor=pointer]:
+              - paragraph [ref=f2e1241]: M 98
+              - paragraph [ref=f2e1242]: Slika uskoro
+            - button [ref=f2e1243] [cursor=pointer]:
+              - paragraph [ref=f2e1252]: M 99
+              - paragraph [ref=f2e1253]: Slika uskoro
+            - button [ref=f2e1254] [cursor=pointer]:
+              - paragraph [ref=f2e1263]: M 100
+              - paragraph [ref=f2e1264]: Slika uskoro
+        - generic [ref=f2e1265]:
+          - heading "M 101–M 104" [level=3] [ref=f2e1266]
+          - generic [ref=f2e1267]:
+            - button [ref=f2e1268] [cursor=pointer]:
+              - paragraph [ref=f2e1277]: M 101
+              - paragraph [ref=f2e1278]: Slika uskoro
+            - button [ref=f2e1279] [cursor=pointer]:
+              - paragraph [ref=f2e1288]: M 102
+              - paragraph [ref=f2e1289]: Slika uskoro
+            - button [ref=f2e1290] [cursor=pointer]:
+              - paragraph [ref=f2e1299]: M 103
+              - paragraph [ref=f2e1300]: Slika uskoro
+            - button [ref=f2e1301] [cursor=pointer]:
+              - paragraph [ref=f2e1310]: M 104
+              - paragraph [ref=f2e1311]: Slika uskoro
+        - generic [ref=f2e1312]:
+          - heading "M 105–M 108" [level=3] [ref=f2e1313]
+          - generic [ref=f2e1314]:
+            - button [ref=f2e1315] [cursor=pointer]:
+              - paragraph [ref=f2e1324]: M 105
+              - paragraph [ref=f2e1325]: Slika uskoro
+            - button [ref=f2e1326] [cursor=pointer]:
+              - paragraph [ref=f2e1335]: M 106
+              - paragraph [ref=f2e1336]: Slika uskoro
+            - button [ref=f2e1337] [cursor=pointer]:
+              - paragraph [ref=f2e1346]: M 107
+              - paragraph [ref=f2e1347]: Slika uskoro
+            - button [ref=f2e1348] [cursor=pointer]:
+              - paragraph [ref=f2e1357]: M 108
+              - paragraph [ref=f2e1358]: Slika uskoro
+        - generic [ref=f2e1359]:
+          - heading "M 109–M 112" [level=3] [ref=f2e1360]
+          - generic [ref=f2e1361]:
+            - button [ref=f2e1362] [cursor=pointer]:
+              - paragraph [ref=f2e1371]: M 109
+              - paragraph [ref=f2e1372]: Slika uskoro
+            - button [ref=f2e1373] [cursor=pointer]:
+              - paragraph [ref=f2e1382]: M 110
+              - paragraph [ref=f2e1383]: Slika uskoro
+            - button [ref=f2e1384] [cursor=pointer]:
+              - paragraph [ref=f2e1393]: M 111
+              - paragraph [ref=f2e1394]: Slika uskoro
+            - button [ref=f2e1395] [cursor=pointer]:
+              - paragraph [ref=f2e1404]: M 112
+              - paragraph [ref=f2e1405]: Slika uskoro
+        - generic [ref=f2e1406]:
+          - heading "M 113–M 116" [level=3] [ref=f2e1407]
+          - generic [ref=f2e1408]:
+            - button [ref=f2e1409] [cursor=pointer]:
+              - paragraph [ref=f2e1418]: M 113
+              - paragraph [ref=f2e1419]: Slika uskoro
+            - button [ref=f2e1420] [cursor=pointer]:
+              - paragraph [ref=f2e1429]: M 114
+              - paragraph [ref=f2e1430]: Slika uskoro
+            - button [ref=f2e1431] [cursor=pointer]:
+              - paragraph [ref=f2e1440]: M 115
+              - paragraph [ref=f2e1441]: Slika uskoro
+            - button [ref=f2e1442] [cursor=pointer]:
+              - paragraph [ref=f2e1451]: M 116
+              - paragraph [ref=f2e1452]: Slika uskoro
+        - generic [ref=f2e1453]:
+          - heading "M 117–M 120" [level=3] [ref=f2e1454]
+          - generic [ref=f2e1455]:
+            - button [ref=f2e1456] [cursor=pointer]:
+              - paragraph [ref=f2e1465]: M 117
+              - paragraph [ref=f2e1466]: Slika uskoro
+            - button [ref=f2e1467] [cursor=pointer]:
+              - paragraph [ref=f2e1476]: M 118
+              - paragraph [ref=f2e1477]: Slika uskoro
+            - button [ref=f2e1478] [cursor=pointer]:
+              - paragraph [ref=f2e1487]: M 119
+              - paragraph [ref=f2e1488]: Slika uskoro
+            - button [ref=f2e1489] [cursor=pointer]:
+              - paragraph [ref=f2e1498]: M 120
+              - paragraph [ref=f2e1499]: Slika uskoro
+        - generic [ref=f2e1500]:
+          - heading "M 121–M 124" [level=3] [ref=f2e1501]
+          - generic [ref=f2e1502]:
+            - button [ref=f2e1503] [cursor=pointer]:
+              - paragraph [ref=f2e1512]: M 121
+              - paragraph [ref=f2e1513]: Slika uskoro
+            - button [ref=f2e1514] [cursor=pointer]:
+              - paragraph [ref=f2e1523]: M 122
+              - paragraph [ref=f2e1524]: Slika uskoro
+            - button [ref=f2e1525] [cursor=pointer]:
+              - paragraph [ref=f2e1534]: M 123
+              - paragraph [ref=f2e1535]: Slika uskoro
+            - button [ref=f2e1536] [cursor=pointer]:
+              - paragraph [ref=f2e1545]: M 124
+              - paragraph [ref=f2e1546]: Slika uskoro
+        - generic [ref=f2e1547]:
+          - heading "M 125–M 128" [level=3] [ref=f2e1548]
+          - generic [ref=f2e1549]:
+            - button [ref=f2e1550] [cursor=pointer]:
+              - paragraph [ref=f2e1559]: M 125
+              - paragraph [ref=f2e1560]: Slika uskoro
+            - button [ref=f2e1561] [cursor=pointer]:
+              - paragraph [ref=f2e1570]: M 126
+              - paragraph [ref=f2e1571]: Slika uskoro
+            - button [ref=f2e1572] [cursor=pointer]:
+              - paragraph [ref=f2e1581]: M 127
+              - paragraph [ref=f2e1582]: Slika uskoro
+            - button [ref=f2e1583] [cursor=pointer]:
+              - paragraph [ref=f2e1592]: M 128
+              - paragraph [ref=f2e1593]: Slika uskoro
+        - generic [ref=f2e1594]:
+          - heading "M 129–M 132" [level=3] [ref=f2e1595]
+          - generic [ref=f2e1596]:
+            - button [ref=f2e1597] [cursor=pointer]:
+              - paragraph [ref=f2e1606]: M 129
+              - paragraph [ref=f2e1607]: Slika uskoro
+            - button [ref=f2e1608] [cursor=pointer]:
+              - paragraph [ref=f2e1617]: M 130
+              - paragraph [ref=f2e1618]: Slika uskoro
+            - button [ref=f2e1619] [cursor=pointer]:
+              - paragraph [ref=f2e1628]: M 131
+              - paragraph [ref=f2e1629]: Slika uskoro
+            - button [ref=f2e1630] [cursor=pointer]:
+              - paragraph [ref=f2e1639]: M 132
+              - paragraph [ref=f2e1640]: Slika uskoro
+        - generic [ref=f2e1641]:
+          - heading "M 133–M 136" [level=3] [ref=f2e1642]
+          - generic [ref=f2e1643]:
+            - button [ref=f2e1644] [cursor=pointer]:
+              - paragraph [ref=f2e1653]: M 133
+              - paragraph [ref=f2e1654]: Slika uskoro
+            - button [ref=f2e1655] [cursor=pointer]:
+              - paragraph [ref=f2e1664]: M 134
+              - paragraph [ref=f2e1665]: Slika uskoro
+            - button [ref=f2e1666] [cursor=pointer]:
+              - paragraph [ref=f2e1675]: M 135
+              - paragraph [ref=f2e1676]: Slika uskoro
+            - button [ref=f2e1677] [cursor=pointer]:
+              - paragraph [ref=f2e1686]: M 136
+              - paragraph [ref=f2e1687]: Slika uskoro
+        - generic [ref=f2e1688]:
+          - heading "M 137–M 138" [level=3] [ref=f2e1689]
+          - generic [ref=f2e1690]:
+            - button [ref=f2e1691] [cursor=pointer]:
+              - paragraph [ref=f2e1700]: M 137
+              - paragraph [ref=f2e1701]: Slika uskoro
+            - button [ref=f2e1702] [cursor=pointer]:
+              - paragraph [ref=f2e1711]: M 138
+              - paragraph [ref=f2e1712]: Slika uskoro
+    - generic [ref=f2e1714]:
+      - generic [ref=f2e1715]:
+        - generic [ref=f2e1716]:
+          - generic [ref=f2e1717]:
+            - generic [ref=f2e1718]: AL
+            - generic [ref=f2e1720]: AL Company d.o.o.
+          - paragraph [ref=f2e1721]: PVC i aluminijumska stolarija
+          - paragraph [ref=f2e1722]: Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. godine. Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
+          - generic [ref=f2e1723]:
+            - link "Prva proleterska 60, 14000 Valjevo, Srbija" [ref=f2e1724] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA
+            - link "+381 14 246 079" [ref=f2e1728] [cursor=pointer]:
+              - /url: tel:+38114246079
+            - link "+381 63 369 392" [ref=f2e1731] [cursor=pointer]:
+              - /url: tel:+38163369392
+            - link "milanaiagency@gmail.com" [ref=f2e1734] [cursor=pointer]:
+              - /url: mailto:milanaiagency@gmail.com
+            - link "@alcompany2002" [ref=f2e1738] [cursor=pointer]:
+              - /url: https://www.instagram.com/alcompany2002/
+        - generic [ref=f2e1742]:
+          - heading "Proizvodi" [level=4] [ref=f2e1743]
+          - list [ref=f2e1744]:
+            - listitem [ref=f2e1745]:
+              - link "PVC stolarija" [ref=f2e1746] [cursor=pointer]:
+                - /url: /proizvodi/pvc
+            - listitem [ref=f2e1747]:
+              - link "Aluminijumska stolarija" [ref=f2e1748] [cursor=pointer]:
+                - /url: /proizvodi/aluminijum
+            - listitem [ref=f2e1749]:
+              - link "Ulazna vrata" [ref=f2e1750] [cursor=pointer]:
+                - /url: /proizvodi/ulazna-vrata
+            - listitem [ref=f2e1751]:
+              - link "Drvodekor" [ref=f2e1752] [cursor=pointer]:
+                - /url: /proizvodi/drvodekor
+            - listitem [ref=f2e1753]:
+              - link "Acrylcolor" [ref=f2e1754] [cursor=pointer]:
+                - /url: /proizvodi/acrylcolor
+        - generic [ref=f2e1755]:
+          - heading "Informacije" [level=4] [ref=f2e1756]
+          - list [ref=f2e1757]:
+            - listitem [ref=f2e1758]:
+              - link "O nama" [ref=f2e1759] [cursor=pointer]:
+                - /url: /o-nama
+            - listitem [ref=f2e1760]:
+              - link "Proizvodi" [ref=f2e1761] [cursor=pointer]:
+                - /url: /proizvodi
+            - listitem [ref=f2e1762]:
+              - link "Subvencije 2026" [ref=f2e1763] [cursor=pointer]:
+                - /url: /subvencije
+            - listitem [ref=f2e1764]:
+              - link "Kontakt" [ref=f2e1765] [cursor=pointer]:
+                - /url: /kontakt
+            - listitem [ref=f2e1766]:
+              - link "Politika privatnosti" [ref=f2e1767] [cursor=pointer]:
+                - /url: /politika-privatnosti
+      - generic [ref=f2e1768]:
+        - paragraph [ref=f2e1769]: © 2002–2026 AL Company d.o.o. Sva prava zadržana.
+        - paragraph [ref=f2e1770]: Valjevo, Srbija · Od 2002.

@@ -1,0 +1,156 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - main [ref=e3]:
+    - generic [ref=e5]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "AL Company Valjevo Logo" [ref=e7]
+      - navigation [ref=e8]:
+        - link "O nama" [ref=e9] [cursor=pointer]:
+          - /url: /o-nama
+        - link "Proizvodi" [ref=e11] [cursor=pointer]:
+          - /url: /proizvodi
+        - link "Subvencije 2026" [ref=e14] [cursor=pointer]:
+          - /url: /subvencije
+        - link "Kontakt" [ref=e15] [cursor=pointer]:
+          - /url: /kontakt
+      - generic [ref=e16]:
+        - link "Instagram" [ref=e17] [cursor=pointer]:
+          - /url: https://www.instagram.com/alcompany2002/
+        - link [ref=e21] [cursor=pointer]:
+          - /url: /kontakt
+          - button "Zatražite ponudu" [ref=e22]
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - paragraph [ref=e26]: GEALAN profili
+        - heading "PVC stolarija" [level=1] [ref=e27]
+        - paragraph [ref=e28]: Kompletna ponuda PVC prozora i vrata na bazi GEALAN profilnih sistema — od ekonomičnog S-3000 do premium S-9000 za pasivne kuće. Svi profili su ekološki, reciklabilni i dostupni u raznovrsnim dekorima i bojama.
+      - img "Bela PVC prozor sa dva krila na zidu kuće u sunčanom svetlu" [ref=e31]
+      - generic [ref=e32]:
+        - 'link "GEALAN S-3000 PVC Ekonomičan izbor GEALAN S-3000 Uf vrednost: 1,6 W/m²K Detaljnije" [ref=e34] [cursor=pointer]':
+          - /url: /proizvodi/gealan-s3000
+          - generic [ref=e35]:
+            - img "GEALAN S-3000" [ref=e36]
+            - button "Dodaj u poređenje" [ref=e37]
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - generic [ref=e41]: PVC
+              - generic [ref=e42]: Ekonomičan izbor
+            - heading "GEALAN S-3000" [level=3] [ref=e43]
+            - paragraph [ref=e44]: "Uf vrednost: 1,6 W/m²K"
+            - generic [ref=e45]: Detaljnije
+        - 'link "GEALAN S-9000 PVC Pasivna kuća GEALAN S-9000 Uf vrednost: do 0,89 W/m²K Detaljnije" [ref=e49] [cursor=pointer]':
+          - /url: /proizvodi/gealan-s9000
+          - generic [ref=e50]:
+            - img "GEALAN S-9000" [ref=e51]
+            - button "Dodaj u poređenje" [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: PVC
+              - generic [ref=e57]: Pasivna kuća
+            - heading "GEALAN S-9000" [level=3] [ref=e58]
+            - paragraph [ref=e59]: "Uf vrednost: do 0,89 W/m²K"
+            - generic [ref=e60]: Detaljnije
+        - 'link "GEALAN S-7000 IQ PVC Premium izolacija GEALAN S-7000 IQ Uf vrednost: 0,95 W/m²K Detaljnije" [ref=e64] [cursor=pointer]':
+          - /url: /proizvodi/gealan-s7000-iq
+          - generic [ref=e65]:
+            - img "GEALAN S-7000 IQ" [ref=e66]
+            - button "Dodaj u poređenje" [ref=e67]
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e71]: PVC
+              - generic [ref=e72]: Premium izolacija
+            - heading "GEALAN S-7000 IQ" [level=3] [ref=e73]
+            - paragraph [ref=e74]: "Uf vrednost: 0,95 W/m²K"
+            - generic [ref=e75]: Detaljnije
+        - 'link "GEALAN S-8000 IQ PVC Pametni profil GEALAN S-8000 IQ Uf vrednost: 1,0 W/m²K Detaljnije" [ref=e79] [cursor=pointer]':
+          - /url: /proizvodi/gealan-s8000-iq
+          - generic [ref=e80]:
+            - img "GEALAN S-8000 IQ" [ref=e81]
+            - button "Dodaj u poređenje" [ref=e82]
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: PVC
+              - generic [ref=e87]: Pametni profil
+            - heading "GEALAN S-8000 IQ" [level=3] [ref=e88]
+            - paragraph [ref=e89]: "Uf vrednost: 1,0 W/m²K"
+            - generic [ref=e90]: Detaljnije
+        - 'link "GEALAN-LINEAR® PVC Moderan dizajn GEALAN-LINEAR® Uf vrednost: 1,0 W/m²K Detaljnije" [ref=e94] [cursor=pointer]':
+          - /url: /proizvodi/gealan-linear
+          - generic [ref=e95]:
+            - img "GEALAN-LINEAR®" [ref=e96]
+            - button "Dodaj u poređenje" [ref=e97]
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]: PVC
+              - generic [ref=e102]: Moderan dizajn
+            - heading "GEALAN-LINEAR®" [level=3] [ref=e103]
+            - paragraph [ref=e104]: "Uf vrednost: 1,0 W/m²K"
+            - generic [ref=e105]: Detaljnije
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - heading "Zainteresovani za PVC stolariju?" [level=2] [ref=e111]
+          - paragraph [ref=e112]: Kontaktirajte nas za besplatnu ponudu prilagođenu vašem projektu.
+        - link [ref=e113] [cursor=pointer]:
+          - /url: /kontakt
+          - button "Zatražite ponudu" [ref=e114]
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: AL
+            - generic [ref=e122]: AL Company d.o.o.
+          - paragraph [ref=e123]: PVC i aluminijumska stolarija
+          - paragraph [ref=e124]: Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. godine. Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
+          - generic [ref=e125]:
+            - link "Prva proleterska 60, 14000 Valjevo, Srbija" [ref=e126] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA
+            - link "+381 14 246 079" [ref=e130] [cursor=pointer]:
+              - /url: tel:+38114246079
+            - link "+381 63 369 392" [ref=e133] [cursor=pointer]:
+              - /url: tel:+38163369392
+            - link "milanaiagency@gmail.com" [ref=e136] [cursor=pointer]:
+              - /url: mailto:milanaiagency@gmail.com
+            - link "@alcompany2002" [ref=e140] [cursor=pointer]:
+              - /url: https://www.instagram.com/alcompany2002/
+        - generic [ref=e144]:
+          - heading "Proizvodi" [level=4] [ref=e145]
+          - list [ref=e146]:
+            - listitem [ref=e147]:
+              - link "PVC stolarija" [ref=e148] [cursor=pointer]:
+                - /url: /proizvodi/pvc
+            - listitem [ref=e149]:
+              - link "Aluminijumska stolarija" [ref=e150] [cursor=pointer]:
+                - /url: /proizvodi/aluminijum
+            - listitem [ref=e151]:
+              - link "Ulazna vrata" [ref=e152] [cursor=pointer]:
+                - /url: /proizvodi/ulazna-vrata
+            - listitem [ref=e153]:
+              - link "Drvodekor" [ref=e154] [cursor=pointer]:
+                - /url: /proizvodi/drvodekor
+            - listitem [ref=e155]:
+              - link "Acrylcolor" [ref=e156] [cursor=pointer]:
+                - /url: /proizvodi/acrylcolor
+        - generic [ref=e157]:
+          - heading "Informacije" [level=4] [ref=e158]
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - link "O nama" [ref=e161] [cursor=pointer]:
+                - /url: /o-nama
+            - listitem [ref=e162]:
+              - link "Proizvodi" [ref=e163] [cursor=pointer]:
+                - /url: /proizvodi
+            - listitem [ref=e164]:
+              - link "Subvencije 2026" [ref=e165] [cursor=pointer]:
+                - /url: /subvencije
+            - listitem [ref=e166]:
+              - link "Kontakt" [ref=e167] [cursor=pointer]:
+                - /url: /kontakt
+            - listitem [ref=e168]:
+              - link "Politika privatnosti" [ref=e169] [cursor=pointer]:
+                - /url: /politika-privatnosti
+      - generic [ref=e170]:
+        - paragraph [ref=e171]: © 2002–2026 AL Company d.o.o. Sva prava zadržana.
+        - paragraph [ref=e172]: Valjevo, Srbija · Od 2002.

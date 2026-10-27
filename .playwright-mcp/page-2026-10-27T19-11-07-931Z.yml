@@ -1,0 +1,89 @@
+- generic [ref=f35e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - link "Pozovite nas" [ref=f35e3] [cursor=pointer]:
+    - /url: tel:+38163369392
+  - main [ref=f35e6]:
+    - generic [ref=f35e7]:
+      - heading "Predlog novog logotipa" [level=1] [ref=f35e8]
+      - paragraph [ref=f35e9]: Tri koncepta na svetloj i tamnoj pozadini. Ovo je samo predlog i nije deo javnog sajta.
+      - generic [ref=f35e10]:
+        - region [ref=f35e11]:
+          - heading "Koncept A" [level=2] [ref=f35e12]
+          - paragraph [ref=f35e13]: Stepenasti trougaoni znak, slovo „A“
+          - generic [ref=f35e14]:
+            - generic [ref=f35e15]:
+              - paragraph [ref=f35e16]: Svetla pozadina
+              - generic [ref=f35e17]:
+                - img "Koncept A – horizontalni logo, svetla pozadina" [ref=f35e18]
+                - img "Koncept A – vertikalni logo, svetla pozadina" [ref=f35e19]
+                - img "Koncept A – samo znak logo, svetla pozadina" [ref=f35e20]
+              - paragraph [ref=f35e21]: Jednobojno (tamno)
+              - generic [ref=f35e22]:
+                - img "Koncept A – horizontalni logo, jednobojno (tamno)" [ref=f35e23]
+                - img "Koncept A – vertikalni logo, jednobojno (tamno)" [ref=f35e24]
+                - img "Koncept A – samo znak logo, jednobojno (tamno)" [ref=f35e25]
+            - generic [ref=f35e26]:
+              - paragraph [ref=f35e27]: Tamna pozadina
+              - generic [ref=f35e28]:
+                - img "Koncept A – horizontalni logo, tamna pozadina" [ref=f35e29]
+                - img "Koncept A – vertikalni logo, tamna pozadina" [ref=f35e30]
+                - img "Koncept A – samo znak logo, tamna pozadina" [ref=f35e31]
+              - paragraph [ref=f35e32]: Jednobojno (belo)
+              - generic [ref=f35e33]:
+                - img "Koncept A – horizontalni logo, jednobojno (belo)" [ref=f35e34]
+                - img "Koncept A – vertikalni logo, jednobojno (belo)" [ref=f35e35]
+                - img "Koncept A – samo znak logo, jednobojno (belo)" [ref=f35e36]
+        - region [ref=f35e37]:
+          - heading "Koncept B" [level=2] [ref=f35e38]
+          - paragraph [ref=f35e39]: Prozorski okvir sa slovom „A“
+          - generic [ref=f35e40]:
+            - generic [ref=f35e41]:
+              - paragraph [ref=f35e42]: Svetla pozadina
+              - generic [ref=f35e43]:
+                - img "Koncept B – horizontalni logo, svetla pozadina" [ref=f35e44]
+                - img "Koncept B – vertikalni logo, svetla pozadina" [ref=f35e45]
+                - img "Koncept B – samo znak logo, svetla pozadina" [ref=f35e46]
+              - paragraph [ref=f35e47]: Jednobojno (tamno)
+              - generic [ref=f35e48]:
+                - img "Koncept B – horizontalni logo, jednobojno (tamno)" [ref=f35e49]
+                - img "Koncept B – vertikalni logo, jednobojno (tamno)" [ref=f35e50]
+                - img "Koncept B – samo znak logo, jednobojno (tamno)" [ref=f35e51]
+            - generic [ref=f35e52]:
+              - paragraph [ref=f35e53]: Tamna pozadina
+              - generic [ref=f35e54]:
+                - img "Koncept B – horizontalni logo, tamna pozadina" [ref=f35e55]
+                - img "Koncept B – vertikalni logo, tamna pozadina" [ref=f35e56]
+                - img "Koncept B – samo znak logo, tamna pozadina" [ref=f35e57]
+              - paragraph [ref=f35e58]: Jednobojno (belo)
+              - generic [ref=f35e59]:
+                - img "Koncept B – horizontalni logo, jednobojno (belo)" [ref=f35e60]
+                - img "Koncept B – vertikalni logo, jednobojno (belo)" [ref=f35e61]
+                - img "Koncept B – samo znak logo, jednobojno (belo)" [ref=f35e62]
+        - region [ref=f35e63]:
+          - heading "Koncept C" [level=2] [ref=f35e64]
+          - paragraph [ref=f35e65]: Minimalistički monogram „AL“
+          - generic [ref=f35e66]:
+            - generic [ref=f35e67]:
+              - paragraph [ref=f35e68]: Svetla pozadina
+              - generic [ref=f35e69]:
+                - img "Koncept C – horizontalni logo, svetla pozadina" [ref=f35e70]
+                - img "Koncept C – vertikalni logo, svetla pozadina" [ref=f35e71]
+                - img "Koncept C – samo znak logo, svetla pozadina" [ref=f35e72]
+              - paragraph [ref=f35e73]: Jednobojno (tamno)
+              - generic [ref=f35e74]:
+                - img "Koncept C – horizontalni logo, jednobojno (tamno)" [ref=f35e75]
+                - img "Koncept C – vertikalni logo, jednobojno (tamno)" [ref=f35e76]
+                - img "Koncept C – samo znak logo, jednobojno (tamno)" [ref=f35e77]
+            - generic [ref=f35e78]:
+              - paragraph [ref=f35e79]: Tamna pozadina
+              - generic [ref=f35e80]:
+                - img "Koncept C – horizontalni logo, tamna pozadina" [ref=f35e81]
+                - img "Koncept C – vertikalni logo, tamna pozadina" [ref=f35e82]
+                - img "Koncept C – samo znak logo, tamna pozadina" [ref=f35e83]
+              - paragraph [ref=f35e84]: Jednobojno (belo)
+              - generic [ref=f35e85]:
+                - img "Koncept C – horizontalni logo, jednobojno (belo)" [ref=f35e86]
+                - img "Koncept C – vertikalni logo, jednobojno (belo)" [ref=f35e87]
+                - img "Koncept C – samo znak logo, jednobojno (belo)" [ref=f35e88]

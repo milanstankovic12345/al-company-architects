@@ -1,0 +1,130 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - navigation "Brzi kontakt" [ref=e3]:
+    - link "Pozovi" [ref=e4] [cursor=pointer]:
+      - /url: tel:+38163369392
+    - link "Viber" [ref=e7] [cursor=pointer]:
+      - /url: viber://chat?number=%2B381633369392
+    - link "WhatsApp" [ref=e10] [cursor=pointer]:
+      - /url: https://wa.me/381633369392
+    - link "Ponuda" [ref=e14] [cursor=pointer]:
+      - /url: /ponuda
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - link [ref=e21] [cursor=pointer]:
+        - /url: /
+        - img "AL Company Valjevo Logo" [ref=e22]
+      - button "Toggle menu" [ref=e23] [cursor=pointer]
+    - generic [ref=e26]:
+      - link "Svi proizvodi" [ref=e27] [cursor=pointer]:
+        - /url: /proizvodi
+      - generic [ref=e30]:
+        - img "GEALAN S-9000 – PVC profil za prozore i vrata, prikaz proizvoda" [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36]: PVC
+            - generic [ref=e37]: Pasivna kuća
+            - generic [ref=e38]: Prozori
+          - heading "GEALAN S-9000" [level=1] [ref=e39]
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - paragraph [ref=e42]: Uf vrednost
+              - paragraph [ref=e43]: do 0,89 W/m²K
+            - generic [ref=e44]:
+              - paragraph [ref=e45]: Dubina profila
+              - paragraph [ref=e46]: 82,5 mm
+            - generic [ref=e47]:
+              - paragraph [ref=e48]: Broj komora
+              - paragraph [ref=e49]: "6"
+            - generic [ref=e50]:
+              - paragraph [ref=e51]: Nivoi zaptivanja
+              - paragraph [ref=e52]: "3"
+          - generic [ref=e53]:
+            - link [ref=e54] [cursor=pointer]:
+              - /url: /ponuda
+              - button "Zatražite ponudu" [ref=e55]
+            - link [ref=e56] [cursor=pointer]:
+              - /url: /merenje
+              - button "Zakažite besplatno merenje" [ref=e57]
+      - generic [ref=e58]:
+        - tablist [ref=e59]:
+          - tab "Opis" [selected] [ref=e60] [cursor=pointer]
+          - tab "Tehničke Specifikacije" [ref=e61] [cursor=pointer]
+        - tabpanel "Opis" [ref=e62]:
+          - paragraph [ref=e63]: GEALAN S-9000 je vrhunski PVC profilni sistem dizajniran za pasivne kuće i objekte sa najvišim zahtevima za energetsku efikasnost. Sa šest komora i dubinom od 82,5mm, pruža izuzetnu toplotnu izolaciju koja zadovoljava najstrože standarde. STV® tehnologija omogućava izradu velikih elemenata bez čeličnog ojačanja.
+          - generic [ref=e64]:
+            - generic [ref=e65]: Standard pasivne kuće – Uf do 0,89 W/m²K
+            - generic [ref=e70]: STV® tehnologija za velike elemente bez čelika
+            - generic [ref=e75]: 6-komorna konstrukcija za maksimalnu izolaciju
+            - generic [ref=e80]: 3 nivoa zaptivanja protiv vode, vazduha i buke
+            - generic [ref=e85]: Reciklabilan materijal – ekološki prihvatljiv
+            - generic [ref=e90]: Širok izbor dekora i boja
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: AL
+            - generic [ref=e103]: AL Company d.o.o.
+          - paragraph [ref=e104]: PVC i aluminijumska stolarija
+          - paragraph [ref=e105]: Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. godine. Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
+          - generic [ref=e106]:
+            - link "Prva proleterska 60, 14000 Valjevo, Srbija" [ref=e107] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA
+            - link "+381 14 246 079" [ref=e111] [cursor=pointer]:
+              - /url: tel:+38114246079
+            - link "+381 63 369 392" [ref=e114] [cursor=pointer]:
+              - /url: tel:+38163369392
+            - link "milanaiagency@gmail.com" [ref=e117] [cursor=pointer]:
+              - /url: mailto:milanaiagency@gmail.com
+            - link "@alcompany2002" [ref=e121] [cursor=pointer]:
+              - /url: https://www.instagram.com/alcompany2002/
+        - generic [ref=e125]:
+          - heading "Proizvodi" [level=4] [ref=e126]
+          - list [ref=e127]:
+            - listitem [ref=e128]:
+              - link "PVC stolarija" [ref=e129] [cursor=pointer]:
+                - /url: /proizvodi/pvc
+            - listitem [ref=e130]:
+              - link "Aluminijumska stolarija" [ref=e131] [cursor=pointer]:
+                - /url: /proizvodi/aluminijum
+            - listitem [ref=e132]:
+              - link "Ulazna vrata" [ref=e133] [cursor=pointer]:
+                - /url: /proizvodi/ulazna-vrata
+            - listitem [ref=e134]:
+              - link "Drvodekor" [ref=e135] [cursor=pointer]:
+                - /url: /proizvodi/drvodekor
+            - listitem [ref=e136]:
+              - link "Acrylcolor" [ref=e137] [cursor=pointer]:
+                - /url: /proizvodi/acrylcolor
+        - generic [ref=e138]:
+          - heading "Informacije" [level=4] [ref=e139]
+          - list [ref=e140]:
+            - listitem [ref=e141]:
+              - link "O nama" [ref=e142] [cursor=pointer]:
+                - /url: /o-nama
+            - listitem [ref=e143]:
+              - link "Proizvodi" [ref=e144] [cursor=pointer]:
+                - /url: /proizvodi
+            - listitem [ref=e145]:
+              - link "Boje i dekori" [ref=e146] [cursor=pointer]:
+                - /url: /boje
+            - listitem [ref=e147]:
+              - link "Poređenje sistema" [ref=e148] [cursor=pointer]:
+                - /url: /uporedi
+            - listitem [ref=e149]:
+              - link "Realizovani projekti" [ref=e150] [cursor=pointer]:
+                - /url: /projekti
+            - listitem [ref=e151]:
+              - link "Subvencije 2026" [ref=e152] [cursor=pointer]:
+                - /url: /subvencije
+            - listitem [ref=e153]:
+              - link "Kontakt" [ref=e154] [cursor=pointer]:
+                - /url: /kontakt
+            - listitem [ref=e155]:
+              - link "Politika privatnosti" [ref=e156] [cursor=pointer]:
+                - /url: /politika-privatnosti
+      - generic [ref=e157]:
+        - paragraph [ref=e158]: © 2002–2026 AL Company d.o.o. Sva prava zadržana.
+        - paragraph [ref=e159]: Valjevo, Srbija · Od 2002.

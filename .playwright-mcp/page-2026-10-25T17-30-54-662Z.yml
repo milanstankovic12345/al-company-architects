@@ -1,0 +1,153 @@
+- generic [ref=f14e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - main [ref=f14e3]:
+    - generic [ref=f14e5]:
+      - link [ref=f14e6] [cursor=pointer]:
+        - /url: /
+        - img "AL Company Valjevo Logo" [ref=f14e7]
+      - navigation [ref=f14e8]:
+        - link "O nama" [ref=f14e9] [cursor=pointer]:
+          - /url: /o-nama
+        - link "Proizvodi" [ref=f14e11] [cursor=pointer]:
+          - /url: /proizvodi
+        - link "Subvencije 2026" [ref=f14e14] [cursor=pointer]:
+          - /url: /subvencije
+        - link "Kontakt" [ref=f14e15] [cursor=pointer]:
+          - /url: /kontakt
+      - generic [ref=f14e16]:
+        - link "Instagram" [ref=f14e17] [cursor=pointer]:
+          - /url: https://www.instagram.com/alcompany2002/
+        - link [ref=f14e21] [cursor=pointer]:
+          - /url: /kontakt
+          - button "Zatražite ponudu" [ref=f14e22]
+    - generic [ref=f14e24]:
+      - generic [ref=f14e25]:
+        - paragraph [ref=f14e26]: Kontakt
+        - heading "Pošaljite nam poruku" [level=1] [ref=f14e27]
+        - paragraph [ref=f14e28]: Popunite formular i kontaktiraćemo vas u najkraćem roku. Možete nas pozvati i direktno.
+      - generic [ref=f14e29]:
+        - generic [ref=f14e31]:
+          - generic [ref=f14e32]:
+            - generic [ref=f14e33]:
+              - text: Ime i prezime *
+              - textbox "Ime i prezime *" [ref=f14e34]:
+                - /placeholder: Vaše ime i prezime
+            - generic [ref=f14e35]:
+              - text: E-mail adresa *
+              - textbox "E-mail adresa *" [ref=f14e36]:
+                - /placeholder: vas@email.com
+          - generic [ref=f14e37]:
+            - text: Telefon
+            - textbox "Telefon" [ref=f14e38]:
+              - /placeholder: +381 6X XXX XXXX
+          - generic [ref=f14e39]:
+            - text: Poruka *
+            - textbox "Poruka *" [ref=f14e40]:
+              - /placeholder: Opišite šta vam je potrebno — tip prozora, boja, posebni zahtevi...
+          - text: Ne popunjavajte ovo polje
+          - textbox [ref=f14e41]
+          - paragraph [ref=f14e42]:
+            - text: Slanjem poruke prihvatate našu
+            - link "politiku privatnosti" [ref=f14e43] [cursor=pointer]:
+              - /url: /politika-privatnosti
+            - text: .
+          - button "Pošaljite poruku" [ref=f14e44] [cursor=pointer]
+        - generic [ref=f14e45]:
+          - generic [ref=f14e46]:
+            - heading "Kontakt informacije" [level=3] [ref=f14e47]
+            - generic [ref=f14e48]:
+              - generic [ref=f14e52]:
+                - link "+381 14 246 079" [ref=f14e53] [cursor=pointer]:
+                  - /url: tel:+38114246079
+                - link "+381 63 369 392 (mobilni)" [ref=f14e54] [cursor=pointer]:
+                  - /url: tel:+38163369392
+              - generic [ref=f14e55]: "Faks: +381 14 246 079"
+              - link "milanaiagency@gmail.com" [ref=f14e61] [cursor=pointer]:
+                - /url: mailto:milanaiagency@gmail.com
+              - link "Prva proleterska 60, 14000 Valjevo, Srbija" [ref=f14e65] [cursor=pointer]:
+                - /url: https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA
+              - link "@alcompany2002" [ref=f14e69] [cursor=pointer]:
+                - /url: https://www.instagram.com/alcompany2002/
+          - generic [ref=f14e73]:
+            - iframe [ref=f14e74]:
+              - generic [ref=f15e2]:
+                - generic:
+                  - region "Map" [ref=f15e3]
+                  - button "Map marker" [ref=f15e4]
+                - generic:
+                  - generic [ref=f15e8]:
+                    - button "Zoom In" [ref=f15e9] [cursor=pointer]
+                    - button "Zoom Out" [ref=f15e11] [cursor=pointer]
+                  - group [ref=f15e13]:
+                    - generic [ref=f15e14]:
+                      - text: ©
+                      - link "OpenStreetMap contributors" [ref=f15e15] [cursor=pointer]:
+                        - /url: /copyright
+                      - text: ♥️
+                      - link "Make a Donation" [ref=f15e16] [cursor=pointer]:
+                        - /url: https://supporting.openstreetmap.org
+                      - text: .
+                      - link "Website and API terms" [ref=f15e17] [cursor=pointer]:
+                        - /url: https://wiki.osmfoundation.org/wiki/Terms_of_Use
+            - link "Prikaži na Google Maps →" [ref=f14e75] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/Prva+proleterska+60,+14000+Valjevo,+Srbija
+    - generic [ref=f14e77]:
+      - generic [ref=f14e78]:
+        - generic [ref=f14e79]:
+          - generic [ref=f14e80]:
+            - generic [ref=f14e81]: AL
+            - generic [ref=f14e83]: AL Company d.o.o.
+          - paragraph [ref=f14e84]: PVC i aluminijumska stolarija
+          - paragraph [ref=f14e85]: Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. godine. Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
+          - generic [ref=f14e86]:
+            - link "Prva proleterska 60, 14000 Valjevo, Srbija" [ref=f14e87] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA
+            - link "+381 14 246 079" [ref=f14e91] [cursor=pointer]:
+              - /url: tel:+38114246079
+            - link "+381 63 369 392" [ref=f14e94] [cursor=pointer]:
+              - /url: tel:+38163369392
+            - link "milanaiagency@gmail.com" [ref=f14e97] [cursor=pointer]:
+              - /url: mailto:milanaiagency@gmail.com
+            - link "@alcompany2002" [ref=f14e101] [cursor=pointer]:
+              - /url: https://www.instagram.com/alcompany2002/
+        - generic [ref=f14e105]:
+          - heading "Proizvodi" [level=4] [ref=f14e106]
+          - list [ref=f14e107]:
+            - listitem [ref=f14e108]:
+              - link "PVC stolarija" [ref=f14e109] [cursor=pointer]:
+                - /url: /proizvodi/pvc
+            - listitem [ref=f14e110]:
+              - link "Aluminijumska stolarija" [ref=f14e111] [cursor=pointer]:
+                - /url: /proizvodi/aluminijum
+            - listitem [ref=f14e112]:
+              - link "Ulazna vrata" [ref=f14e113] [cursor=pointer]:
+                - /url: /proizvodi/ulazna-vrata
+            - listitem [ref=f14e114]:
+              - link "Drvodekor" [ref=f14e115] [cursor=pointer]:
+                - /url: /proizvodi/drvodekor
+            - listitem [ref=f14e116]:
+              - link "Acrylcolor" [ref=f14e117] [cursor=pointer]:
+                - /url: /proizvodi/acrylcolor
+        - generic [ref=f14e118]:
+          - heading "Informacije" [level=4] [ref=f14e119]
+          - list [ref=f14e120]:
+            - listitem [ref=f14e121]:
+              - link "O nama" [ref=f14e122] [cursor=pointer]:
+                - /url: /o-nama
+            - listitem [ref=f14e123]:
+              - link "Proizvodi" [ref=f14e124] [cursor=pointer]:
+                - /url: /proizvodi
+            - listitem [ref=f14e125]:
+              - link "Subvencije 2026" [ref=f14e126] [cursor=pointer]:
+                - /url: /subvencije
+            - listitem [ref=f14e127]:
+              - link "Kontakt" [ref=f14e128] [cursor=pointer]:
+                - /url: /kontakt
+            - listitem [ref=f14e129]:
+              - link "Politika privatnosti" [ref=f14e130] [cursor=pointer]:
+                - /url: /politika-privatnosti
+      - generic [ref=f14e131]:
+        - paragraph [ref=f14e132]: © 2002–2026 AL Company d.o.o. Sva prava zadržana.
+        - paragraph [ref=f14e133]: Valjevo, Srbija · Od 2002.

@@ -1,0 +1,230 @@
+- generic [ref=f1e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - main [ref=f1e3]:
+    - generic [ref=f1e5]:
+      - link [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - img "AL Company Valjevo Logo" [ref=f1e7]
+      - navigation [ref=f1e8]:
+        - link "O nama" [ref=f1e9] [cursor=pointer]:
+          - /url: /o-nama
+        - link "Proizvodi" [ref=f1e11] [cursor=pointer]:
+          - /url: /proizvodi
+        - link "Subvencije 2026" [ref=f1e14] [cursor=pointer]:
+          - /url: /subvencije
+        - link "Kontakt" [ref=f1e15] [cursor=pointer]:
+          - /url: /kontakt
+      - generic [ref=f1e16]:
+        - link "Instagram" [ref=f1e17] [cursor=pointer]:
+          - /url: https://www.instagram.com/alcompany2002/
+        - link [ref=f1e21] [cursor=pointer]:
+          - /url: /kontakt
+          - button "Zatražite ponudu" [ref=f1e22]
+    - generic [ref=f1e23]:
+      - img "Moderna arhitektura sa aluminium prozorima" [ref=f1e25]
+      - generic [ref=f1e28]:
+        - generic [ref=f1e29]:
+          - paragraph [ref=f1e30]: Od 2002. godine
+          - heading "Arhitektonska Preciznost. Energetska Superiornost." [level=1] [ref=f1e31]: ArhitektonskaPreciznost.EnergetskaSuperiornost.
+        - paragraph [ref=f1e32]: Vrhunska PVC i ALU stolarija sa tradicijom od 2002. godine. Partneri kompanija GEALAN i ALUMIL.
+        - generic [ref=f1e33]:
+          - link [ref=f1e34] [cursor=pointer]:
+            - /url: /kontakt
+            - button "Zatražite ponudu" [ref=f1e35]
+          - link [ref=f1e36] [cursor=pointer]:
+            - /url: /subvencije
+            - button "Vodič za subvencije 2026" [ref=f1e37]
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40]:
+          - paragraph [ref=f1e41]: 30+
+          - paragraph [ref=f1e42]: Godina iskustva
+        - generic [ref=f1e43]:
+          - paragraph [ref=f1e44]: 15,000+
+          - paragraph [ref=f1e45]: Realizovanih projekata
+        - generic [ref=f1e46]:
+          - paragraph [ref=f1e47]: "0.72"
+          - paragraph [ref=f1e48]: Uf vrednost (W/m²K)
+        - generic [ref=f1e49]:
+          - paragraph [ref=f1e50]: 47dB
+          - paragraph [ref=f1e51]: Zvučna izolacija
+    - generic [ref=f1e53]:
+      - generic [ref=f1e54]:
+        - paragraph [ref=f1e55]: Zašto AL Company
+        - heading "Generacijska investicija u komfor i sigurnost" [level=2] [ref=f1e56]: Generacijska investicija ukomfor i sigurnost
+        - paragraph [ref=f1e57]:
+          - text: Preduzeće AL Company je nastalo kao rezultat ulaganja kapitala i znanja tokom dugog niza godina i jedno je od pionira u proizvodnji PVC i ALU stolarije u Srbiji. Nudimo širok asortiman proizvoda od svetski poznatih proizvođača —
+          - strong [ref=f1e58]: GEALAN
+          - text: (Nemačka) i
+          - strong [ref=f1e59]: ALUMIL
+          - text: (Grčka) — čiji kvalitet stoji na samom vrhu domaće i evropske proizvodnje. Naš tim stručnjaka kontinuirano prati svetske inovacije kako bi svakom klijentu ponudili najbolje rešenje.
+      - generic [ref=f1e60]:
+        - generic [ref=f1e61]:
+          - heading "Termička superiornost" [level=3] [ref=f1e65]
+          - paragraph [ref=f1e66]: GEALAN S-9000 sistem sa tri nivoa zaptivanja i Uf vrednošću od samo 0.72 W/m²K. Ušteda energije do 40%.
+        - generic [ref=f1e67]:
+          - heading "Utočište tišine" [level=3] [ref=f1e73]
+          - paragraph [ref=f1e74]: Redukcija buke do 47dB. Vaš dom postaje oaza mira, čak i u najbuknijim gradskim sredinama.
+        - generic [ref=f1e75]:
+          - heading "Sigurnost bez kompromisa" [level=3] [ref=f1e79]
+          - paragraph [ref=f1e80]: RC2 klasa otpornosti na provalu. Višekomorni profili sa čeličnim ojačanjima za maksimalnu zaštitu.
+        - generic [ref=f1e81]:
+          - heading "Nemačko-Grčki inženjering" [level=3] [ref=f1e86]
+          - paragraph [ref=f1e87]: Ekskluzivni partner GEALAN (Nemačka) i ALUMIL (Grčka) — dva lidera evropske stolarije.
+    - generic [ref=f1e89]:
+      - generic [ref=f1e90]:
+        - paragraph [ref=f1e91]: Proizvodni program
+        - heading "PVC & Aluminijum svetske klase" [level=2] [ref=f1e92]: PVC & Aluminijumsvetske klase
+      - generic [ref=f1e93]:
+        - generic [ref=f1e94]:
+          - img "GEALAN S-9000" [ref=f1e96]
+          - generic [ref=f1e97]:
+            - paragraph [ref=f1e98]: PVC SISTEMI
+            - heading "GEALAN S-9000" [level=3] [ref=f1e99]
+            - paragraph [ref=f1e100]: GEALAN S-9000 je vrhunski PVC profilni sistem dizajniran za pasivne kuće i objekte sa najvišim zahtevima za energetsku efikasnost. Sa šest komora i dubinom od 82.5mm, pruža izuzetnu toplotnu izolaciju koja zadovoljava najstrože standarde. STV® tehnologija omogućava izradu velikih elemenata bez čeličnog ojačanja.
+            - generic [ref=f1e101]:
+              - generic [ref=f1e102]: 0.92 W/m²K
+              - generic [ref=f1e103]: 82.5 mm
+              - generic [ref=f1e104]: "6"
+              - generic [ref=f1e105]: "3"
+            - link "Saznajte više" [ref=f1e106] [cursor=pointer]:
+              - /url: /proizvodi/gealan-s9000
+        - generic [ref=f1e109]:
+          - img "ALUMIL SUPREME SD77" [ref=f1e111]
+          - generic [ref=f1e112]:
+            - paragraph [ref=f1e113]: ALU SISTEMI
+            - heading "ALUMIL SUPREME SD77" [level=3] [ref=f1e114]
+            - paragraph [ref=f1e115]: ALUMIL SUPREME SD77 je premium aluminijumski sistem za ulazna vrata koji kombinuje izuzetnu sigurnost sa vrhunskom toplotnom izolacijom. Sa RC3 sertifikovanom otpornošću na provalu i Ud vrednošću od 0.7 W/m²K, pruža mir i udobnost. Nizak prag od 22mm omogućava lak pristup.
+            - generic [ref=f1e116]:
+              - generic [ref=f1e117]: Od 0.7 W/m²K
+              - generic [ref=f1e118]: 77 mm
+              - generic [ref=f1e119]: RC3
+              - generic [ref=f1e120]: 22 mm (nizak prag)
+            - link "Saznajte više" [ref=f1e121] [cursor=pointer]:
+              - /url: /proizvodi/alumil-supreme-sd77
+    - generic [ref=f1e128]:
+      - generic [ref=f1e129]:
+        - paragraph [ref=f1e135]: Subvencije 2026
+        - heading "Ostvarite do 90% povraćaja kroz državne subvencije" [level=2] [ref=f1e136]: Ostvarite do 90% povraćajakroz državne subvencije
+        - paragraph [ref=f1e137]: Nacionalni program za energetsku rehabilitaciju stambenih zgrada za 2026. godinu. Proverite da li vaša opština ispunjava uslove i uštedite na zameni stolarije.
+      - generic [ref=f1e138]:
+        - link "Proveri pravo na subvenciju" [ref=f1e139] [cursor=pointer]:
+          - /url: /subvencije
+        - paragraph [ref=f1e140]: Besplatna provera u 2 minuta
+    - generic [ref=f1e143]:
+      - paragraph [ref=f1e148]: Kalkulator ušteda
+      - heading "Koliko možete da uštedite?" [level=2] [ref=f1e149]
+      - paragraph [ref=f1e150]: Izračunajte godišnju uštedu na grejanju zamenom starih prozora sa GEALAN sistemom (Uw 0.9).
+      - generic [ref=f1e151]:
+        - generic [ref=f1e152]:
+          - generic [ref=f1e153]:
+            - generic [ref=f1e154]:
+              - text: "Površina stana/kuće:"
+              - generic [ref=f1e155]: 80 m²
+            - slider [ref=f1e160]
+            - generic [ref=f1e161]:
+              - generic [ref=f1e162]: 30 m²
+              - generic [ref=f1e163]: 300 m²
+          - generic [ref=f1e164]:
+            - text: Izvor grejanja
+            - combobox [ref=f1e165] [cursor=pointer]:
+              - generic: Struja (11 RSD/kWh)
+          - generic [ref=f1e168]:
+            - text: Trenutni prozori
+            - combobox [ref=f1e169] [cursor=pointer]:
+              - generic: Stari jednoslojni drveni (Uw = 3)
+        - generic [ref=f1e172]:
+          - generic [ref=f1e173]:
+            - paragraph [ref=f1e174]: Godišnja ušteda
+            - paragraph [ref=f1e177]: 36.960 RSD
+          - generic [ref=f1e178]:
+            - paragraph [ref=f1e179]: Period otplate
+            - generic [ref=f1e180]:
+              - generic [ref=f1e181]: "1"
+              - generic [ref=f1e184]: "2"
+              - generic [ref=f1e187]: "3"
+              - generic [ref=f1e190]: "4"
+              - generic [ref=f1e193]: "5"
+              - generic [ref=f1e196]: "6"
+              - generic [ref=f1e199]: "7"
+              - generic [ref=f1e202]: "8"
+              - generic [ref=f1e205]: "9"
+              - generic [ref=f1e208]: "10"
+              - generic [ref=f1e211]: "11"
+              - generic [ref=f1e214]: "12"
+              - generic [ref=f1e217]: "13"
+              - generic [ref=f1e220]: "14"
+              - generic [ref=f1e223]: "15"
+            - paragraph [ref=f1e226]:
+              - text: Otplata za
+              - generic [ref=f1e227]: 13.3 godina
+    - generic [ref=f1e229]:
+      - paragraph [ref=f1e231]: Ekskluzivni partneri svetskih lidera u stolariji
+      - generic [ref=f1e232]:
+        - generic [ref=f1e233]:
+          - paragraph [ref=f1e234]: GEALAN
+          - paragraph [ref=f1e235]: Nemačka · PVC sistemi
+        - generic [ref=f1e237]:
+          - paragraph [ref=f1e238]: ALUMIL
+          - paragraph [ref=f1e239]: Grčka · ALU sistemi
+    - generic [ref=f1e242]:
+      - generic [ref=f1e243]:
+        - generic [ref=f1e244]:
+          - generic [ref=f1e245]:
+            - generic [ref=f1e246]: AL
+            - generic [ref=f1e248]: AL Company d.o.o.
+          - paragraph [ref=f1e249]: PVC i aluminijumska stolarija
+          - paragraph [ref=f1e250]: Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. godine. Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
+          - generic [ref=f1e251]:
+            - link "Prva proleterska 60, 14000 Valjevo, Srbija" [ref=f1e252] [cursor=pointer]:
+              - /url: https://maps.app.goo.gl/ZXj7UDHgeK4nkm7cA
+            - link "+381 14 246 079" [ref=f1e256] [cursor=pointer]:
+              - /url: tel:+38114246079
+            - link "+381 63 369 392" [ref=f1e259] [cursor=pointer]:
+              - /url: tel:+38163369392
+            - link "alcompany@open.telekom.rs" [ref=f1e262] [cursor=pointer]:
+              - /url: mailto:milanaiagency@gmail.com
+            - link "@alcompany2002" [ref=f1e266] [cursor=pointer]:
+              - /url: https://www.instagram.com/alcompany2002/
+        - generic [ref=f1e270]:
+          - heading "Proizvodi" [level=4] [ref=f1e271]
+          - list [ref=f1e272]:
+            - listitem [ref=f1e273]:
+              - link "PVC stolarija" [ref=f1e274] [cursor=pointer]:
+                - /url: /proizvodi/pvc
+            - listitem [ref=f1e275]:
+              - link "Aluminijumska stolarija" [ref=f1e276] [cursor=pointer]:
+                - /url: /proizvodi/aluminijum
+            - listitem [ref=f1e277]:
+              - link "Ulazna vrata" [ref=f1e278] [cursor=pointer]:
+                - /url: /proizvodi/ulazna-vrata
+            - listitem [ref=f1e279]:
+              - link "Drvodekor" [ref=f1e280] [cursor=pointer]:
+                - /url: /proizvodi/drvodekor
+            - listitem [ref=f1e281]:
+              - link "Acrylcolor" [ref=f1e282] [cursor=pointer]:
+                - /url: /proizvodi/acrylcolor
+        - generic [ref=f1e283]:
+          - heading "Informacije" [level=4] [ref=f1e284]
+          - list [ref=f1e285]:
+            - listitem [ref=f1e286]:
+              - link "O nama" [ref=f1e287] [cursor=pointer]:
+                - /url: /o-nama
+            - listitem [ref=f1e288]:
+              - link "Proizvodi" [ref=f1e289] [cursor=pointer]:
+                - /url: /proizvodi
+            - listitem [ref=f1e290]:
+              - link "Subvencije 2026" [ref=f1e291] [cursor=pointer]:
+                - /url: /subvencije
+            - listitem [ref=f1e292]:
+              - link "Kontakt" [ref=f1e293] [cursor=pointer]:
+                - /url: /kontakt
+            - listitem [ref=f1e294]:
+              - link "Politika privatnosti" [ref=f1e295] [cursor=pointer]:
+                - /url: /politika-privatnosti
+      - generic [ref=f1e296]:
+        - paragraph [ref=f1e297]: © 2002–2026 AL Company d.o.o. Sva prava zadržana.
+        - paragraph [ref=f1e298]: Valjevo, Srbija · Od 2002.
+    - button "Otvori AI Assistant" [ref=f1e299] [cursor=pointer]:
+      - generic [ref=f1e300]: AI Assistant
