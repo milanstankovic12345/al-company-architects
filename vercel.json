@@ -41,6 +41,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/((?!assets|favicon|placeholder|robots|sitemap).*)", "destination": "/index.html" }
+    { "source": "/((?!assets|favicon|placeholder|robots|sitemap|og-default).*)", "destination": "/index.html" }
   ]
 }
