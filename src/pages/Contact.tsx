@@ -51,6 +51,7 @@ const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
+  const [showMap, setShowMap] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -246,16 +247,29 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* OpenStreetMap embed */}
+              {/* Google Maps embed — loaded on click so no third-party requests happen before the visitor asks */}
               <div className="border border-border overflow-hidden">
-                <iframe
-                  title="AL Company lokacija - Valjevo"
-                  width="100%"
-                  height="250"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=19.877%2C44.267%2C19.897%2C44.277&layer=mapnik&marker=44.272%2C19.887"
-                />
+                {showMap ? (
+                  <iframe
+                    title="AL Company lokacija - Valjevo"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=Prva+proleterska+60,+14000+Valjevo,+Srbija&output=embed"
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setShowMap(true)}
+                    className="flex h-[250px] w-full flex-col items-center justify-center gap-2 bg-muted/30 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <MapPin size={24} className="text-accent" />
+                    <span className="font-semibold">Prikaži mapu</span>
+                    <span className="max-w-xs px-4 text-xs">Učitava se Google mapa; Google može postaviti kolačiće.</span>
+                  </button>
+                )}
                 <a
                   href="https://www.google.com/maps/search/Prva+proleterska+60,+14000+Valjevo,+Srbija"
                   target="_blank"

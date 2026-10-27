@@ -9,6 +9,7 @@ import EnergyROICalculator from "@/components/EnergyCalculator/EnergyROICalculat
 import TrustSection from "@/components/Trust/TrustSection";
 import FaqSection from "@/components/Faq/FaqSection";
 import Footer from "@/components/Footer";
+import { buildLocalBusinessJsonLd } from "@/lib/localBusiness";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Helmet>
         <title>AL Company – PVC i aluminijumska stolarija Valjevo</title>
         <meta name="description" content="AL Company d.o.o. – Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. GEALAN i ALUMIL profili. Valjevo, Srbija." />
+        <script type="application/ld+json">{JSON.stringify(buildLocalBusinessJsonLd())}</script>
       </Helmet>
       <Navbar />
       <HeroSection />

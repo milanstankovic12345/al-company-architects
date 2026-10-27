@@ -43,13 +43,44 @@ const PrivacyPolicy = () => {
                 <h2 className="text-lg font-heading font-bold text-foreground">Koje podatke prikupljamo</h2>
               </div>
               <p>
-                Putem kontakt formulara na našem sajtu prikupljamo sledeće podatke koje vi dobrovoljno unosite:
+                Putem formulara na našem sajtu (kontakt, zahtev za ponudu i zakazivanje merenja)
+                prikupljamo sledeće podatke koje vi dobrovoljno unosite:
               </p>
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>Ime i prezime</li>
                 <li>Email adresa</li>
-                <li>Broj telefona (opciono)</li>
-                <li>Sadržaj vaše poruke</li>
+                <li>Broj telefona (u kontakt formularu opciono)</li>
+                <li>Sadržaj vaše poruke ili napomene</li>
+                <li>Zahtev za ponudu: izabrani proizvod i materijal, dimenzije, količina, završna obrada, grad</li>
+                <li>Zakazivanje merenja: grad, adresa, željeni datum i termin</li>
+                <li>Željeni način kontakta (telefon, email i sl.)</li>
+              </ul>
+              <p className="mt-3">
+                Poruke sa formulara prosleđuje nam servis <strong>Formspree</strong>, koji u našem
+                ime prenosi podatke na našu email adresu (obrađivač podataka).
+              </p>
+            </div>
+
+            <div className="border border-border bg-card p-6">
+              <div className="flex items-start gap-3 mb-3">
+                <FileText className="text-accent shrink-0 mt-1" size={18} />
+                <h2 className="text-lg font-heading font-bold text-foreground">Kolačići, lokalno čuvanje i analitika</h2>
+              </div>
+              <ul className="list-disc list-inside space-y-1">
+                <li>
+                  Lista proizvoda za poređenje i nacrt zahteva za ponudu čuvaju se samo u vašem
+                  pregledaču (localStorage) i ne šalju se nama. Kratka pauza između slanja formulara
+                  koristi sessionStorage.
+                </li>
+                <li>
+                  Koristimo Vercel Analytics, analitiku bez kolačića koja beleži samo agregirane
+                  posete stranicama, bez praćenja pojedinaca preko sajtova.
+                </li>
+                <li>
+                  Mapa na stranici Kontakt je Google mapa i učitava se tek kada kliknete na „Prikaži
+                  mapu“. Tada Google može postaviti kolačiće i obrađivati vašu IP adresu prema
+                  sopstvenoj politici privatnosti.
+                </li>
               </ul>
             </div>
 
@@ -96,7 +127,7 @@ const PrivacyPolicy = () => {
             </div>
 
             <p className="text-sm text-muted-foreground/60">
-              Poslednje ažuriranje: maj 2026. godine.
+              Poslednje ažuriranje: oktobar 2026. godine.
             </p>
           </motion.div>
         </div>
