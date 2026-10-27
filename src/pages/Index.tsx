@@ -7,6 +7,7 @@ import SubsidyBanner from "@/components/SubsidyBanner";
 import MeasurementBanner from "@/components/MeasurementBanner";
 import EnergyROICalculator from "@/components/EnergyCalculator/EnergyROICalculator";
 import TrustSection from "@/components/Trust/TrustSection";
+import FaqSection from "@/components/Faq/FaqSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
       <MeasurementBanner />
       <EnergyROICalculator />
       <TrustSection />
+      <FaqSection />
       <div id="kontakt">
         <Footer />
       </div>
