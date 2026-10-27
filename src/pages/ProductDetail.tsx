@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -10,6 +11,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import TechTooltip from "@/components/TechTooltip";
+import { Skeleton } from "@/components/ui/skeleton";
+
+const ProfileCrossSection = lazy(() => import("@/components/ProfileSection/ProfileCrossSection"));
 
 const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -103,6 +107,12 @@ const ProductDetail = () => {
           </motion.div>
 
           <ProductTabs product={product} />
+
+          {product.slug === "gealan-s9000" && (
+            <Suspense fallback={<Skeleton className="h-80 w-full mt-12" />}>
+              <ProfileCrossSection />
+            </Suspense>
+          )}
         </div>
       </section>
       <Footer />
