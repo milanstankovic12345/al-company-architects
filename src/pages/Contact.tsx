@@ -196,7 +196,7 @@ const Contact = () => {
 
                   <p className="text-xs text-muted-foreground">
                     Slanjem poruke prihvatate našu{" "}
-                    <Link to="/politika-privatnosti" className="text-accent hover:underline">
+                    <Link to="/politika-privatnosti" className="text-accent underline underline-offset-2">
                       politiku privatnosti
                     </Link>.
                   </p>
@@ -219,13 +219,13 @@ const Contact = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="space-y-6">
               <div className="border border-border p-6 bg-muted/30">
-                <h3 className="font-heading font-bold text-foreground mb-4">Kontakt informacije</h3>
+                <h2 className="font-heading font-bold text-foreground mb-4">Kontakt informacije</h2>
                 <div className="space-y-4 text-sm font-body text-muted-foreground">
                   <div className="flex items-start gap-3">
                     <Phone size={16} className="text-accent mt-0.5 shrink-0" />
                     <div>
-                      <a href="tel:+38114246079" className="hover:text-foreground transition-colors block">+381 14 246 079</a>
-                      <a href="tel:+38163369392" className="hover:text-foreground transition-colors block">+381 63 369 392 (mobilni)</a>
+                      <a href="tel:+38114246079" className="hover:text-foreground transition-colors block py-1">+381 14 246 079</a>
+                      <a href="tel:+38163369392" className="hover:text-foreground transition-colors block py-1">+381 63 369 392 (mobilni)</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -274,7 +274,7 @@ const Contact = () => {
                   href="https://www.google.com/maps/search/Prva+proleterska+60,+14000+Valjevo,+Srbija"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-center text-xs text-accent hover:underline py-2 bg-muted/30"
+                  className="block text-center text-xs text-accent underline py-2 bg-muted/30"
                 >
                   Prikaži na Google Maps →
                 </a>

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useMemo, useState } from "react";
+import { lazy, Suspense, useCallback, useMemo, useRef, useState } from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import { RevealItem, RevealStagger } from "@/components/motion/Reveal";
@@ -11,6 +11,19 @@ const ProjectGrid = () => {
   const [filter, setFilter] = useState<ProjectFilter>("sve");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const visible = useMemo(() => filterProjects(projects, filter), [filter]);
+  const cardRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const lastIndex = useRef(0);
+
+  // The lightbox unmounts on close, so Radix cannot return focus itself: put it back on the last viewed card.
+  const handleIndexChange = useCallback((i: number | null) => {
+    if (i === null) {
+      const card = cardRefs.current[lastIndex.current];
+      setTimeout(() => card?.focus(), 0);
+    } else {
+      lastIndex.current = i;
+    }
+    setOpenIndex(i);
+  }, []);
 
   return (
     <div>
@@ -42,8 +55,9 @@ const ProjectGrid = () => {
             <RevealItem key={p.id}>
               <button
                 type="button"
-                onClick={() => setOpenIndex(i)}
-                aria-label={`Otvori projekat: ${p.title}, ${p.location}`}
+                ref={(el) => (cardRefs.current[i] = el)}
+                onClick={() => handleIndexChange(i)}
+                aria-haspopup="dialog"
                 className="group block w-full overflow-hidden rounded-lg border bg-card text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-muted">
@@ -58,7 +72,7 @@ const ProjectGrid = () => {
                   )}
                 </div>
                 <div className="p-4">
-                  <h3 className="font-heading font-bold text-foreground">{p.title}</h3>
+                  <h2 className="font-heading font-bold text-foreground">{p.title}</h2>
                   <p className="text-sm text-muted-foreground">
                     {p.location} · {categoryLabels[p.category]} · {p.system.toUpperCase()}
                   </p>
@@ -71,7 +85,7 @@ const ProjectGrid = () => {
 
       {openIndex !== null && (
         <Suspense fallback={null}>
-          <Lightbox items={visible} index={openIndex} onIndexChange={setOpenIndex} />
+          <Lightbox items={visible} index={openIndex} onIndexChange={handleIndexChange} />
         </Suspense>
       )}
     </div>

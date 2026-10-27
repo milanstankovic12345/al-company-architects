@@ -20,7 +20,7 @@ const Measurement = () => (
         <h1 className="text-3xl md:text-5xl font-heading font-black text-foreground mb-4">Zakažite besplatno merenje</h1>
         <p className="font-body text-muted-foreground max-w-xl mb-10">
           Naš stručnjak dolazi na vašu adresu, uzima tačne mere i savetuje vas o izboru stolarije — bez obaveze. Ako vam treba samo okvirna cena, možete{" "}
-          <Link to="/ponuda" className="text-accent hover:underline">
+          <Link to="/ponuda" className="text-accent underline underline-offset-2">
             zatražiti ponudu
           </Link>
           .

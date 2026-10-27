@@ -20,11 +20,11 @@ const Projects = () => (
         <h1 className="text-3xl md:text-5xl font-heading font-black text-foreground mb-4">Realizovani projekti</h1>
         <p className="font-body text-muted-foreground max-w-xl mb-10">
           Izdvojeni radovi na kućama, stanovima i poslovnim objektima. Želite isto za svoj dom?{" "}
-          <Link to="/ponuda" className="text-accent hover:underline">
+          <Link to="/ponuda" className="text-accent underline underline-offset-2">
             Zatražite ponudu
           </Link>{" "}
           ili{" "}
-          <Link to="/merenje" className="text-accent hover:underline">
+          <Link to="/merenje" className="text-accent underline underline-offset-2">
             zakažite besplatno merenje
           </Link>
           .

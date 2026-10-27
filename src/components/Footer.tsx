@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="font-body text-primary-foreground/50 max-w-sm leading-relaxed mb-2 text-sm font-medium">
               PVC i aluminijumska stolarija
             </p>
-            <p className="font-body text-primary-foreground/40 max-w-sm leading-relaxed mb-6 text-sm">
+            <p className="font-body text-primary-foreground/60 max-w-sm leading-relaxed mb-6 text-sm">
               Proizvođač vrhunske PVC i aluminijumske stolarije od 2002. godine.
               Ekskluzivni partner kompanija GEALAN i ALUMIL za Srbiju.
             </p>
@@ -42,9 +42,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-sm text-primary-foreground mb-4 tracking-wide uppercase">
+            <h2 className="font-heading font-bold text-sm text-primary-foreground mb-4 tracking-wide uppercase">
               Proizvodi
-            </h4>
+            </h2>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
               <li><Link to="/proizvodi/pvc" className="hover:text-primary-foreground/80 transition-colors">PVC stolarija</Link></li>
               <li><Link to="/proizvodi/aluminijum" className="hover:text-primary-foreground/80 transition-colors">Aluminijumska stolarija</Link></li>
@@ -55,9 +55,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-sm text-primary-foreground mb-4 tracking-wide uppercase">
+            <h2 className="font-heading font-bold text-sm text-primary-foreground mb-4 tracking-wide uppercase">
               Informacije
-            </h4>
+            </h2>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
               <li><Link to="/o-nama" className="hover:text-primary-foreground/80 transition-colors">O nama</Link></li>
               <li><Link to="/proizvodi" className="hover:text-primary-foreground/80 transition-colors">Proizvodi</Link></li>
@@ -73,10 +73,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs font-body text-primary-foreground/30">
+          <p className="text-xs font-body text-primary-foreground/55">
             © 2002–{new Date().getFullYear()} AL Company d.o.o. Sva prava zadržana.
           </p>
-          <p className="text-xs font-body text-primary-foreground/30">
+          <p className="text-xs font-body text-primary-foreground/55">
             Valjevo, Srbija · Od 2002.
           </p>
         </div>

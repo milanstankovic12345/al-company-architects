@@ -68,6 +68,7 @@ const EnergyROICalculator = () => {
                 <Slider
                   value={[homeSize]}
                   onValueChange={([v]) => setHomeSize(v)}
+                  aria-label="Površina stana/kuće u kvadratnim metrima"
                   min={30}
                   max={300}
                   step={5}
@@ -80,9 +81,9 @@ const EnergyROICalculator = () => {
               </div>
 
               <div className="space-y-3">
-                <label className="text-sm font-medium text-foreground">Izvor grejanja</label>
+                <label htmlFor="calc-heating" className="text-sm font-medium text-foreground">Izvor grejanja</label>
                 <Select value={heating} onValueChange={setHeating}>
-                  <SelectTrigger>
+                  <SelectTrigger id="calc-heating">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -96,9 +97,9 @@ const EnergyROICalculator = () => {
               </div>
 
               <div className="space-y-3">
-                <label className="text-sm font-medium text-foreground">Trenutni prozori</label>
+                <label htmlFor="calc-windows" className="text-sm font-medium text-foreground">Trenutni prozori</label>
                 <Select value={windowType} onValueChange={setWindowType}>
-                  <SelectTrigger>
+                  <SelectTrigger id="calc-windows">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
