@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="t">
+  <title id="t">AL Company</title>
+  <g id="emblem" fill="#870D11">
+    <polygon points="50,4 65.30,36 34.70,36"/>
+    <polygon points="67.70,41 73.91,54 26.09,54 32.30,41"/>
+    <polygon points="76.30,59 82.52,72 17.48,72 23.70,59"/>
+    <polygon points="84.91,77 94,96 66,96 50,85 34,96 6,96 15.09,77"/>
+  </g>
+</svg>

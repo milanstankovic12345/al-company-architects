@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="t">
+  <title id="t">AL Company Valjevo</title>
+  <g id="emblem" fill="#870D11" fill-rule="evenodd">
+    <path d="M22,6 H34 L56,94 H44 L40,82 H16 L12,94 H0 Z M20,60 H36 L28,30 Z"/>
+    <path d="M64,6 H76 V82 H100 V94 H64 Z"/>
+  </g>
+</svg>

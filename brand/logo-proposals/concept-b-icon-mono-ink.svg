@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="t">
+  <title id="t">AL Company</title>
+  <g id="emblem" fill="#1B1D21" fill-rule="evenodd">
+    <path d="M4,4 H96 V96 H4 Z M14,14 V86 H86 V14 Z"/>
+    <path d="M44,24 H56 L80,82 H68 L63,70 H37 L32,82 H20 Z M41,60 H59 L50,38 Z"/>
+  </g>
+</svg>

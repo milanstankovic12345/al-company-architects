@@ -29,6 +29,7 @@ import Acrylcolor from "./pages/Acrylcolor";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import BrandPreview from "./pages/BrandPreview";
 import { ComparisonProvider } from "./contexts/ComparisonContext";
 
 const queryClient = new QueryClient();
@@ -66,7 +67,8 @@ const App = () => (
             <Route path="/saveti" element={<Blog />} />
             <Route path="/saveti/:slug" element={<BlogPost />} />
             <Route path="/politika-privatnosti" element={<PrivacyPolicy />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/brand-preview" element={<BrandPreview />} />
+            <Route path="*"element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </ComparisonProvider>
