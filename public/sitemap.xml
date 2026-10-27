@@ -80,4 +80,24 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://al-company.vercel.app/saveti</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://al-company.vercel.app/saveti/kako-izabrati-prozore-za-pasivnu-kucu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://al-company.vercel.app/saveti/subvencije-za-stolariju-2026-korak-po-korak</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://al-company.vercel.app/saveti/pvc-ili-aluminijum</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

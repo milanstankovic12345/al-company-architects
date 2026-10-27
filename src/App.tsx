@@ -25,6 +25,8 @@ import AboutUs from "./pages/AboutUs";
 import Drvodekor from "./pages/Drvodekor";
 import Acrylcolor from "./pages/Acrylcolor";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import { ComparisonProvider } from "./contexts/ComparisonContext";
 
 const queryClient = new QueryClient();
@@ -57,6 +59,8 @@ const App = () => (
             <Route path="/boje" element={<Colors />} />
             <Route path="/uporedi" element={<Compare />} />
             <Route path="/asistent" element={<Assistant />} />
+            <Route path="/saveti" element={<Blog />} />
+            <Route path="/saveti/:slug" element={<BlogPost />} />
             <Route path="/politika-privatnosti" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
