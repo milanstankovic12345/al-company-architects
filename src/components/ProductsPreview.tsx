@@ -15,7 +15,7 @@ const previewProducts = previewProductSlugs
     name: product.name,
     description: product.description,
     specs: product.specs.slice(0, 4).map((spec) => spec.value),
-    image: product.heroImage,
+    image: `${product.heroImage}-preview`,
     imageAlt: getProductImageAlt(product),
   }));
 
@@ -40,11 +40,11 @@ const ProductsPreview = () => {
               key={product.name}
               className="group relative overflow-hidden bg-primary-foreground/5 border border-primary-foreground/10 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10 transition-[border-color,box-shadow] duration-300"
             >
-              <div className="w-[300px] h-[300px] max-w-full mx-auto overflow-hidden">
+              <div className="w-full aspect-[16/10] overflow-hidden">
                 <ResponsiveImage
                   name={product.image}
                   alt={product.imageAlt}
-                  sizes="300px"
+                  sizes="(min-width: 1400px) 656px, (min-width: 1024px) 45vw, 100vw"
                   className="w-full h-full object-cover group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform duration-700"
                 />
               </div>

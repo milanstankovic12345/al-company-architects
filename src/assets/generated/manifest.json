@@ -101,6 +101,15 @@
       1265
     ]
   },
+  "alumil-supreme-sd77-preview": {
+    "width": 1265,
+    "height": 790,
+    "widths": [
+      400,
+      800,
+      1265
+    ]
+  },
   "gealan-linear": {
     "width": 1043,
     "height": 916,
@@ -133,6 +142,15 @@
       400,
       800,
       917
+    ]
+  },
+  "gealan-s9000-preview": {
+    "width": 1312,
+    "height": 820,
+    "widths": [
+      400,
+      800,
+      1280
     ]
   },
   "gealan-s9000": {
