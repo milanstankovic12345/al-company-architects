@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { motion, type Variants } from "framer-motion";
 
-const EASE = [0.22, 1, 0.36, 1] as const;
+export const EASE =[0.22, 1, 0.36, 1] as const;
 const VIEWPORT = { once: true, margin: "0px 0px -80px 0px" } as const;
 
 interface RevealProps {
